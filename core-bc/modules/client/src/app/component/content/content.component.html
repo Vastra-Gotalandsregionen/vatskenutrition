@@ -1,0 +1,69 @@
+<!--<md-grid-list cols="4" rowHeight="100% - 28px">-->
+<!--<md-grid-tile colspan="1" rowspan="1" style="background: beige">-->
+<div id="background" *ngIf="watermarkText() | async">
+
+  asdfasdf
+  <p id="bg-text">{{watermarkText() | async}}</p>
+</div>
+
+<div class="content">
+  <!--{{ watermarkText() | async}}-->
+  <div class="col-4">
+  <!--<div class="col-4 {{!(isReviewed() | async) ? 'watermarked' : ''}}">-->
+    <div *ngIf="chapters">
+      <div *ngFor="let chapter of chapters">
+
+        <h3>{{chapter.heading}}</h3>
+
+        <div *ngFor="let article of chapter.articles">
+          <a class="article-link" routerLink="/" [queryParams]="{article: article.uuid}" routerLinkActive="active">{{article.title}}</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-8 {{(watermarkText() | async) ? 'transparent' : ''}}">
+  <!--<div class="col-8 {{!(isReviewed() | async) ? 'watermarked' : ''}}">-->
+    <!--</md-grid-tile>-->
+    <!--<md-grid-tile colspan="3" rowspan="1" style="background: #ffda5c">-->
+    <div *ngIf="article">
+      <h2>{{article.title}}</h2>
+      <!--<pre>{{article | json}}</pre>-->
+
+      <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
+        <!--<pre>{{field | json}}</pre>-->
+
+        <h3>{{field.value}}</h3>
+
+        <div [innerHTML]="getRichContent(field)"></div>
+
+        <div *ngIf="getImage(field)">
+          <p>
+            <img src="/api/image?url={{getImage(field)}}"/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<ng-template>
+  <script type="application/javascript">
+    setTimeout(function () {
+      debugger;
+      Array.from(document.querySelectorAll('.watermarked')).forEach(function(el) {
+        console.log('asdf');
+        el.dataset.watermark = (el.dataset.watermark + ' ').repeat(300);
+      });
+    }, 2000);
+  </script>
+
+</ng-template>-->
+<!--</md-grid-tile>-->
+<!--</md-grid-list>-->
+
+<!--
+<div *ngIf="chapters">
+  <pre>{{chapters | json}}</pre>
+</div>
+-->

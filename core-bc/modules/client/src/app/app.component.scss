@@ -1,0 +1,16 @@
+#container {
+  //background: #00bcd4;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  width: 1000px;
+  overflow: hidden;
+}
+
+app-header {
+  display: block;
+  height: 56px;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+}

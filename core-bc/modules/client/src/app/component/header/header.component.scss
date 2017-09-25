@@ -1,0 +1,30 @@
+.header {
+  background: #005292;
+  height: 100%;
+  color: #fff;
+  vertical-align: middle;
+  line-height: 56px;
+  padding: 0 16px;
+
+  a {
+    color: #ffffff;
+
+    &:visited {
+      color: #ffffff;
+    }
+  }
+
+  .title {
+    position: absolute;
+    margin: 0 auto;
+    text-align: center;
+    margin-left: calc(50% - 77px);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

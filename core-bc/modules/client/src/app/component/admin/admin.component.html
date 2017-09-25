@@ -1,0 +1,20 @@
+<div class="container">
+  <h2>Välj år</h2>
+  <p>Genom att välja år ändrar du året du själv ser. <b>Ingen annan kommer påverkas.</b></p>
+
+  <div>
+    Välj år:
+    <div>
+      <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
+        <option [ngValue]="null">Inget valt</option>
+        <option *ngFor="let year of availableYears | async" [ngValue]="year">{{year}}</option>
+      </select>
+      <button (click)="resetYear()">Rensa val</button>
+    </div>
+
+    <div>
+      <span>Standardår: {{defaultYear}}</span>
+    </div>
+    <!--{{availableYears | async |json}}-->
+  </div>
+</div>
