@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
@@ -21,6 +22,7 @@ import javax.sql.DataSource;
 @EnableWebMvc
 @EnableScheduling
 @ComponentScan(basePackages = {"se.vgregion.vatskenutrition.controller", "se.vgregion.vatskenutrition.service"})
+@PropertySource(value = "file://${user.home}/.app/vatskenutrition/application.properties", ignoreResourceNotFound = false)
 @EnableJpaRepositories(basePackageClasses = {ArticleRepository.class})
 public class AppConfig {
 

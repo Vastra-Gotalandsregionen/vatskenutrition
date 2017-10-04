@@ -11,13 +11,15 @@ import { AdminComponent } from './component/admin/admin.component';
 import {FormsModule} from "@angular/forms";
 import {YearService} from "./service/year.service";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { BackLinkComponent } from './component/back-link/back-link.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ContentComponent,
-    AdminComponent
+    AdminComponent,
+    BackLinkComponent
   ],
   imports: [
     BrowserModule,

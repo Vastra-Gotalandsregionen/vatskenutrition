@@ -1,24 +1,17 @@
+<div *ngIf="selectedYear | async" class="version-warning">
+  <div>Visar utgåva
+    <em><a mdTooltip="Gå till Admin för att ändra utgåva" mdTooltipPosition="below" [routerLink]="['/admin']" [preserveQueryParams]="true">{{selectedYear | async}}</a></em>
+    <span>Visa utkast:
+      <em><a mdTooltip="Gå till Admin för att ändra" mdTooltipPosition="below" [routerLink]="['/admin']" [preserveQueryParams]="true">{{(includeDrafts | async) === 'true' ? 'Ja' : 'Nej'}}</a></em>
+    </span>
+  </div>
+  <div *ngIf="!(selectedYearIsSameAsDefaultYear() | async)">Observera att denna utgåva inte är ordinarie. Denna är endast för granskning.</div>
+</div>
+
 <div id="container">
 
-  <app-header></app-header>
+  <app-header class="{{(selectedYear | async)? 'extra-header-compensation' : ''}}"></app-header>
 
-  <!--<md-grid-list cols="4" rowHeight="100% - 28px">
-    <md-grid-tile colspan="1" rowspan="1" style="background: beige">
-      <ul *ngIf="chapters">
-        <li *ngFor="let chapter of chapters">
-          {{chapter.heading}}
-          <ul>
-            <li *ngFor="let article of chapter.articles">
-              {{article.title}}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </md-grid-tile>
-    <md-grid-tile colspan="3" rowspan="1" style="background: lightgreen">
-      right
-    </md-grid-tile>
-  </md-grid-list>-->
   <router-outlet></router-outlet>
 </div>
 

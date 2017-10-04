@@ -1,7 +1,6 @@
 package se.vgregion.vatskenutrition.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.CascadeType;
@@ -13,13 +12,15 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.OrderColumn;
 import java.util.List;
-import java.util.List;
 
 @Entity
 public class Article {
 
     @Id
     private String uuid;
+
+    @Column
+    private String articleId;
 
     @JsonProperty(value = "path")
     @ElementCollection(fetch = FetchType.EAGER)
@@ -29,23 +30,36 @@ public class Article {
     @Column
     private String title;
 
-//    @JsonIgnore
     @OneToMany(orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Field> fields;
+
+    @Column
+    private int status;
+
+    @Column
+    private String version;
 
     public String getUuid() {
         return uuid;
     }
 
-    public void ListUuid(String uuid) {
+    public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getArticleId() {
+        return articleId;
+    }
+
+    public void setArticleId(String articleId) {
+        this.articleId = articleId;
     }
 
     public List<String> getPaths() {
         return paths;
     }
 
-    public void ListPaths(List<String> paths) {
+    public void setPaths(List<String> paths) {
         this.paths = paths;
     }
 
@@ -53,7 +67,7 @@ public class Article {
         return title;
     }
 
-    public void ListTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -61,7 +75,23 @@ public class Article {
         return fields;
     }
 
-    public void ListFields(List<Field> fields) {
+    public void setFields(List<Field> fields) {
         this.fields = fields;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
     }
 }

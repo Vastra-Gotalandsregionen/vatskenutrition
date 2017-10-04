@@ -14,6 +14,7 @@ import {Subscription} from "rxjs/Subscription";
 import {DomSanitizer} from "@angular/platform-browser";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
+import 'rxjs/add/operator/combineLatest';
 
 @Component({
   selector: 'app-content',
@@ -23,20 +24,23 @@ import "rxjs/add/observable/of";
 export class ContentComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
 
-  private chapters: Chapter[];
-  private article: Article;
-  private notReviewedText: string;
-  // private chapters: {path: string, articles: Article[]}[];
-  // private chapters: Map<string, Article>;
-  // private chapterEntries: IterableIterator<[string, Article[]]>;
-
-  // private articles: Observable<any>;
+  chapters: Chapter[];
+  article: Article;
+  notReviewedText: string;
+  selectedYear: Observable<string>;
 
   constructor(private http: Http,
               private route: ActivatedRoute,
-              private _sanitizer:DomSanitizer,
-              private yearServcie: YearService) {
-    this.notReviewedText = 'Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat Ej_granskat ';
+              private _sanitizer: DomSanitizer,
+              private yearService: YearService) {
+    this.notReviewedText = '<span class="not-reviewed">UTKAST - ej granskat</span>';
+
+    let n = 0;
+    while (n < 10) {
+      this.notReviewedText = this.notReviewedText + this.notReviewedText;
+      n++;
+    }
+
   }
 
   ngOnDestroy(): void {
@@ -44,36 +48,48 @@ export class ContentComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subscription = this.yearServcie.selectedYear.mergeMap(year => {
+    let includeDrafts = this.yearService.includeDrafts;
+    let selectedYear = this.yearService.selectedYear;
+
+    includeDrafts.subscribe(a => console.log(a));
+    selectedYear.subscribe(a => console.log(a));
+
+    this.subscription = includeDrafts.combineLatest(selectedYear).mergeMap(result => {
+      let includeDrafts = result[0];
+      let year = result[1];
+
       if (!year) {
         year = 'currentYear';
       }
-      console.log('flag1');
-      return this.http.get('/api/article/year/' + year).map(response => {
-        return response.json().reduce(function (map, article) {
-          let path = article['path'][1];
-          if (!map.get(path)) {
-            map.set(path, []);// = [];
-          }
-          map.get(path).push(article);
-          return map;
-        }, new Map());
-      })
-    }).subscribe((chapters: Map<string, Article[]>) => {
-      console.log('flag2');
 
+      let options;
+      if (includeDrafts === 'true') {
+        options = {params: {includeDrafts: true}};
+      } else {
+        options = {};
+      }
+
+      return this.http.get('/api/article/year/' + year, options)
+        .map(response => {
+          return response.json().reduce(function (map, article) {
+            let path = article['path'][1];
+            if (!map.get(path)) {
+              map.set(path, []);// = [];
+            }
+            map.get(path).push(article);
+            return map;
+          }, new Map());
+        })
+    }).subscribe((chapters: Map<string, Article[]>) => {
       this.chapters = [];
 
       // this.chapterEntries = chapters.entries();
       let next;
       let entries = chapters.entries();
+
       while (!(next = entries.next()).done) {
         this.chapters.push({heading: next.value[0], articles: next.value[1]});
       }
-      /*chapters.entries().next().value.forEach(entry => {
-        debugger;
-        console.log(entry);
-      })*/
     });
 
     this.route.queryParams
@@ -88,26 +104,15 @@ export class ContentComponent implements OnInit, OnDestroy {
         }
       });
 
-    // .subscribe(articles => this.articles = articles);
+    this.selectedYear = this.yearService.selectedYear;
   }
 
   getRichContent(field: Field) {
-    // debugger;
-    let fieldName = 'rich_content';
-    /*let result = null;
-    field.children.forEach(child => {
-      if (child.name === fieldName) { // todo make constant
-        result = child.value;
-      }
-    });
-    return result;*/
-    return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, fieldName));
+    return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, 'rich_content'));
   }
 
   getImage(field: Field): string {
-    // debugger;
-    let fieldName = 'image';
-    return this.getChildValue(field, fieldName);
+    return this.getChildValue(field, 'image');
   }
 
   getStyleOption(field: Field) {
@@ -117,22 +122,16 @@ export class ContentComponent implements OnInit, OnDestroy {
   private getChildValue(field: Field, fieldName: string) {
     let result = null;
     field.children.forEach(child => {
-      if (child.name === fieldName) { // todo make constant
+      if (child.name === fieldName) {
         result = child.value;
       }
     });
     return result;
   }
 
-  /*isReviewed(): Observable<boolean> {
-    return this.yearServcie.selectedYear.mergeMap(year => {
-      return Observable.of(year === this.yearServcie.defaultYear);
-    });
-  }*/
-
   watermarkText(): Observable<string> {
-    return this.yearServcie.selectedYear.mergeMap(year => {
-      return Observable.of(year === this.yearServcie.defaultYear ? null : this.notReviewedText);
+    return this.yearService.selectedYear.mergeMap(year => {
+      return Observable.of(year && year !== this.yearService.defaultYear ? this.notReviewedText : null);
     });
   }
 

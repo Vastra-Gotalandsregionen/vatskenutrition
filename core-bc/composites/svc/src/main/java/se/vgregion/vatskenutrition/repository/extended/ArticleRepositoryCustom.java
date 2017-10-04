@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ArticleRepositoryCustom {
 
-    List<Article> findArticles(String year);
+    List<Article> findArticles(String year, Integer... status);
 
     List<String> findAvailableYears();
 }

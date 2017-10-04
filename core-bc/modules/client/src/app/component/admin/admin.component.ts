@@ -3,6 +3,8 @@ import {Http} from "@angular/http";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/operator/map";
 import {YearService} from "../../service/year.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-admin',
@@ -13,31 +15,45 @@ export class AdminComponent implements OnInit {
 
   availableYears: Observable<string[]>;
   selectedYear: string;
-  // defaultYear: string;
+  includeDrafts: string;
 
   constructor(private http: Http,
-              private yearService: YearService) { }
+              private location: Location,
+              private router: Router,
+              public yearService: YearService) { }
 
   ngOnInit() {
     this.availableYears = this.http.get('/api/year/availableYears').map(response => response.json());
 
     this.yearService.selectedYear.subscribe(year => this.selectedYear = year);
-    // this.selectedYear = sessionStorage.getItem("selectedYear");
-
-    /*this.http.get('/api/year/currentYear').map(response => response.text())
-      .subscribe(year => {
-        // this.selectedYear = year;
-        this.defaultYear = year;
-      });*/
+    this.yearService.includeDrafts.subscribe(includeDrafts => this.includeDrafts = includeDrafts);
   }
 
   saveSelectedYear() {
     this.yearService.setSelectedYear(this.selectedYear);
-    console.log("saveSelectedYear");
+
+    let queryParams = {
+      'selectedYear': this.selectedYear,
+      'includeDrafts': this.includeDrafts
+    };
+
+    this.router.navigate(['/admin'], { queryParams: queryParams });
+  }
+
+  saveIncludeDrafts() {
+    this.yearService.setIncludeDrafts(this.includeDrafts);
+
+    let queryParams = {
+      'selectedYear': this.selectedYear,
+      'includeDrafts': this.includeDrafts
+    };
+
+    this.router.navigate(['/admin'], { queryParams: queryParams });
   }
 
   resetYear() {
     this.yearService.resetYear();
+    this.router.navigate(['/admin']);
   }
 
   get defaultYear() {

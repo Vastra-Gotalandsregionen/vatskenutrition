@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import se.vgregion.vatskenutrition.model.Article;
 import se.vgregion.vatskenutrition.service.ArticleService;
@@ -24,31 +25,23 @@ public class ArticleController {
 
         Object articles = articleService.findAllArticles();
 
-        /*List<ArticleDTO> articleDTOs = articles.stream().map(journalArticle -> {
-            ArticleDTO articleDTO = new ArticleDTO();
-
-            journalArticle.getTitle();
-            journalArticle.getContent();
-            articleDTO.setTitle(journalArticle.getTitle());
-            articleDTO.setContent(journalArticle.getContent());
-
-            return articleDTO;
-        }).collect(Collectors.toList());*/
         return articles;
     }
 
     @RequestMapping(value = "/year/{year}", method = RequestMethod.GET)
     @ResponseBody
-    public Object getArticlesByYear(@PathVariable("year") String year) {
-        return articleService.findByYear(year);
+    public Object getArticlesByYear(@PathVariable("year") String year,
+                                    @RequestParam(name = "includeDrafts", required = false) Boolean includeDrafts) {
+
+        return articleService.findByYear(year, includeDrafts);
     }
 
     @RequestMapping(value = "/year/currentYear", method = RequestMethod.GET)
     @ResponseBody
-    public Object getArticlesByCurrentYear() {
+    public Object getArticlesByCurrentYear(@PathVariable(name = "includeDrafts", required = false) Boolean includeDrafts) {
         String currentYear = "2017"; // todo
 
-        return articleService.findByYear(currentYear);
+        return articleService.findByYear(currentYear, includeDrafts);
     }
 
     @RequestMapping(value = "/{articleUuid}", method = RequestMethod.GET)
@@ -65,25 +58,4 @@ public class ArticleController {
         return ResponseEntity.ok(article);
     }
 
-    public class ArticleDTO {
-
-        private String title;
-        private String content;
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-        public String getContent() {
-            return content;
-        }
-    }
 }

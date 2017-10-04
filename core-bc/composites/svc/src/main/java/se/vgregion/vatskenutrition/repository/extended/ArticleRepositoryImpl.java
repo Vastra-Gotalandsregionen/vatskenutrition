@@ -4,9 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import se.vgregion.vatskenutrition.model.Article;
 import se.vgregion.vatskenutrition.repository.ArticleRepository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -15,21 +14,16 @@ import java.util.stream.Collectors;
 public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
 
     @Autowired
-    private EntityManager entityManager;
-
-    @Autowired
     private ArticleRepository articleRepository;
 
     @Override
-    public List<Article> findArticles(String year) {
-//        Query query = entityManager.createQuery("select distinct a from Article a left join fetch a.paths");
-
-//        List<Article> resultList = query.getResultList();
+    public List<Article> findArticles(String year, Integer... status) {
 
         List<Article> articles = articleRepository.findAll();
 
         return articles.stream()
-                .filter(article -> article.getPaths().contains(year))
+                .filter(a -> a.getPaths().contains(year)
+                        && (status == null || status.length == 0 || Arrays.asList(status).contains(a.getStatus())))
                 .collect(Collectors.toList());
     }
 
@@ -43,16 +37,8 @@ public class ArticleRepositoryImpl implements ArticleRepositoryCustom {
                 years.add(article.getPaths().get(0));
             }
         }
-        /*Set<String> reduce = all.stream().reduce(new TreeSet<>(), (Set<String> paths, Article article) -> {
-            if (article.getPaths() != null && article.getPaths().size() > 0) {
-                paths.add(article.getPaths().get(0));
-            }
-            return paths;
-        }, ((Set<String> set1, Set<String> set2) -> {
-            set1.addAll(set2);
-            return set1;
-        }));*/
 
         return new ArrayList<>(years);
     }
+
 }

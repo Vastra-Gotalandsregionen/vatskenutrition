@@ -13,4 +13,24 @@ app-header {
   position: absolute;
   z-index: 1;
   width: 100%;
+
+  &.extra-header-compensation {
+    top: 66px;
+  }
+}
+
+.version-warning {
+  box-sizing: border-box;
+  height: 66px;
+  position: absolute;
+  z-index: 1;
+  background-color: #8A1414;
+  color: #ffffff;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+
+  a {
+    color: #ffffff;
+  }
 }

@@ -1,5 +1,18 @@
 .container {
-  //background-color: #ffffff;
-  height: 100%;
+  height: calc(100% - 56px);
   padding: 16px;
+  position: absolute;
+  width: 100%;
+  top: 56px;
+  box-sizing: border-box;
+
+  &.extra-header-compensation {
+    height: calc(100% - 122px);
+    top: 122px;
+  }
+}
+
+section {
+  margin: 16px 0;
+  line-height: 24px;
 }
