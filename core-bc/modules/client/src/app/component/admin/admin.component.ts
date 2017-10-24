@@ -18,7 +18,6 @@ export class AdminComponent implements OnInit {
   includeDrafts: string;
 
   constructor(private http: Http,
-              private location: Location,
               private router: Router,
               public yearService: YearService) { }
 

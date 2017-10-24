@@ -3,27 +3,33 @@
 </div>
 
 <div class="content {{(selectedYear | async)? 'extra-header-compensation' : ''}}">
-  <div class="col-4">
+  <div class="col-4 scroll-container">
     <div *ngIf="chapters">
       <div *ngFor="let chapter of chapters">
 
         <h3>{{chapter.heading}}</h3>
 
         <div *ngFor="let article of chapter.articles">
-          <a class="article-link" routerLink="/" [queryParams]="{article: article.uuid}" queryParamsHandling="merge" routerLinkActive="active">{{article.title}} {{article.status === 2 ? '(Utkast)' : ''}}</a>
+          <a class="article-link" routerLink="/" [queryParams]="{article: article.uuid}" queryParamsHandling="merge" routerLinkActive="active" (click)="scrollToTop()">{{article.title}} {{article.status === 2 ? '(Utkast)' : ''}}</a>
+          <ul class="sub-chapter-list">
+            <!--<li *ngFor="let field of article.fields" [ngStyle]="{'display': 'none'}">{{field.value}}</li>-->
+            <li *ngFor="let field of article.fields" [ngStyle]="(field.value && field.value.length > 0) ? {} : {'display': 'none'}">
+              <a class="sub-chapter-link" (click)="scrollToSubChapter(field.value)">{{field.value}}</a>
+            </li>
+          </ul>
         </div>
 
       </div>
     </div>
   </div>
 
-  <div class="col-8 {{(watermarkText() | async) ? 'transparent' : ''}}">
+  <div class="col-8 scroll-container {{(watermarkText() | async) ? 'transparent' : ''}}">
     <div *ngIf="article">
       <h2>{{article.title}}</h2>
 
       <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
 
-        <h3>{{field.value}}</h3>
+        <a name="{{field.value}}"><h3>{{field.value}}</h3></a>
 
         <div [innerHTML]="getRichContent(field)"></div>
 

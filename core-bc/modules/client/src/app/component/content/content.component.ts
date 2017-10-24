@@ -129,6 +129,20 @@ export class ContentComponent implements OnInit, OnDestroy {
     return result;
   }
 
+  scrollToSubChapter(subChapter: string) {
+    try {
+      let subChapterElement = document.querySelector('a[name="' + subChapter + '"]');
+      subChapterElement.scrollIntoView();
+      subChapterElement.closest('.scroll-container').scrollTop -= 12;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  scrollToTop() {
+    document.querySelector('.col-8').scrollTop = 0;
+  }
+
   watermarkText(): Observable<string> {
     return this.yearService.selectedYear.mergeMap(year => {
       return Observable.of(year && year !== this.yearService.defaultYear ? this.notReviewedText : null);

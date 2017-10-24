@@ -22,6 +22,9 @@ md-grid-tile {
   box-sizing: border-box;
   float: left;
   height: 100%;
+}
+
+.scroll-container {
   overflow-y: scroll;
 }
 
@@ -107,4 +110,40 @@ img {
   height: 150%;
 
   transform: rotate(-45deg);
+}
+
+.article-link+ul {
+  display: none;
+}
+
+.article-link.active+ul {
+  display: block;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.sub-chapter-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.sub-chapter-link {
+  display: block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: .8em;
+
+  &:before {
+    content: '\000BB ';
+  }
+}
+.sub-chapter-link:hover {
+  background-color: #ececec;
+}
+
+ul {
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
