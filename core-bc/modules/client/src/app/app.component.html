@@ -1,8 +1,8 @@
 <div *ngIf="selectedYear | async" class="version-warning">
   <div>Visar utgåva
-    <em><a mdTooltip="Gå till Admin för att ändra utgåva" mdTooltipPosition="below" [routerLink]="['/admin']" [preserveQueryParams]="true">{{selectedYear | async}}</a></em>
+    <em><a matTooltip="Gå till Admin för att ändra utgåva" mdTooltipPosition="below" [routerLink]="['/admin']" queryParamsHandling="merge">{{selectedYear | async}}</a></em>
     <span>Visa utkast:
-      <em><a mdTooltip="Gå till Admin för att ändra" mdTooltipPosition="below" [routerLink]="['/admin']" [preserveQueryParams]="true">{{(includeDrafts | async) === 'true' ? 'Ja' : 'Nej'}}</a></em>
+      <em><a matTooltip="Gå till Admin för att ändra" mdTooltipPosition="below" [routerLink]="['/admin']" queryParamsHandling="merge">{{(includeDrafts | async) === 'true' ? 'Ja' : 'Nej'}}</a></em>
     </span>
   </div>
   <div *ngIf="!(selectedYearIsSameAsDefaultYear() | async)">Observera att denna utgåva inte är ordinarie. Denna är endast för granskning.</div>

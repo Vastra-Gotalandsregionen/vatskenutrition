@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpModule} from "@angular/http";
-import {MdGridListModule, MdTooltipModule} from '@angular/material';
+import {MatTooltipModule} from '@angular/material';
 import { HeaderComponent } from './component/header/header.component';
 import { ContentComponent } from './component/content/content.component';
 import { AdminComponent } from './component/admin/admin.component';
@@ -27,8 +27,7 @@ import { BackLinkComponent } from './component/back-link/back-link.component';
     HttpModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdGridListModule,
-    MdTooltipModule
+    MatTooltipModule
   ],
   providers: [
     YearService
