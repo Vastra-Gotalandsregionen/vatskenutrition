@@ -14,3 +14,16 @@ em {
   font-style: normal;
   font-weight: bold;
 }
+
+.shift-below-header {
+  height: calc(100% - 56px);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 56px;
+
+  &.extra-header-compensation {
+    height: calc(100% - 122px);
+    top: 122px;
+  }
+}

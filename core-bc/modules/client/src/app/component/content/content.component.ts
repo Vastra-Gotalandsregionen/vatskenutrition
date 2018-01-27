@@ -1,6 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Chapter} from "../../model/chapter";
-import {Http} from "@angular/http";
 import {Article} from "../../model/article";
 import "rxjs/add/operator/map";
 import {ActivatedRoute} from "@angular/router";
@@ -15,6 +14,8 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
 import 'rxjs/add/operator/combineLatest';
+import {HttpClient} from "@angular/common/http";
+import {AuthStateService} from "../../service/auth/auth-state.service";
 
 @Component({
   selector: 'app-content',
@@ -26,21 +27,13 @@ export class ContentComponent implements OnInit, OnDestroy {
 
   chapters: Chapter[];
   article: Article;
-  notReviewedText: string;
   selectedYear: Observable<string>;
 
-  constructor(private http: Http,
+  constructor(private httpClient: HttpClient,
               private route: ActivatedRoute,
               private _sanitizer: DomSanitizer,
-              private yearService: YearService) {
-    this.notReviewedText = '<span class="not-reviewed">UTKAST - ej granskat</span>';
-
-    let n = 0;
-    while (n < 10) {
-      this.notReviewedText = this.notReviewedText + this.notReviewedText;
-      n++;
-    }
-
+              private yearService: YearService,
+              private authStateService: AuthStateService) {
   }
 
   ngOnDestroy(): void {
@@ -48,30 +41,20 @@ export class ContentComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    let includeDrafts = this.yearService.includeDrafts;
     let selectedYear = this.yearService.selectedYear;
 
-    includeDrafts.subscribe(a => console.log(a));
     selectedYear.subscribe(a => console.log(a));
 
-    this.subscription = includeDrafts.combineLatest(selectedYear).mergeMap(result => {
-      let includeDrafts = result[0];
-      let year = result[1];
+    this.subscription = selectedYear.mergeMap(result => {
+      let year = result;
 
-      if (!year) {
+      if (!year || year === this.yearService.defaultYear) {
         year = 'currentYear';
       }
 
-      let options;
-      if (includeDrafts === 'true') {
-        options = {params: {includeDrafts: true}};
-      } else {
-        options = {};
-      }
-
-      return this.http.get('/api/article/year/' + year, options)
+      return this.httpClient.get<string[]>('/api/article/year/' + year)
         .map(response => {
-          return response.json().reduce(function (map, article) {
+          return response.reduce(function (map, article) {
             let path = article['path'][1];
             if (!map.get(path)) {
               map.set(path, []);// = [];
@@ -79,7 +62,7 @@ export class ContentComponent implements OnInit, OnDestroy {
             map.get(path).push(article);
             return map;
           }, new Map());
-        })
+        });
     }).subscribe((chapters: Map<string, Article[]>) => {
       this.chapters = [];
 
@@ -96,8 +79,7 @@ export class ContentComponent implements OnInit, OnDestroy {
       .subscribe(params => {
 
         if (params.article) {
-          this.http.get('/api/article/' + params.article)
-            .map(response => response.json())
+          this.httpClient.get<Article>('/api/article/' + params.article)
             .subscribe(article => this.article = article);
         } else {
           this.article = null;
@@ -105,6 +87,10 @@ export class ContentComponent implements OnInit, OnDestroy {
       });
 
     this.selectedYear = this.yearService.selectedYear;
+  }
+
+  get loggedIn() {
+    return this.authStateService.isAuthenticated();
   }
 
   getRichContent(field: Field) {
@@ -143,9 +129,9 @@ export class ContentComponent implements OnInit, OnDestroy {
     document.querySelector('.col-8').scrollTop = 0;
   }
 
-  watermarkText(): Observable<string> {
+  watermarkText(): Observable<boolean> {
     return this.yearService.selectedYear.mergeMap(year => {
-      return Observable.of(year && year !== this.yearService.defaultYear ? this.notReviewedText : null);
+      return Observable.of(year && year !== this.yearService.defaultYear);
     });
   }
 

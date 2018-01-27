@@ -15,6 +15,7 @@ import se.vgregion.vatskenutrition.model.Child;
 import se.vgregion.vatskenutrition.model.Field;
 import se.vgregion.vatskenutrition.repository.ArticleRepository;
 
+import javax.annotation.PostConstruct;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Base64;
@@ -35,9 +36,13 @@ public class ArticleService {
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;// = "http://localhost:9080/api/jsonws/skinny-web.skinny/get-skinny-journal-articles/company-id/10136/group-name/vatskenutrition/ddm-structure-id/1687613/locale/sv_SE/includeDraft/true";
 
-    //    @PostConstruct
-    @Scheduled(fixedRate = 5_000)
+    @PostConstruct
+    @Scheduled(fixedRate = 60_000)
     public synchronized void update() {
+        if (fetchAllArticlesUrl == null || "".equals(fetchAllArticlesUrl)) {
+            LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
+            return;
+        }
         List<Article> articles = fetchArticlesFromExternalSource();
         articleRepository.deleteAll();
         articleRepository.save(articles);

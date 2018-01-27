@@ -1,0 +1,17 @@
+<div>
+  <form (submit)="login()">
+    <div>
+      <label>VGR-ID:</label>
+      <input [(ngModel)]="username" name="username"/>
+    </div>
+
+    <div>
+      <label>Lösenord:</label>
+      <input [(ngModel)]="password" name="password" type="password"/>
+    </div>
+
+    <div>
+      <input type="submit" value="Logga in"/>
+    </div>
+  </form>
+</div>

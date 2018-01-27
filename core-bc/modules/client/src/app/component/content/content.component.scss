@@ -6,11 +6,11 @@ md-grid-tile {
 
 
 .content {
-  height: calc(100% - 56px);
+  height: 100%;
   position: absolute;
   width: 100%;
   z-index: 1;
-  top: 56px;
+  top: 0;
 
   &.extra-header-compensation {
     height: calc(100% - 122px);
@@ -146,4 +146,8 @@ a:hover {
 ul {
   margin-top: 4px;
   margin-bottom: 8px;
+}
+
+.watermark-draft {
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='60px' width='100px'><text x='0' y='15' fill='#000' opacity='0.2' transform='rotate(-35 60,10)'>UTKAST</text></svg>")
 }

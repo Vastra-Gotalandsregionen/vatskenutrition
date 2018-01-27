@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs/Observable";
-import {Http} from "@angular/http";
+import {HttpClient} from "@angular/common/http";
 import "rxjs/add/operator/share";
 import {ReplaySubject} from "rxjs/ReplaySubject";
 import "rxjs/add/operator/publishReplay";
@@ -8,20 +8,20 @@ import "rxjs/add/operator/publishReplay";
 @Injectable()
 export class YearService {
 
-  private _selectedYear = new ReplaySubject<string>(1);// = new BehaviorSubject()<string>();
-  private _includeDrafts = new ReplaySubject<string>(1);
+  private _selectedYear = new ReplaySubject<string>(1);
+  private _availableYears: Observable<string[]>;
   _defaultYear: string;
 
-  constructor(private http: Http) {
-
-    this.http.get('/api/year/currentYear').map(response => response.text())
-      .subscribe(currentYear => {
-        this._defaultYear = currentYear;
-      });
+  constructor(private http: HttpClient) {
+    this._availableYears = this.http.get<string[]>('/api/year/availableYears');
   }
 
   get defaultYear() {
     return this._defaultYear;
+  }
+
+  set defaultYear(defaultYear) {
+    this._defaultYear = defaultYear;
   }
 
   get selectedYear(): Observable<string> {
@@ -32,12 +32,8 @@ export class YearService {
     this._selectedYear.next(selectedYear);
   }
 
-  get includeDrafts(): Observable<string> {
-    return this._includeDrafts;
-  }
-
-  setIncludeDrafts(includeDrafts: string) {
-    this._includeDrafts.next(includeDrafts);
+  get availableYears(): Observable<string[]> {
+    return this._availableYears;
   }
 
   resetYear() {

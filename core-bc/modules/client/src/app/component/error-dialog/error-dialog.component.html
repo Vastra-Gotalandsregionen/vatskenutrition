@@ -1,0 +1,17 @@
+<div class="error-dialog">
+    <h4>Oj då, ett fel har inträffat</h4>
+
+  <p *ngIf="getErrorMessage()">{{getErrorMessage()}}</p>
+
+    <div>
+        <a href="" (click)="toggleDetails(); false;">Detaljer</a>
+    </div>
+
+    <div class="error-message {{showDetails ? 'show' : 'invisible'}} padding-top-bottom">
+        {{err}}
+    </div>
+
+    <div>
+        <button mat-button (click)="dialogRef.close()">Stäng</button>
+    </div>
+</div>

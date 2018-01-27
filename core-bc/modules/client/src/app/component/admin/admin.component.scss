@@ -3,13 +3,7 @@
   padding: 16px;
   position: absolute;
   width: 100%;
-  top: 56px;
   box-sizing: border-box;
-
-  &.extra-header-compensation {
-    height: calc(100% - 122px);
-    top: 122px;
-  }
 }
 
 section {

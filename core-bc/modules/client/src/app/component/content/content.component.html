@@ -1,8 +1,4 @@
-<div id="background" *ngIf="watermarkText() | async">
-  <div id="bg-text" [innerHtml]="watermarkText() | async"></div>
-</div>
-
-<div class="content {{(selectedYear | async)? 'extra-header-compensation' : ''}}">
+<div class="content {{(loggedIn)? 'extra-headdddddder-compensation' : ''}}">
   <div class="col-4 scroll-container">
     <div *ngIf="chapters">
       <div *ngFor="let chapter of chapters">
@@ -23,7 +19,7 @@
     </div>
   </div>
 
-  <div class="col-8 scroll-container {{(watermarkText() | async) ? 'transparent' : ''}}">
+  <div class="col-8 scroll-container {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
     <div *ngIf="article">
       <h2>{{article.title}}</h2>
 

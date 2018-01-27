@@ -1,35 +1,27 @@
-<div class="container {{selectedYear ? 'extra-header-compensation' : ''}}">
-  <h2>Välj utgåva</h2>
-  <p>Genom att välja år ändrar du året du själv ser. <b>Ingen annan kommer påverkas.</b></p>
+<div class="container">
 
-  <div>
-    <section>
-      <div>
-        Välj utgåva:
-      </div>
-      <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
-        <option [ngValue]="null">Inget valt</option>
-        <option *ngFor="let year of availableYears | async" [ngValue]="year">{{year}}</option>
-      </select>
-      <button (click)="resetYear()">Rensa val</button>
-    </section>
+  <div *ngIf="!loggedIn">
+    <app-login></app-login>
+  </div>
 
-    <section>
-      <div>Inkludera utkast:</div>
-      <span>
-        <input id="includeDraftsTrue" type="radio" name="includeDrafts" (change)="saveIncludeDrafts()" [(ngModel)]="includeDrafts"
-               value="true">
-        <label for="includeDraftsTrue">Ja</label>
-      </span>
-      <span>
-        <input id="includeDraftsFalse" type="radio" name="includeDrafts" (change)="saveIncludeDrafts()" [(ngModel)]="includeDrafts"
-               value="false">
-          <label for="includeDraftsFalse">Nej</label>
-    </span>
-    </section>
+  <div *ngIf="loggedIn">
+    <h2>Välj utgåva</h2>
+    <p>Genom att välja år ändrar du året du själv ser. <b>Ingen annan kommer påverkas.</b></p>
 
     <div>
-      <span>Standardutgåva: {{defaultYear}}</span>
+      <section>
+        <div>
+          Välj utgåva:
+        </div>
+        <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
+          <option *ngFor="let year of availableYears | async" [ngValue]="year">{{year}}</option>
+        </select>
+        <button (click)="resetYear()">Rensa val</button>
+      </section>
+
+      <div>
+        <span>Standardutgåva: {{defaultYear}}</span>
+      </div>
     </div>
   </div>
 </div>

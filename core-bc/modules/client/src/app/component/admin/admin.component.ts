@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import {Http} from "@angular/http";
+import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/operator/map";
 import {YearService} from "../../service/year.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {Location} from "@angular/common";
+import {Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
+import {StateService} from "../../service/state/state.service";
+import {AuthStateService} from "../../service/auth/auth-state.service";
 
 @Component({
   selector: 'app-admin',
@@ -15,36 +16,32 @@ export class AdminComponent implements OnInit {
 
   availableYears: Observable<string[]>;
   selectedYear: string;
-  includeDrafts: string;
 
-  constructor(private http: Http,
+  constructor(private http: HttpClient,
               private router: Router,
-              public yearService: YearService) { }
+              public yearService: YearService,
+              private stateService: StateService,
+              private authStateService: AuthStateService) { }
 
   ngOnInit() {
-    this.availableYears = this.http.get('/api/year/availableYears').map(response => response.json());
+    this.availableYears = this.yearService.availableYears;
 
     this.yearService.selectedYear.subscribe(year => this.selectedYear = year);
-    this.yearService.includeDrafts.subscribe(includeDrafts => this.includeDrafts = includeDrafts);
   }
 
   saveSelectedYear() {
     this.yearService.setSelectedYear(this.selectedYear);
 
     let queryParams = {
-      'selectedYear': this.selectedYear,
-      'includeDrafts': this.includeDrafts
+      'selectedYear': this.selectedYear
     };
 
     this.router.navigate(['/admin'], { queryParams: queryParams });
   }
 
   saveIncludeDrafts() {
-    this.yearService.setIncludeDrafts(this.includeDrafts);
-
     let queryParams = {
-      'selectedYear': this.selectedYear,
-      'includeDrafts': this.includeDrafts
+      'selectedYear': this.selectedYear
     };
 
     this.router.navigate(['/admin'], { queryParams: queryParams });
@@ -57,5 +54,9 @@ export class AdminComponent implements OnInit {
 
   get defaultYear() {
     return this.yearService.defaultYear;
+  }
+
+  get loggedIn(): boolean {
+    return this.authStateService.isAuthenticated();
   }
 }
