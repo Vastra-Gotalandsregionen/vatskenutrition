@@ -15,14 +15,15 @@ export class AuthStateService {
       this.jwt = localStorageToken;
     }
 
-    if (this.isTokenExpired()) {
-      this.resetAuth();
-    }
-
   }
 
   isTokenExpired() {
     const token = this.getToken();
+    return token && (token.exp - new Date().getTime() / 1000 < 0);
+  }
+
+  isRefreshTokenExpired() {
+    const token = this.getRefreshToken();
     return token && (token.exp - new Date().getTime() / 1000 < 0);
   }
 
@@ -31,8 +32,13 @@ export class AuthStateService {
     return jwtTokenString ? this.jwtHelper.decodeToken(jwtTokenString) : null;
   }
 
+  getRefreshToken(): any {
+    const jwtTokenString = this.refreshToken;
+    return jwtTokenString ? this.jwtHelper.decodeToken(jwtTokenString) : null;
+  }
+
   isAuthenticated(): boolean {
-    return this.getToken() && !this.isTokenExpired();
+    return this.getRefreshToken() && !this.isRefreshTokenExpired();
   }
 
   get jwt(): string {
@@ -54,8 +60,21 @@ export class AuthStateService {
 
   }
 
+  get refreshToken(): string {
+    return localStorage.getItem('refreshToken');
+  }
+
+  set refreshToken(value: string) {
+    if (value) {
+      localStorage.setItem('refreshToken', value);
+    } else if (this.getRefreshToken()) {
+      debugger;
+    }
+  }
+
   resetAuth() {
     this.jwt = null;
+    this.refreshToken = null;
   }
 
   getLoggedInUserId(): string {
@@ -67,15 +86,5 @@ export class AuthStateService {
     const token = this.getToken();
     return token ? token.displayName : null;
   }
-
-  /*isAdmin() {
-    const token = this.getToken();
-    if (token) {
-      const roles = <string[]>token.roles;
-      return roles.indexOf('ADMIN') > -1;
-    }
-
-    return false;
-  }*/
 
 }

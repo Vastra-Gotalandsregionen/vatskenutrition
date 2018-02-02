@@ -1,21 +1,4 @@
-<div *ngIf="loggedIn" class="version-warning">
-  <div>Visar utgåva
-    <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
-      <option *ngFor="let year of availableYears | async" [ngValue]="year">{{year}}</option>
-    </select>
-
-    <em>
-      <a matTooltip="Gå till Admin för att ändra utgåva" mdTooltipPosition="below" [routerLink]="['/admin']" queryParamsHandling="merge">{{selectedYear}}</a>
-    </em>
-  </div>
-  <div *ngIf="!(selectedYearIsSameAsDefaultYear() | async)">Observera att denna utgåva inte är ordinarie. Denna är endast för granskning.</div>
-
-
-  <span class="right-align" *ngIf="displayName">
-    <span>{{displayName}}</span>
-    <span><button (click)="logout()">Logga ut</button></span>
-  </span>
-</div>
+<app-logged-in-header *ngIf="loggedIn" [selectedYear]="selectedYear" [availableYears]="availableYears | async" [displayName]="displayName"></app-logged-in-header>
 
 <div id="container">
 

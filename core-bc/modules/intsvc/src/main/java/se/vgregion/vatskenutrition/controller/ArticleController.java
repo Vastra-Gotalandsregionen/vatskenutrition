@@ -1,16 +1,19 @@
 package se.vgregion.vatskenutrition.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import se.vgregion.vatskenutrition.model.Article;
 import se.vgregion.vatskenutrition.service.ArticleService;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/article")
@@ -18,6 +21,12 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
+
+    @Value("${articleAdminUrl}")
+    private String articleAdminUrl;
+
+    @Value("${defaultRevision}")
+    private String defaultRevision;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     @ResponseBody
@@ -30,18 +39,28 @@ public class ArticleController {
 
     @RequestMapping(value = "/year/{year}", method = RequestMethod.GET)
     @ResponseBody
-    public Object getArticlesByYear(@PathVariable("year") String year,
-                                    @RequestParam(name = "includeDrafts", required = false) Boolean includeDrafts) {
+    public Object getArticlesByYear(@PathVariable("year") String year) {
 
-        return articleService.findByYear(year, includeDrafts);
+        return articleService.findByYear(year);
     }
 
     @RequestMapping(value = "/year/currentYear", method = RequestMethod.GET)
     @ResponseBody
-    public Object getArticlesByCurrentYear(@PathVariable(name = "includeDrafts", required = false) Boolean includeDrafts) {
-        String currentYear = "2017"; // todo
+    public Object getArticlesByCurrentYear() {
+        String currentYear = defaultRevision; // todo
 
-        return articleService.findByYear(currentYear, includeDrafts);
+        return articleService.findByYear(currentYear);
+    }
+
+    @RequestMapping(value = "/admin/url", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Map<String, String>> getAdminUrl() {
+
+        Map<String, String> map = new HashMap<>();
+
+        map.put("url", articleAdminUrl);
+
+        return ResponseEntity.ok(map);
     }
 
     @RequestMapping(value = "/{articleUuid}", method = RequestMethod.GET)
@@ -54,6 +73,8 @@ public class ArticleController {
         if (article == null) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
+
+        // todo check which revision it belongs too and if other than default require auth
 
         return ResponseEntity.ok(article);
     }

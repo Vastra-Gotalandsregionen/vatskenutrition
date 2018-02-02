@@ -1,5 +1,6 @@
 package se.vgregion.vatskenutrition.service;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +10,6 @@ import se.vgregion.vatskenutrition.config.AppTestConfig;
 import se.vgregion.vatskenutrition.model.Article;
 
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppTestConfig.class)
@@ -26,10 +25,11 @@ public class ArticleServiceIT {
 
     @Test
     public void findByYear() throws Exception {
-        List<Article> byYear = articleService.findByYear("2017", true);
+        List<Article> byYear = articleService.findByYear("2017");
     }
 
     @Test
+    @Ignore
     public void fetchArticlesFromExternalSource() throws Exception {
         List<Article> articles = articleService.fetchArticlesFromExternalSource();
     }

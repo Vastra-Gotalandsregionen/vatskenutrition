@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {Injector, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,7 +23,7 @@ import 'rxjs/add/operator/combineLatest';
 // import 'rxjs/add/operator/switchMap';
 // import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-// import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/filter';
 // import 'rxjs/add/operator/startWith';
 // import 'rxjs/add/operator/concatMap';
 // import 'rxjs/add/operator/take';
@@ -44,10 +44,10 @@ import {StateService} from "./service/state/state.service";
 import {ErrorHandler} from "./service/errorHandler/error-handler";
 import {AuthStateService} from "./service/auth/auth-state.service";
 import {JwtHelper} from "angular2-jwt";
-import {AppMaterialModule} from "./module/material/app-material.module";
 import {ErrorDialogComponent} from "./component/error-dialog/error-dialog.component";
 import {LoginService} from "./service/login/login.service";
 import {AuthGuard} from "./guard/auth.guard";
+import { LoggedInHeaderComponent } from './component/logged-in-header/logged-in-header.component';
 // import 'rxjs/add/operator/retry';
 // import 'rxjs/add/operator/retryWhen';
 // import 'rxjs/add/observable/interval';
@@ -60,7 +60,8 @@ import {AuthGuard} from "./guard/auth.guard";
     AdminComponent,
     BackLinkComponent,
     LoginComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    LoggedInHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +70,7 @@ import {AuthGuard} from "./guard/auth.guard";
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    // AppMaterialModule
   ],
   providers: [
     AuthStateService,
@@ -81,7 +82,7 @@ import {AuthGuard} from "./guard/auth.guard";
     {
       provide: HTTP_INTERCEPTORS,
       useFactory: JwtHttpInterceptorFactory,
-      deps: [AuthStateService, ErrorHandler, StateService],
+      deps: [AuthStateService, ErrorHandler, StateService, Injector],
       multi: true,
     },
     AuthGuard
@@ -96,6 +97,7 @@ export class AppModule { }
 export function JwtHttpInterceptorFactory(
                                authService: AuthStateService,
                                errorHandler: ErrorHandler,
-                               stateService: StateService) {
-  return new JwtHttpInterceptor(authService, errorHandler, stateService);
+                               stateService: StateService,
+                               injector: Injector) {
+  return new JwtHttpInterceptor(authService, errorHandler, stateService, injector);
 }

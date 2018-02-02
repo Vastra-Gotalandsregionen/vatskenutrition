@@ -18,29 +18,3 @@ app-header {
     top: 66px;
   }
 }
-
-.version-warning {
-  box-sizing: border-box;
-  height: 66px;
-  position: absolute;
-  z-index: 2;
-  background-color: #8A1414;
-  color: #ffffff;
-  padding: 8px;
-  width: 100%;
-  text-align: center;
-
-  a {
-    color: #ffffff;
-  }
-
-
-  .right-align {
-    padding-right: 24px;
-    position: absolute;
-    right: 0;
-    top: calc(50% - 12px);
-    height: 24px;
-    line-height: 24px;
-  }
-}

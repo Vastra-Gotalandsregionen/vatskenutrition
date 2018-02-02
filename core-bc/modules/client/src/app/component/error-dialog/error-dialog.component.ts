@@ -1,5 +1,4 @@
-import {Component, Optional} from '@angular/core';
-import {MatDialogRef} from '@angular/material';
+import {Component} from '@angular/core';
 
 @Component({
     styleUrls: ['./error-dialog.component.css'],
@@ -8,10 +7,10 @@ import {MatDialogRef} from '@angular/material';
 export class ErrorDialogComponent {
     err: any;
     showDetails = false;
-    public dialogRef: MatDialogRef<ErrorDialogComponent>;
+    // public dialogRef: MatDialogRef<ErrorDialogComponent>;
 
-    constructor(@Optional() dialogRef: MatDialogRef<ErrorDialogComponent>) {
-        this.dialogRef = dialogRef;
+    constructor(/*@Optional() dialogRef: MatDialogRef<ErrorDialogComponent>*/) {
+        // this.dialogRef = dialogRef;
     }
 
     public toggleDetails(): void {
@@ -19,7 +18,7 @@ export class ErrorDialogComponent {
     }
 
     public close(): void {
-        this.dialogRef.close();
+        // this.dialogRef.close();
     }
 
     public getErrorMessage() {

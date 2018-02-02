@@ -9,7 +9,7 @@ export class AuthGuard implements CanActivate {
               private authStateService: AuthStateService) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (!route.queryParams.selectedYear || this.authStateService.isAuthenticated()) {
+    if (!(route.queryParams.selectedYear || route.routeConfig.path === 'admin') || this.authStateService.isAuthenticated()) {
       // logged in so return true
       return true;
     }

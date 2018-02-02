@@ -16,6 +16,7 @@ import "rxjs/add/observable/of";
 import 'rxjs/add/operator/combineLatest';
 import {HttpClient} from "@angular/common/http";
 import {AuthStateService} from "../../service/auth/auth-state.service";
+import {StateService} from "../../service/state/state.service";
 
 @Component({
   selector: 'app-content',
@@ -33,6 +34,7 @@ export class ContentComponent implements OnInit, OnDestroy {
               private route: ActivatedRoute,
               private _sanitizer: DomSanitizer,
               private yearService: YearService,
+              private stateService: StateService,
               private authStateService: AuthStateService) {
   }
 
@@ -79,7 +81,14 @@ export class ContentComponent implements OnInit, OnDestroy {
       .subscribe(params => {
 
         if (params.article) {
+          const timerSubscription: Subscription = Observable.timer(250) // Delay when progress indicator is shown.
+            .take(1)
+            .subscribe(() => {
+              this.article = null; // Makes view show progress indidator
+            });
+
           this.httpClient.get<Article>('/api/article/' + params.article)
+            .finally(() => timerSubscription.unsubscribe())
             .subscribe(article => this.article = article);
         } else {
           this.article = null;
@@ -135,4 +144,7 @@ export class ContentComponent implements OnInit, OnDestroy {
     });
   }
 
+  get showProgress() {
+    return this.stateService.showProgress;
+  }
 }

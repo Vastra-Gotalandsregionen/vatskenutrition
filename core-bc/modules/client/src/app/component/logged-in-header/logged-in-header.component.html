@@ -1,0 +1,21 @@
+<div class="version-warning">
+  <div>Visar utgåva
+
+    <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
+      <option *ngFor="let year of availableYears" [ngValue]="year">{{year}}</option>
+    </select>
+
+  </div>
+  <div>
+    <span *ngIf="(selectedYearIsSameAsDefaultYear() | async) === false">Observera att denna utgåva inte är ordinarie. Denna är endast för granskning.</span>
+    <em>
+      <a href="{{adminUrl | async}}">Redigera innehåll</a>
+    </em>
+  </div>
+
+
+  <span class="right-align" *ngIf="displayName">
+    <span>{{displayName}}</span>
+    <span><button (click)="logout()">Logga ut</button></span>
+  </span>
+</div>

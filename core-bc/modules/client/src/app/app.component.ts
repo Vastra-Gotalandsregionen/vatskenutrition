@@ -48,18 +48,6 @@ export class AppComponent implements OnInit {
       });
   }
 
-  saveSelectedYear() {
-    let queryParams = {
-      'selectedYear': this.selectedYear
-    };
-
-    this.router.navigate([''], {queryParams: queryParams});
-  }
-
-  selectedYearIsSameAsDefaultYear() {
-    return this.yearService.selectedYearIsSameAsDefaultYear()
-  }
-
   get loggedIn(): boolean {
     return this.authStateService.isAuthenticated();
   }
@@ -70,10 +58,6 @@ export class AppComponent implements OnInit {
 
   get availableYears() {
     return this.yearService.availableYears;
-  }
-
-  logout() {
-    this.authStateService.resetAuth();
   }
 
 }

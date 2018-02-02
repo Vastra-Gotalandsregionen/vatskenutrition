@@ -4,16 +4,16 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
 import se.vgregion.vatskenutrition.model.jwt.AccessJwtToken;
 import se.vgregion.vatskenutrition.model.jwt.JwtToken;
-import se.vgregion.vatskenutrition.model.jwt.RefreshToken;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.UUID;
@@ -32,13 +32,6 @@ public class JwtTokenFactory {
     public JwtTokenFactory() {
     }
 
-    /**
-     * Factory method for issuing new JWT Tokens.
-     * 
-     * @param username
-     * @param roles
-     * @return
-     */
     public AccessJwtToken createAccessJwtToken(ApplicationUser applicationUser) {
         if (StringUtils.isEmpty(applicationUser.getUsername()))
             throw new IllegalArgumentException("Cannot create JWT Token without username");
@@ -49,13 +42,13 @@ public class JwtTokenFactory {
         Claims claims = Jwts.claims().setSubject(applicationUser.getUsername());
         claims.put("scopes", applicationUser.getAuthorities().stream().map(s -> s.toString()).collect(Collectors.toList()));
 
-        LocalDateTime currentTime = LocalDateTime.now();
+        Date now = new Date();
 
         String token = Jwts.builder()
           .setClaims(claims)
           .setIssuer(ISSUER)
-          .setIssuedAt(Date.from(currentTime.atOffset(ZoneOffset.UTC).toInstant()))
-          .setExpiration(Date.from(currentTime.plusMinutes(EXPIRATION_MINUTES).atOffset(ZoneOffset.UTC).toInstant()))
+          .setIssuedAt(now)
+          .setExpiration(Date.from(Instant.now().plus(EXPIRATION_MINUTES, ChronoUnit.MINUTES)))
           .signWith(SignatureAlgorithm.HS512, signingKey)
         .compact();
 

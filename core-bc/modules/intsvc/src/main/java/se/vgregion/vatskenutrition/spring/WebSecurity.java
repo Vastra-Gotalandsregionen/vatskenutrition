@@ -27,7 +27,6 @@ import org.springframework.security.ldap.userdetails.LdapAuthoritiesPopulator;
 import org.springframework.security.ldap.userdetails.LdapAuthority;
 import se.vgregion.vatskenutrition.security.JWTAuthenticationFilter;
 import se.vgregion.vatskenutrition.security.JWTAuthorizationFilter;
-import se.vgregion.vatskenutrition.security.UnauthorizedErrorAuthenticationEntryPoint;
 import se.vgregion.vatskenutrition.service.JwtTokenFactory;
 
 import java.util.ArrayList;
@@ -81,12 +80,15 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
 		auth.authenticationProvider(new AbstractUserDetailsAuthenticationProvider() {
 			@Override
-			protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
+			protected void additionalAuthenticationChecks(UserDetails userDetails,
+														  UsernamePasswordAuthenticationToken authentication)
+					throws AuthenticationException {
 
 			}
 
 			@Override
-			protected UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication) throws AuthenticationException {
+			protected UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication)
+					throws AuthenticationException {
 				if (!username.equals("patbe5")) { // todo Check auth from properties
 					throw new AuthenticationCredentialsNotFoundException("Invalid credentials.");
 				}
@@ -129,7 +131,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	public DefaultSpringSecurityContextSource contextSource() {
 		DefaultSpringSecurityContextSource contextSource = new DefaultSpringSecurityContextSource(ldapUrl);
 
-		contextSource.setBaseEnvironmentProperties(Collections.singletonMap("com.sun.jndi.ldap.connect.timeout", "1000"));
+		contextSource.setBaseEnvironmentProperties(
+				Collections.singletonMap("com.sun.jndi.ldap.connect.timeout", "1000"));
 
 		contextSource.setBase(ldapBase);
 		contextSource.setUserDn(ldapUserDn);

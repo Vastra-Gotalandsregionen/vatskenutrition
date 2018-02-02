@@ -34,7 +34,7 @@ public class ArticleService {
     private ArticleRepository articleRepository;
 
     @Value("${fetchAllArticlesUrl}")
-    private String fetchAllArticlesUrl;// = "http://localhost:9080/api/jsonws/skinny-web.skinny/get-skinny-journal-articles/company-id/10136/group-name/vatskenutrition/ddm-structure-id/1687613/locale/sv_SE/includeDraft/true";
+    private String fetchAllArticlesUrl;
 
     @PostConstruct
     @Scheduled(fixedRate = 60_000)
@@ -52,14 +52,8 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
-    public List<Article> findByYear(String year, Boolean includeDrafts) {
-
-        includeDrafts = Boolean.TRUE.equals(includeDrafts);
-        if (!includeDrafts) {
-            return articleRepository.findArticles(year, 0);
-        } else {
-            return articleRepository.findArticles(year, 0, 2);
-        }
+    public List<Article> findByYear(String year) {
+        return articleRepository.findArticles(year, 0);
     }
 
     public List<String> findAvailableYears() {

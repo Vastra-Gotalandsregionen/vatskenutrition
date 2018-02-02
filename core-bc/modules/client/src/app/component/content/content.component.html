@@ -1,4 +1,4 @@
-<div class="content {{(loggedIn)? 'extra-headdddddder-compensation' : ''}}">
+<div class="content">
   <div class="col-4 scroll-container">
     <div *ngIf="chapters">
       <div *ngFor="let chapter of chapters">
@@ -20,7 +20,8 @@
   </div>
 
   <div class="col-8 scroll-container {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
-    <div *ngIf="article">
+
+    <div *ngIf="article; else progressIndicator">
       <h2>{{article.title}}</h2>
 
       <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
@@ -37,4 +38,8 @@
       </div>
     </div>
   </div>
+
+  <ng-template #progressIndicator>
+    <span *ngIf="showProgress" class="loading-indicator"><i class="icon icon-spinner"></i></span>
+  </ng-template>
 </div>
