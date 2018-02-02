@@ -1,5 +1,9 @@
 <div>
   <form (submit)="login()">
+    <h3>Inloggning</h3>
+    <p class="error-message">
+      {{errorMessage}}
+    </p>
     <div>
       <label>VGR-ID:</label>
       <input [(ngModel)]="username" name="username"/>

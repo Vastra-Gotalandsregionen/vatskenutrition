@@ -32,6 +32,11 @@ export class JwtHttpInterceptor implements HttpInterceptor {
         this.stateService.startShowProgress();
       });
 
+    // Don't intercept login calls
+    if (req.url == '/api/login') {
+      return next.handle(req);
+    }
+
     if (this.authService.isTokenExpired() && req.url !== '/api/auth/token') {
       let http = this.injector.get(HttpClient);
       const refreshToken = this.authService.refreshToken;
@@ -52,7 +57,11 @@ export class JwtHttpInterceptor implements HttpInterceptor {
       }
     } else if (this.authService.isTokenExpired()) {
       // Just send request without access token.
-      return next.handle(req);
+      return next.handle(req)
+        .finally(() => {
+          timerSubscription.unsubscribe();
+          this.stateService.stopShowProgress()
+        });
     } else {
       // Valid access token is present and thus added to request.
       return this.addTokenAndContinueRequest(next, req, timerSubscription);

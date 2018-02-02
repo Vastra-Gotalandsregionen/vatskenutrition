@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
 import se.vgregion.vatskenutrition.model.jwt.JwtToken;
+import se.vgregion.vatskenutrition.model.jwt.JwtUser;
 import se.vgregion.vatskenutrition.service.JwtTokenFactory;
 import se.vgregion.vatskenutrition.spring.WebSecurity;
 
@@ -47,6 +48,7 @@ public class AuthController {
         String jti = body.getId();
 
         List scopes = body.get("scopes", List.class);
+        Map jwtUser = body.get("context", Map.class);
 
         if (!scopes.contains("ROLE_REFRESH_TOKEN")) {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
@@ -57,6 +59,7 @@ public class AuthController {
         ApplicationUser applicationUser = new ApplicationUser();
         applicationUser.setUsername(subject);
         applicationUser.setAuthorities(Collections.emptyList());
+        applicationUser.setDisplayName((String) jwtUser.get("displayName"));
 
         JwtToken accessToken = tokenFactory.createAccessJwtToken(applicationUser);
         JwtToken refreshToken = tokenFactory.createRefreshToken(applicationUser);

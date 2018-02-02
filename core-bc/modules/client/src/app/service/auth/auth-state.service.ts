@@ -84,7 +84,7 @@ export class AuthStateService {
 
   getLoggedInDisplayName(): string {
     const token = this.getToken();
-    return token ? token.displayName : null;
+    return token ? token.context.displayName : null;
   }
 
 }

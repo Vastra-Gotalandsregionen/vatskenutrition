@@ -9,6 +9,7 @@ import org.springframework.util.StringUtils;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
 import se.vgregion.vatskenutrition.model.jwt.AccessJwtToken;
 import se.vgregion.vatskenutrition.model.jwt.JwtToken;
+import se.vgregion.vatskenutrition.model.jwt.JwtUser;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -41,6 +42,9 @@ public class JwtTokenFactory {
 
         Claims claims = Jwts.claims().setSubject(applicationUser.getUsername());
         claims.put("scopes", applicationUser.getAuthorities().stream().map(s -> s.toString()).collect(Collectors.toList()));
+        JwtUser jwtUser = new JwtUser();
+        jwtUser.setDisplayName(applicationUser.getDisplayName());
+        claims.put("context", jwtUser);
 
         Date now = new Date();
 
@@ -64,6 +68,9 @@ public class JwtTokenFactory {
 
         Claims claims = Jwts.claims().setSubject(applicationUser.getUsername());
         claims.put("scopes", Arrays.asList("ROLE_REFRESH_TOKEN"));
+        JwtUser jwtUser = new JwtUser();
+        jwtUser.setDisplayName(applicationUser.getDisplayName());
+        claims.put("context", jwtUser);
 
         String token = Jwts.builder()
           .setClaims(claims)

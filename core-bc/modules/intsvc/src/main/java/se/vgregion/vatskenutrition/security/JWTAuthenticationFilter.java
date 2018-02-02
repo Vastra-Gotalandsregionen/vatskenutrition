@@ -8,13 +8,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.ldap.userdetails.InetOrgPerson;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
 import se.vgregion.vatskenutrition.model.jwt.JwtToken;
 import se.vgregion.vatskenutrition.service.JwtTokenFactory;
 
 import javax.servlet.FilterChain;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -59,6 +59,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         ApplicationUser user = new ApplicationUser();
         user.setUsername(principal.getUsername());
         user.setAuthorities(new ArrayList<>());
+
+        if (principal instanceof InetOrgPerson) {
+            InetOrgPerson ldapUserDetails = (InetOrgPerson) principal;
+            user.setDisplayName(ldapUserDetails.getDisplayName());
+        }
 
         JwtToken accessToken = jwtTokenFactory.createAccessJwtToken(user);
         JwtToken refreshToken = jwtTokenFactory.createRefreshToken(user);

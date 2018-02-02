@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
   }
 
   get displayName() {
-    return this.authStateService.getLoggedInUserId();
+    return this.authStateService.getLoggedInDisplayName();
   }
 
   get availableYears() {

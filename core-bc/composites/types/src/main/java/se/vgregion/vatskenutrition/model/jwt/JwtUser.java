@@ -1,13 +1,12 @@
-package se.vgregion.vatskenutrition.model;
+package se.vgregion.vatskenutrition.model.jwt;
 
 
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.List;
 
-public class ApplicationUser {
+public class JwtUser {
     private String username;
-    private String password;
     private List<GrantedAuthority> authorities;
     private String displayName;
 
@@ -17,14 +16,6 @@ public class ApplicationUser {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public List<GrantedAuthority> getAuthorities() {

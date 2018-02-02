@@ -12,11 +12,14 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
 
+  errorMessage: string;
+
   returnUrl: string;
 
   constructor(private loginService: LoginService,
               private route: ActivatedRoute,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit() {
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -24,12 +27,16 @@ export class LoginComponent implements OnInit {
 
   login() {
     this.loginService.login(this.username, this.password)
-      .subscribe(result => {
-        // login successful so redirect to return url
-        if (result) {
-          this.router.navigateByUrl(this.returnUrl);
-        }
-      });
+      .subscribe(
+        result => {
+          // login successful so redirect to return url
+          if (result) {
+            this.router.navigateByUrl(this.returnUrl);
+          }
+        },
+        error => {
+          this.errorMessage = 'Inloggning misslyckades';
+        });
   }
 
 }
