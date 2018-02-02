@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
@@ -27,7 +28,8 @@ public class JwtTokenFactory {
     private static final int EXPIRATION_MINUTES = 60; // todo Make property
     private static final int REFRESH_TOKEN_EXPIRATION_TIME = 120; // todo Make property
 
-    private final String signingKey = "SECRET";
+    @Value("${jwt.secret}")
+    private String jwtSecret;
 
     @Autowired
     public JwtTokenFactory() {
@@ -53,7 +55,7 @@ public class JwtTokenFactory {
           .setIssuer(ISSUER)
           .setIssuedAt(now)
           .setExpiration(Date.from(Instant.now().plus(EXPIRATION_MINUTES, ChronoUnit.MINUTES)))
-          .signWith(SignatureAlgorithm.HS512, signingKey)
+          .signWith(SignatureAlgorithm.HS512, jwtSecret)
         .compact();
 
         return new AccessJwtToken(token, claims);
@@ -78,7 +80,7 @@ public class JwtTokenFactory {
           .setId(UUID.randomUUID().toString())
           .setIssuedAt(Date.from(currentTime.atOffset(ZoneOffset.UTC).toInstant()))
           .setExpiration(Date.from(currentTime.plusMinutes(REFRESH_TOKEN_EXPIRATION_TIME).atOffset(ZoneOffset.UTC).toInstant()))
-          .signWith(SignatureAlgorithm.HS512, signingKey)
+          .signWith(SignatureAlgorithm.HS512, jwtSecret)
         .compact();
 
         return new AccessJwtToken(token, claims);

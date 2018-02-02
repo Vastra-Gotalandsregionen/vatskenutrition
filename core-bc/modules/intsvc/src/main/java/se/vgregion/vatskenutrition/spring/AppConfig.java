@@ -10,7 +10,10 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import se.vgregion.vatskenutrition.controller.ArticleController;
 import se.vgregion.vatskenutrition.repository.ArticleRepository;
+import se.vgregion.vatskenutrition.service.ArticleService;
+import se.vgregion.vatskenutrition.util.HttpUtil;
 
 import javax.sql.DataSource;
 
@@ -20,7 +23,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableWebMvc
 @EnableScheduling
-@ComponentScan(basePackages = {"se.vgregion.vatskenutrition.controller", "se.vgregion.vatskenutrition.service"})
+@ComponentScan(basePackageClasses = {ArticleController.class, HttpUtil.class, ArticleService.class})
 @PropertySource(value = "file://${user.home}/.app/vatskenutrition/application.properties", ignoreResourceNotFound = false)
 @EnableJpaRepositories(basePackageClasses = {ArticleRepository.class})
 public class AppConfig {

@@ -48,9 +48,11 @@ import {ErrorDialogComponent} from "./component/error-dialog/error-dialog.compon
 import {LoginService} from "./service/login/login.service";
 import {AuthGuard} from "./guard/auth.guard";
 import { LoggedInHeaderComponent } from './component/logged-in-header/logged-in-header.component';
-// import 'rxjs/add/operator/retry';
+import {Router} from "@angular/router";
+import 'rxjs/add/operator/retry';
 // import 'rxjs/add/operator/retryWhen';
 // import 'rxjs/add/observable/interval';
+import 'rxjs/add/observable/empty';
 
 @NgModule({
   declarations: [
@@ -82,7 +84,7 @@ import { LoggedInHeaderComponent } from './component/logged-in-header/logged-in-
     {
       provide: HTTP_INTERCEPTORS,
       useFactory: JwtHttpInterceptorFactory,
-      deps: [AuthStateService, ErrorHandler, StateService, Injector],
+      deps: [AuthStateService, ErrorHandler, StateService, Injector, Router],
       multi: true,
     },
     AuthGuard
@@ -98,6 +100,7 @@ export function JwtHttpInterceptorFactory(
                                authService: AuthStateService,
                                errorHandler: ErrorHandler,
                                stateService: StateService,
-                               injector: Injector) {
-  return new JwtHttpInterceptor(authService, errorHandler, stateService, injector);
+                               injector: Injector,
+                               router: Router) {
+  return new JwtHttpInterceptor(authService, errorHandler, stateService, injector, router);
 }

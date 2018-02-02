@@ -3,6 +3,7 @@ package se.vgregion.vatskenutrition.controller;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import se.vgregion.vatskenutrition.model.ApplicationUser;
 import se.vgregion.vatskenutrition.model.jwt.JwtToken;
-import se.vgregion.vatskenutrition.model.jwt.JwtUser;
 import se.vgregion.vatskenutrition.service.JwtTokenFactory;
 import se.vgregion.vatskenutrition.spring.WebSecurity;
 
@@ -21,14 +21,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static se.vgregion.vatskenutrition.security.JWTAuthorizationFilter.TOKEN_PREFIX;
+import static se.vgregion.vatskenutrition.util.Constants.TOKEN_PREFIX;
 
 @RestController
 @RequestMapping("/auth")
 public class AuthController {
 
-    public static String HEADER_PREFIX = "Bearer "; // todo Make constant somewhere
-    private final String secret = "SECRET"; // todo Make property
+    @Value("${jwt.secret}")
+    private String jwtSecret;
 
     @Autowired
     private JwtTokenFactory tokenFactory;
@@ -38,10 +38,10 @@ public class AuthController {
 
         String header = request.getHeader(WebSecurity.AUTHENTICATION_HEADER_NAME);
 
-        String tokenPayload = header.substring(HEADER_PREFIX.length(), header.length());
+        String tokenPayload = header.substring(TOKEN_PREFIX.length(), header.length());
 
         Claims body = Jwts.parser()
-                .setSigningKey(secret)
+                .setSigningKey(jwtSecret)
                 .parseClaimsJws(tokenPayload.replace(TOKEN_PREFIX, ""))
                 .getBody();
 

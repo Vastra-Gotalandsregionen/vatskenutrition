@@ -46,6 +46,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	@Value("${ldap.password}")
 	private String ldapPassword;
 
+	@Value("${jwt.secret}")
+	private String jwtSecret;
+
 	@Autowired
 	private JwtTokenFactory jwtTokenFactory;
 
@@ -61,7 +64,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 				.and()
 				.addFilter(new JWTAuthenticationFilter(authenticationManager(), jwtTokenFactory))
-				.addFilter(new JWTAuthorizationFilter(authenticationManager()))
+				.addFilter(new JWTAuthorizationFilter(authenticationManager(), jwtSecret))
 				.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 

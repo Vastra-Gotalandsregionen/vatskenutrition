@@ -11,6 +11,6 @@ export class ErrorHandler {
   public notifyError(error: any): void {
     /*const dialogRef: MatDialogRef<ErrorDialogComponent> = this.dialog.open(ErrorDialogComponent);
     dialogRef.componentInstance.err = error;*/
-    alert(error);
+    alert(error.message);
   }
 }

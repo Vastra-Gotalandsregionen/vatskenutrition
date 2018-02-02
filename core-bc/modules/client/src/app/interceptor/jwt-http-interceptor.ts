@@ -7,6 +7,7 @@ import {Subscription} from "rxjs/Subscription";
 import 'rxjs/add/observable/throw';
 import {HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import {TokenResponse} from "../model/token-response";
+import {Router} from "@angular/router";
 
 @Injectable()
 export class JwtHttpInterceptor implements HttpInterceptor {
@@ -18,7 +19,8 @@ export class JwtHttpInterceptor implements HttpInterceptor {
   constructor(authService: AuthStateService,
               errorHandler: ErrorHandler,
               stateService: StateService,
-              private injector: Injector) {
+              private injector: Injector,
+              private router: Router) {
     this.authService = authService;
     this.errorHandler = errorHandler;
     this.stateService = stateService;
@@ -26,16 +28,16 @@ export class JwtHttpInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
+    // Don't intercept login calls
+    if (req.url == '/api/login') {
+      return next.handle(req);
+    }
+
     const timerSubscription: Subscription = Observable.timer(250) // Delay when progress indicator is shown.
       .take(1)
       .subscribe(undefined, undefined, () => {
         this.stateService.startShowProgress();
       });
-
-    // Don't intercept login calls
-    if (req.url == '/api/login') {
-      return next.handle(req);
-    }
 
     if (this.authService.isTokenExpired() && req.url !== '/api/auth/token') {
       let http = this.injector.get(HttpClient);
@@ -54,6 +56,7 @@ export class JwtHttpInterceptor implements HttpInterceptor {
           });
       } else {
         this.authService.resetAuth();
+        return this.addTokenAndContinueRequest(next, req, timerSubscription);
       }
     } else if (this.authService.isTokenExpired()) {
       // Just send request without access token.
@@ -72,8 +75,15 @@ export class JwtHttpInterceptor implements HttpInterceptor {
   addTokenAndContinueRequest(next: HttpHandler, req: HttpRequest<any>, timerSubscription): Observable<HttpEvent<any>> {
     return next.handle(this.addAccessToken(req))
       .catch(error => {
-        this.errorHandler.notifyError(error);
-        return Observable.throw(error);
+        if (error.status === 403) {
+          this.authService.resetAuth();
+          this.errorHandler.notifyError({message: 'Du har loggats ut.'});
+          this.router.navigate(['/']);
+          return Observable.throw(error);
+        } else {
+          this.errorHandler.notifyError(error);
+          return Observable.throw(error);
+        }
       })
       .finally(() => {
         timerSubscription.unsubscribe();

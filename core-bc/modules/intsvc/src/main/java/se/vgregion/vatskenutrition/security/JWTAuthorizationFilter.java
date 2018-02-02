@@ -1,6 +1,7 @@
 package se.vgregion.vatskenutrition.security;
 
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureException;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,13 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
-	public static final String TOKEN_PREFIX = "Bearer "; // todo Make constant somewhere
-	public static final String HEADER_STRING = "Authorization"; // todo Make constant somewhere
-	private String SECRET = "SECRET"; // todo Make property
+import static se.vgregion.vatskenutrition.util.Constants.HEADER_STRING;
+import static se.vgregion.vatskenutrition.util.Constants.TOKEN_PREFIX;
 
-	public JWTAuthorizationFilter(AuthenticationManager authManager) {
+public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
+	private final String jwtSecret;
+
+	public JWTAuthorizationFilter(AuthenticationManager authManager, String jwtSecret) {
 		super(authManager);
+		this.jwtSecret = jwtSecret;
 	}
 
 	@Override
@@ -33,10 +36,15 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 			return;
 		}
 
-		UsernamePasswordAuthenticationToken authentication = getAuthentication(req);
+		try {
+			UsernamePasswordAuthenticationToken authentication = getAuthentication(req);
 
-		SecurityContextHolder.getContext().setAuthentication(authentication);
-		chain.doFilter(req, res);
+			SecurityContextHolder.getContext().setAuthentication(authentication);
+			chain.doFilter(req, res);
+		} catch (SignatureException e) {
+			res.setStatus(HttpServletResponse.SC_FORBIDDEN);
+			chain.doFilter(req, res);
+		}
 	}
 
 	private UsernamePasswordAuthenticationToken getAuthentication(HttpServletRequest request) {
@@ -44,7 +52,7 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
 		if (token != null) {
 			// parse the token.
 			String user = Jwts.parser()
-					.setSigningKey(SECRET)
+					.setSigningKey(jwtSecret)
 					.parseClaimsJws(token.replace(TOKEN_PREFIX, ""))
 					.getBody()
 					.getSubject();

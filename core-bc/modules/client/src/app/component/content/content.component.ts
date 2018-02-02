@@ -65,17 +65,19 @@ export class ContentComponent implements OnInit, OnDestroy {
             return map;
           }, new Map());
         });
-    }).subscribe((chapters: Map<string, Article[]>) => {
-      this.chapters = [];
+    }).retry()
+      .subscribe((chapters: Map<string, Article[]>) => {
+        this.chapters = [];
+        // this.chapterEntries = chapters.entries();
+        let next;
+        let entries = chapters.entries();
 
-      // this.chapterEntries = chapters.entries();
-      let next;
-      let entries = chapters.entries();
-
-      while (!(next = entries.next()).done) {
-        this.chapters.push({heading: next.value[0], articles: next.value[1]});
-      }
-    });
+        while (!(next = entries.next()).done) {
+          this.chapters.push({heading: next.value[0], articles: next.value[1]});
+        }
+      }, error => {
+        console.log('error: ' + error);
+      });
 
     this.route.queryParams
       .subscribe(params => {

@@ -36,6 +36,9 @@ public class ArticleService {
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;
 
+    @Value("${defaultRevision}")
+    private String defaultRevision;
+
     @PostConstruct
     @Scheduled(fixedRate = 60_000)
     public synchronized void update() {
@@ -58,6 +61,10 @@ public class ArticleService {
 
     public List<String> findAvailableYears() {
         return articleRepository.findAvailableYears();
+    }
+
+    public String getDefaultRevision() {
+        return defaultRevision;
     }
 
     public List<Article> fetchArticlesFromExternalSource() {
@@ -96,7 +103,7 @@ public class ArticleService {
             return null;
         }
 
-        List<Field> fields = article.getFields();
+/*        List<Field> fields = article.getFields();
         for (Field field : fields) {
             for (Child child : field.getChildren()) {
                 if (child.getName().equalsIgnoreCase("image") && !StringUtils.isEmpty(child.getValue())) {
@@ -104,7 +111,7 @@ public class ArticleService {
                     child.setValue(child.getValue() + "&token=secret"); // todo make HMAC
                 }
             }
-        }
+        }*/
 
         return article;
     }
