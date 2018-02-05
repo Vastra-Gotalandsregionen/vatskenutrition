@@ -65,7 +65,7 @@ export class ContentComponent implements OnInit, OnDestroy {
             return map;
           }, new Map());
         });
-    }).retry()
+    }).retry(3)
       .subscribe((chapters: Map<string, Article[]>) => {
         this.chapters = [];
         // this.chapterEntries = chapters.entries();

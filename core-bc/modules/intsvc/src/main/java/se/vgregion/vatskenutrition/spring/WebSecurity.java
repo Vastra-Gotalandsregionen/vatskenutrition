@@ -5,13 +5,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ldap.core.DirContextOperations;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.ldap.DefaultSpringSecurityContextSource;
 import org.springframework.security.ldap.authentication.BindAuthenticator;
 import org.springframework.security.ldap.authentication.LdapAuthenticationProvider;
@@ -22,7 +28,9 @@ import org.springframework.security.ldap.userdetails.LdapAuthority;
 import se.vgregion.vatskenutrition.security.JWTAuthenticationFilter;
 import se.vgregion.vatskenutrition.security.JWTAuthorizationFilter;
 import se.vgregion.vatskenutrition.service.JwtTokenFactory;
+import se.vgregion.vatskenutrition.util.PasswordEncoder;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -48,6 +56,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
 	@Value("${jwt.secret}")
 	private String jwtSecret;
+
+	@Value("${default.admin.username}")
+	private String defaultAdminUsername;
+
+	@Value("${default.admin.encoded.password}")
+	private String defaultAdminEncodedPassword;
 
 	@Autowired
 	private JwtTokenFactory jwtTokenFactory;
@@ -76,7 +90,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
 		LdapAuthenticationProvider authenticationProvider = new LdapAuthenticationProvider(authenticator, getLdapAuthoritiesPopulator());
 		authenticationProvider.setUserDetailsContextMapper(new InetOrgPersonContextMapper());
-		auth/*.authenticationProvider(new AbstractUserDetailsAuthenticationProvider() {
+		auth.authenticationProvider(new AbstractUserDetailsAuthenticationProvider() {
 			@Override
 			protected void additionalAuthenticationChecks(UserDetails userDetails,
 														  UsernamePasswordAuthenticationToken authentication)
@@ -87,13 +101,14 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 			@Override
 			protected UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication)
 					throws AuthenticationException {
-				if (username.equals("patbe5")) { // todo Check auth from properties
+				if (username.equals(defaultAdminUsername)
+						&& PasswordEncoder.getInstance().matches((String) authentication.getCredentials(), defaultAdminEncodedPassword)) { // todo Check auth from properties
 					User user = new User(username, (String) authentication.getCredentials(), new ArrayList<>());
 					return user;
 				}
 				throw new AuthenticationCredentialsNotFoundException("Invalid credentials.");
 			}
-		})*/.authenticationProvider(authenticationProvider);
+		}).authenticationProvider(authenticationProvider);
 
 	}
 

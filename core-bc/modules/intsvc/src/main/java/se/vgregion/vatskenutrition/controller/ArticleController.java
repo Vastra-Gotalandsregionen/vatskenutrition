@@ -83,6 +83,7 @@ public class ArticleController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
+        // If fetching other than default revision authenication is required.
         if (!article.getPaths().get(0).equals(articleService.getDefaultRevision())
                 && httpUtil.getUserIdFromRequest(request) == null) {
 

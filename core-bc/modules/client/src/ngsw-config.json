@@ -23,5 +23,16 @@
         "/assets/**"
       ]
     }
+  }],
+  "dataGroups": [{
+    "name": "api-requests",
+    "urls": [
+      "/api"
+    ],
+    "cacheConfig": {
+      "strategy": "freshness",
+      "maxAge": "30d",
+      "maxSize": 100
+    }
   }]
 }

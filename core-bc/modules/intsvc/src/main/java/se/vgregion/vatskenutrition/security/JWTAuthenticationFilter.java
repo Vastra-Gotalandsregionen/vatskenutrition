@@ -63,6 +63,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         if (principal instanceof InetOrgPerson) {
             InetOrgPerson ldapUserDetails = (InetOrgPerson) principal;
             user.setDisplayName(ldapUserDetails.getDisplayName());
+        } else {
+            user.setDisplayName(principal.getUsername());
         }
 
         JwtToken accessToken = jwtTokenFactory.createAccessJwtToken(user);
