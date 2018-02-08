@@ -20,7 +20,7 @@ public class ImageController {
     @Value("${baseUrl}")
     private String baseUrl;
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = "image/png")
     @ResponseBody
     public ResponseEntity<InputStreamResource> getArticlesByYear(@RequestParam("url") String url) throws IOException {
 

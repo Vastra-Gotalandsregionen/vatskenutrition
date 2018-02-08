@@ -46,4 +46,11 @@ export class LoggedInHeaderComponent implements OnInit {
     this.authStateService.resetAuth();
   }
 
+  updateArticles() {
+    this.http.post('/api/article/update', null)
+      .subscribe(() => {
+        this.yearService.reinit();
+      });
+  }
+
 }

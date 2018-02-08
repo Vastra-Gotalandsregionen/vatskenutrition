@@ -40,7 +40,7 @@ public class ArticleService {
     private String defaultRevision;
 
     @PostConstruct
-    @Scheduled(fixedRate = 60_000)
+    @Scheduled(fixedRate = 600_000)
     public synchronized void update() {
         if (fetchAllArticlesUrl == null || "".equals(fetchAllArticlesUrl)) {
             LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
@@ -75,8 +75,8 @@ public class ArticleService {
 
             ResponseEntity<Article[]> skinnyResponse = skinnyTemplate.getForEntity(
                     fetchAllArticlesUrl,
-                    Article[].class, new HashMap<>());
-
+                    Article[].class,
+                    new HashMap<>());
 
             Article[] articleArray = skinnyResponse.getBody();
 

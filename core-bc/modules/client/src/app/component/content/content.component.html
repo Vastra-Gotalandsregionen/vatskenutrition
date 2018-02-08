@@ -1,5 +1,5 @@
 <div class="content">
-  <div class="col-4 scroll-container">
+  <div class="col-4 scroll-container {{article ? 'inactive' : 'active'}}">
     <div *ngIf="chapters">
       <div *ngFor="let chapter of chapters">
 
@@ -19,14 +19,14 @@
     </div>
   </div>
 
-  <div class="col-8 scroll-container {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
+  <div class="col-8 scroll-container  {{article ? 'active' : 'inactive'}} {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
 
     <div *ngIf="article; else progressIndicator">
       <h2>{{article.title}}</h2>
 
       <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
 
-        <a name="{{field.value}}"><h3>{{field.value}}</h3></a>
+        <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
 
         <div [innerHTML]="getRichContent(field)"></div>
 

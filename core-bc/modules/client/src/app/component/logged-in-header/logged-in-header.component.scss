@@ -9,6 +9,10 @@
   width: 100%;
   text-align: center;
 
+  &.current-revision {
+    background: #000;
+  }
+
   a {
     color: #ffffff;
   }

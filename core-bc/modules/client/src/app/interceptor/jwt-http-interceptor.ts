@@ -80,6 +80,10 @@ export class JwtHttpInterceptor implements HttpInterceptor {
           this.errorHandler.notifyError({message: 'Du har loggats ut.'});
           this.router.navigate(['/']);
           return Observable.throw(error);
+        } else if (error.status === 404) {
+          this.errorHandler.notifyError({message: 'Begärd resurs hittades inte. Den kanske har ersatts.'});
+          this.router.navigate(['/'], {queryParams: {article: null}, queryParamsHandling: 'merge'});
+          return Observable.throw(error);
         } else {
           this.errorHandler.notifyError(error);
           return Observable.throw(error);

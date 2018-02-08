@@ -46,6 +46,12 @@ public class ArticleController {
         return articles;
     }
 
+    @RequestMapping(value = "/update", method = RequestMethod.POST)
+    @ResponseBody
+    public void update() {
+        articleService.update();
+    }
+
     @RequestMapping(value = "/year/{year}", method = RequestMethod.GET)
     @ResponseBody
     @PreAuthorize("isAuthenticated()")

@@ -1,3 +1,5 @@
+@import '../../../assets/scss/shared';
+
 /*
 md-grid-tile {
   overflow-y: scroll;
@@ -61,9 +63,19 @@ md-grid-tile {
   }
 }
 
+@include max-medium {
+  .active {
+    width: 100%;
+  }
+
+  .inactive {
+    display: none;
+  }
+}
+
 .article-link {
   display: block;
-  padding: 8px 16px;
+  padding: 10px 16px;
 
   &:hover {
     background-color: #fcffdf;
@@ -71,6 +83,12 @@ md-grid-tile {
 
   &.active {
     background-color: #fcffdf;
+  }
+}
+
+@include max-medium {
+  .article-link {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   }
 }
 
@@ -85,6 +103,10 @@ img {
 
 .blue {
   color: #3c82c8
+}
+
+.anchor-element:hover {
+  cursor: text;
 }
 
 #background{
@@ -146,6 +168,10 @@ a:hover {
 ul {
   margin-top: 4px;
   margin-bottom: 8px;
+}
+
+table td {
+  border-bottom: 1px solid rgba(0,0,0,.12);
 }
 
 .watermark-draft {

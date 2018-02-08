@@ -2,17 +2,17 @@
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 @import 'assets/scss/atoms/body';
+@import 'assets/scss/atoms/font';
+@import 'assets/scss/atoms/heading';
+@import 'assets/scss/atoms/list';
 @import 'assets/scss/atoms/table';
+@import 'assets/scss/utilities/mixins';
+@import 'assets/scss/utilities/variables';
 
 .not-reviewed {
   font-size: 2.5em;
   margin-left: 50px;
   line-height: 2.5em;
-}
-
-em {
-  font-style: normal;
-  font-weight: bold;
 }
 
 .shift-below-header {

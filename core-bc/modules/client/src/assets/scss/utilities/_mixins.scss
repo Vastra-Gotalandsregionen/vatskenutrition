@@ -1,0 +1,11 @@
+@mixin max-small {
+  @media screen and (max-width : $bp-small) {
+    @content;
+  }
+}
+
+@mixin max-medium {
+  @media screen and (max-width : $bp-medium) {
+    @content;
+  }
+}

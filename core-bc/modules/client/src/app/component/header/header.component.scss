@@ -4,7 +4,7 @@
   color: #fff;
   vertical-align: middle;
   line-height: 56px;
-  padding: 0 16px;
+  padding: 0 8px;
 
   a {
     color: #ffffff;
@@ -16,15 +16,28 @@
 
   .title {
     position: absolute;
-    margin: 0 auto;
     text-align: center;
-    margin-left: calc(50% - 77px);
+    margin: 0 auto 0 calc(50% - 84px);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 25px;
 
     a {
       text-decoration: none;
     }
   }
+}
+
+app-back-link {
+
+  transform: translateX(32px);
+  transition: all ease .2s;
+  opacity: 0;
+  position: absolute;
+
+  &.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
 }

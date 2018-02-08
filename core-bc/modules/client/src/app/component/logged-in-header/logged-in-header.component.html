@@ -1,4 +1,4 @@
-<div class="version-warning">
+<div class="version-warning {{(selectedYearIsSameAsDefaultYear() | async) ? 'current-revision' : ''}}">
   <div>Visar utgåva
 
     <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
@@ -7,9 +7,9 @@
 
   </div>
   <div>
-    <span *ngIf="(selectedYearIsSameAsDefaultYear() | async) === false">Observera att denna utgåva inte är ordinarie. Denna är endast för granskning.</span>
+    <em>Du ser det här för att du är inloggad. <a href="" (click)="updateArticles();false">Ladda om artiklar</a>.</em>
     <em>
-      <a href="{{adminUrl | async}}">Redigera innehåll</a>
+      Redigera artiklar i <a href="{{adminUrl | async}}">administrationsgränssnittet</a>.
     </em>
   </div>
 

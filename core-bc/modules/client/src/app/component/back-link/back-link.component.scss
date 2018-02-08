@@ -1,0 +1,29 @@
+@import '../../../assets/scss/shared';
+
+.back-link {
+  .text {
+    float: left;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
+
+a {
+  color: #ffffff;
+  display: block;
+  height: 56px;
+}
+
+i {
+  float: left;
+  font-size: 3em;
+  line-height: 32px;
+  padding: 12px;
+}
+
+
+@include max-small {
+  .text {
+    display: none;
+  }
+}

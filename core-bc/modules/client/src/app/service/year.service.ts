@@ -13,7 +13,17 @@ export class YearService {
   _defaultYear: string;
 
   constructor(private http: HttpClient) {
+    this.init();
+  }
+
+  private init() {
     this._availableYears = this.http.get<string[]>('/api/year/availableYears');
+  }
+
+  public reinit() {
+    this.init();
+    // Push out currentYear to make subscribes redo their stuff.
+    this._selectedYear.take(1).subscribe(year => this._selectedYear.next(year));
   }
 
   get defaultYear() {

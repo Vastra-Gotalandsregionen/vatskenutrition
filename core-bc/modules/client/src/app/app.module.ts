@@ -3,7 +3,7 @@ import {Injector, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 
-import { ServiceWorkerModule } from '@angular/service-worker';
+// import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './component/header/header.component';
@@ -68,7 +68,7 @@ import 'rxjs/add/observable/empty';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    // ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
