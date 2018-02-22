@@ -1,5 +1,5 @@
 <div *ngIf="article">
-  <h2>{{article.title}}</h2>
+  <h2 *ngIf="showTitle">{{article.title}}</h2>
 
   <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
 

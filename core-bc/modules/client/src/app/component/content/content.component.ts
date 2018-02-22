@@ -44,29 +44,34 @@ export class ContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     let selectedYear = this.yearService.selectedYear;
 
-    selectedYear.mergeMap(result => this.httpClient.get<Article>('/api/article/startPageArticle/' + result))
-      .subscribe(article => this.startPageArticle = article);
-
-    this.subscription = selectedYear
-      .mergeMap(result => {
-      let year = result;
-
+    selectedYear.mergeMap(year => {
       if (!year || year === this.yearService.defaultYear) {
         year = 'currentYear';
       }
 
-      return this.httpClient.get<string[]>('/api/article/year/' + year)
-        .map(response => {
-          return response.reduce(function (map, article) {
-            let path = article['path'][1];
-            if (!map.get(path)) {
-              map.set(path, []);// = [];
-            }
-            map.get(path).push(article);
-            return map;
-          }, new Map());
-        });
-    }).retry(3)
+      return this.httpClient.get<Article>('/api/article/startPageArticle/' + year)
+    }).subscribe(article => this.startPageArticle = article);
+
+    this.subscription = selectedYear
+      .mergeMap(result => {
+        let year = result;
+
+        if (!year || year === this.yearService.defaultYear) {
+          year = 'currentYear';
+        }
+
+        return this.httpClient.get<string[]>('/api/article/year/' + year)
+          .map(response => {
+            return response.reduce(function (map, article) {
+              let path = article['path'][1];
+              if (!map.get(path)) {
+                map.set(path, []);// = [];
+              }
+              map.get(path).push(article);
+              return map;
+            }, new Map());
+          });
+      }).retry(3)
       .subscribe((chapters: Map<string, Article[]>) => {
         this.chapters = [];
         // this.chapterEntries = chapters.entries();

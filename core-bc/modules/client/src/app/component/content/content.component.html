@@ -24,7 +24,7 @@
   </div>
 
   <div class="col-8 scroll-container  {{article ? 'active' : 'inactive'}} {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
-    <app-article [article]="article" *ngIf="article; else noArticle"></app-article>
+    <app-article [article]="article" [showTitle]="true" *ngIf="article; else noArticle"></app-article>
   </div>
 
   <ng-template #noArticle>
@@ -34,6 +34,6 @@
       <img src="/assets/image/vgr-w400-c.png">
     </div>
 
-    <app-article [article]="startPageArticle"></app-article>
+    <app-article [article]="startPageArticle" [showTitle]="false"></app-article>
   </ng-template>
 </div>

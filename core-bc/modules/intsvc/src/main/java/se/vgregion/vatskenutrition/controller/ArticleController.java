@@ -57,7 +57,7 @@ public class ArticleController {
 
     @RequestMapping(value = "/year/currentYear", method = RequestMethod.GET)
     public Object getArticlesByCurrentYear() {
-        String currentYear = defaultRevision; // todo
+        String currentYear = defaultRevision;
 
         return articleService.findByYear(currentYear);
     }
@@ -75,6 +75,11 @@ public class ArticleController {
     @RequestMapping(value = "/startPageArticle/{year}", method = RequestMethod.GET)
     public ResponseEntity<Article> getStartPageArticle(@PathVariable("year") String year) {
         return ResponseEntity.ok(articleService.findStartPageArticle(year));
+    }
+
+    @RequestMapping(value = "/startPageArticle/currentYear", method = RequestMethod.GET)
+    public ResponseEntity<Article> getStartPageArticleCurrentYear() {
+        return ResponseEntity.ok(articleService.findStartPageArticle(defaultRevision));
     }
 
     @RequestMapping(value = "/{articleUuid}", method = RequestMethod.GET)

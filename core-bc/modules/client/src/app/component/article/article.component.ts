@@ -13,6 +13,9 @@ export class ArticleComponent implements OnInit {
   @Input('article')
   article: Article;
 
+  @Input('showTitle')
+  showTitle: boolean;
+
   constructor(
     private _sanitizer: DomSanitizer
   ) { }

@@ -23,6 +23,9 @@ public class ArticleServiceIT {
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;
 
+    @Value("${fetchStartPageArticlesUrl}")
+    private String fetchStartPageArticlesUrl;
+
     @Autowired
     private ArticleService articleService;
 
