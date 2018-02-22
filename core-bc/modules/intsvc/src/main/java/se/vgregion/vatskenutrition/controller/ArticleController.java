@@ -5,11 +5,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import se.vgregion.vatskenutrition.model.Article;
 import se.vgregion.vatskenutrition.service.ArticleService;
 import se.vgregion.vatskenutrition.util.HttpUtil;
@@ -18,7 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-@Controller
+@RestController
 @RequestMapping("/article")
 public class ArticleController {
 
@@ -38,7 +37,6 @@ public class ArticleController {
     private HttpServletRequest request;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    @ResponseBody
     public Object getArticles() {
 
         Object articles = articleService.findAllArticles();
@@ -47,20 +45,17 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    @ResponseBody
     public void update() {
         articleService.update();
     }
 
     @RequestMapping(value = "/year/{year}", method = RequestMethod.GET)
-    @ResponseBody
     @PreAuthorize("isAuthenticated()")
     public Object getArticlesByYear(@PathVariable("year") String year) {
         return articleService.findByYear(year);
     }
 
     @RequestMapping(value = "/year/currentYear", method = RequestMethod.GET)
-    @ResponseBody
     public Object getArticlesByCurrentYear() {
         String currentYear = defaultRevision; // todo
 
@@ -68,7 +63,6 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/admin/url", method = RequestMethod.GET)
-    @ResponseBody
     public ResponseEntity<Map<String, String>> getAdminUrl() {
 
         Map<String, String> map = new HashMap<>();
@@ -78,8 +72,12 @@ public class ArticleController {
         return ResponseEntity.ok(map);
     }
 
+    @RequestMapping(value = "/startPageArticle/{year}", method = RequestMethod.GET)
+    public ResponseEntity<Article> getStartPageArticle(@PathVariable("year") String year) {
+        return ResponseEntity.ok(articleService.findStartPageArticle(year));
+    }
+
     @RequestMapping(value = "/{articleUuid}", method = RequestMethod.GET)
-    @ResponseBody
     public ResponseEntity<Article> getArticleByUuid(@PathVariable("articleUuid") String articleUuid) {
 
 

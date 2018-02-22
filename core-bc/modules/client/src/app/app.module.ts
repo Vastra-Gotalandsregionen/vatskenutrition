@@ -53,6 +53,7 @@ import 'rxjs/add/operator/retry';
 // import 'rxjs/add/operator/retryWhen';
 // import 'rxjs/add/observable/interval';
 import 'rxjs/add/observable/empty';
+import { ArticleComponent } from './component/article/article.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import 'rxjs/add/observable/empty';
     BackLinkComponent,
     LoginComponent,
     ErrorDialogComponent,
-    LoggedInHeaderComponent
+    LoggedInHeaderComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule,

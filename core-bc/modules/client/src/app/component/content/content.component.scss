@@ -24,6 +24,7 @@ md-grid-tile {
   box-sizing: border-box;
   float: left;
   height: 100%;
+  position: relative;
 }
 
 .scroll-container {
@@ -182,7 +183,19 @@ table td {
 .loading-indicator {
   display: block;
   text-align: center;
-  margin-top: calc(50vh - 50px);
+  top: calc(50% - 36px);
+  position: absolute;
+  left: calc(50% - 33px);
+}
+
+.logo {
+  text-align: center;
+  //margin-top: 80px;
+  max-width: 100%;
+
+  &.only-desktop {
+    margin-top: 24px;
+  }
 }
 
 .icon.icon-spinner {

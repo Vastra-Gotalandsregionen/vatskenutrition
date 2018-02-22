@@ -2,6 +2,7 @@
   <div>Visar utgåva
 
     <select [(ngModel)]="selectedYear" (change)="saveSelectedYear()">
+      <option [ngValue]="''">Välj...</option>
       <option *ngFor="let year of availableYears" [ngValue]="year">{{year}}</option>
     </select>
 

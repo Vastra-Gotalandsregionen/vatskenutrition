@@ -101,10 +101,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 			@Override
 			protected UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication)
 					throws AuthenticationException {
+				String passwordInput = (String) authentication.getCredentials();
+
 				if (username.equals(defaultAdminUsername)
-						&& PasswordEncoder.getInstance().matches((String) authentication.getCredentials(), defaultAdminEncodedPassword)) { // todo Check auth from properties
-					User user = new User(username, (String) authentication.getCredentials(), new ArrayList<>());
-					return user;
+						&& PasswordEncoder.getInstance().matches(passwordInput, defaultAdminEncodedPassword)) {
+
+					return new User(username, (String) authentication.getCredentials(), new ArrayList<>());
 				}
 				throw new AuthenticationCredentialsNotFoundException("Invalid credentials.");
 			}

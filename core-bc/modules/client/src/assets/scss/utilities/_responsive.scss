@@ -1,0 +1,13 @@
+@include max-medium {
+  .only-desktop {
+    display: none;
+  }
+
+  .logo.only-mobile {
+    display: block;
+  }
+}
+
+.only-mobile {
+  display: none;
+}

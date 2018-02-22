@@ -10,7 +10,6 @@ import "rxjs/add/operator/takeLast";
 import "rxjs/add/operator/publishLast";
 import "rxjs/add/operator/take";
 import {Subscription} from "rxjs/Subscription";
-import {DomSanitizer} from "@angular/platform-browser";
 import {Observable} from "rxjs/Observable";
 import "rxjs/add/observable/of";
 import 'rxjs/add/operator/combineLatest';
@@ -28,11 +27,11 @@ export class ContentComponent implements OnInit, OnDestroy {
 
   chapters: Chapter[];
   article: Article;
+  startPageArticle: Article;
   selectedYear: Observable<string>;
 
   constructor(private httpClient: HttpClient,
               private route: ActivatedRoute,
-              private _sanitizer: DomSanitizer,
               private yearService: YearService,
               private stateService: StateService,
               private authStateService: AuthStateService) {
@@ -45,9 +44,11 @@ export class ContentComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     let selectedYear = this.yearService.selectedYear;
 
-    selectedYear.subscribe(a => console.log(a));
+    selectedYear.mergeMap(result => this.httpClient.get<Article>('/api/article/startPageArticle/' + result))
+      .subscribe(article => this.startPageArticle = article);
 
-    this.subscription = selectedYear.mergeMap(result => {
+    this.subscription = selectedYear
+      .mergeMap(result => {
       let year = result;
 
       if (!year || year === this.yearService.defaultYear) {
@@ -102,28 +103,6 @@ export class ContentComponent implements OnInit, OnDestroy {
 
   get loggedIn() {
     return this.authStateService.isAuthenticated();
-  }
-
-  getRichContent(field: Field) {
-    return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, 'rich_content'));
-  }
-
-  getImage(field: Field): string {
-    return this.getChildValue(field, 'image');
-  }
-
-  getStyleOption(field: Field) {
-    return this.getChildValue(field, "style-option");
-  }
-
-  private getChildValue(field: Field, fieldName: string) {
-    let result = null;
-    field.children.forEach(child => {
-      if (child.name === fieldName) {
-        result = child.value;
-      }
-    });
-    return result;
   }
 
   scrollToSubChapter(subChapter: string) {

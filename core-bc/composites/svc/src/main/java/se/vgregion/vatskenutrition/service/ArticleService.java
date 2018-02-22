@@ -36,8 +36,13 @@ public class ArticleService {
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;
 
+    @Value("${fetchStartPageArticlesUrl}")
+    private String fetchStartPageArticlesUrl;
+
     @Value("${defaultRevision}")
     private String defaultRevision;
+
+    private List<Article> startPageArticles;
 
     @PostConstruct
     @Scheduled(fixedRate = 600_000)
@@ -46,7 +51,10 @@ public class ArticleService {
             LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
             return;
         }
-        List<Article> articles = fetchArticlesFromExternalSource();
+
+        List<Article> articles = fetchArticlesFromExternalSource(fetchAllArticlesUrl);
+        startPageArticles = fetchArticlesFromExternalSource(fetchStartPageArticlesUrl);
+
         articleRepository.deleteAll();
         articleRepository.save(articles);
     }
@@ -67,14 +75,21 @@ public class ArticleService {
         return defaultRevision;
     }
 
-    public List<Article> fetchArticlesFromExternalSource() {
+    public Article findStartPageArticle(String year) {
+        return startPageArticles.stream()
+                .filter(article -> article.getPaths().get(0).equals(year))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public List<Article> fetchArticlesFromExternalSource(String url) {
 
         try {
 
             RestTemplate skinnyTemplate = new RestTemplate();
 
             ResponseEntity<Article[]> skinnyResponse = skinnyTemplate.getForEntity(
-                    fetchAllArticlesUrl,
+                    url,
                     Article[].class,
                     new HashMap<>());
 
@@ -102,16 +117,6 @@ public class ArticleService {
         if (article == null) {
             return null;
         }
-
-/*        List<Field> fields = article.getFields();
-        for (Field field : fields) {
-            for (Child child : field.getChildren()) {
-                if (child.getName().equalsIgnoreCase("image") && !StringUtils.isEmpty(child.getValue())) {
-                    // todo Is this verified in the coming image request? Does it need to?
-                    child.setValue(child.getValue() + "&token=secret"); // todo make HMAC
-                }
-            }
-        }*/
 
         return article;
     }

@@ -1,5 +1,9 @@
 <div class="content">
   <div class="col-4 scroll-container {{article ? 'inactive' : 'active'}}">
+    <div class="logo only-mobile">
+      <img src="/assets/image/vgr-w400-c.png">
+    </div>
+
     <div *ngIf="chapters">
       <div *ngFor="let chapter of chapters">
 
@@ -20,26 +24,16 @@
   </div>
 
   <div class="col-8 scroll-container  {{article ? 'active' : 'inactive'}} {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
-
-    <div *ngIf="article; else progressIndicator">
-      <h2>{{article.title}}</h2>
-
-      <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
-
-        <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
-
-        <div [innerHTML]="getRichContent(field)"></div>
-
-        <div *ngIf="getImage(field)">
-          <p>
-            <img src="/api/image?url={{getImage(field)}}"/>
-          </p>
-        </div>
-      </div>
-    </div>
+    <app-article [article]="article" *ngIf="article; else noArticle"></app-article>
   </div>
 
-  <ng-template #progressIndicator>
+  <ng-template #noArticle>
     <span *ngIf="showProgress" class="loading-indicator"><i class="icon icon-spinner"></i></span>
+
+    <div class="logo only-desktop">
+      <img src="/assets/image/vgr-w400-c.png">
+    </div>
+
+    <app-article [article]="startPageArticle"></app-article>
   </ng-template>
 </div>

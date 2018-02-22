@@ -6,6 +6,7 @@ import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import se.vgregion.vatskenutrition.config.AppITConfig;
@@ -18,6 +19,9 @@ import java.util.List;
 public class ArticleServiceIT {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ArticleServiceIT.class);
+
+    @Value("${fetchAllArticlesUrl}")
+    private String fetchAllArticlesUrl;
 
     @Autowired
     private ArticleService articleService;
@@ -35,7 +39,7 @@ public class ArticleServiceIT {
     @Test
     @Ignore
     public void fetchArticlesFromExternalSource() throws Exception {
-        List<Article> articles = articleService.fetchArticlesFromExternalSource();
+        List<Article> articles = articleService.fetchArticlesFromExternalSource(fetchAllArticlesUrl);
 
         LOGGER.info("Articles size: " + articles.size());
 

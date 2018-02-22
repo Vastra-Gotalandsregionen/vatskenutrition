@@ -1,0 +1,16 @@
+<div *ngIf="article">
+  <h2>{{article.title}}</h2>
+
+  <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
+
+    <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
+
+    <div [innerHTML]="getRichContent(field)"></div>
+
+    <div *ngIf="getImage(field)">
+      <p>
+        <img src="/api/image?url={{getImage(field)}}"/>
+      </p>
+    </div>
+  </div>
+</div>
