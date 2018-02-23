@@ -35,6 +35,10 @@ export class ArticleComponent implements OnInit {
     return this.getChildValue(field, "style-option");
   }
 
+  filterField(fieldName: string, fields: Field[]) {
+    return fields.filter(field => field.name === fieldName);
+  }
+
   private getChildValue(field: Field, fieldName: string) {
     let result = null;
     field.children.forEach(child => {

@@ -60,7 +60,7 @@ export class ContentComponent implements OnInit, OnDestroy {
           year = 'currentYear';
         }
 
-        return this.httpClient.get<string[]>('/api/article/year/' + year)
+        return this.httpClient.get<Article[]>('/api/article/year/' + year)
           .map(response => {
             return response.reduce(function (map, article) {
               let path = article['path'][1];
@@ -79,8 +79,13 @@ export class ContentComponent implements OnInit, OnDestroy {
         let entries = chapters.entries();
 
         while (!(next = entries.next()).done) {
-          this.chapters.push({heading: next.value[0], articles: next.value[1]});
+          let articles = <Article[]>next.value[1];
+          articles.sort((a, b) => this.sort(a, b));
+
+          this.chapters.push({heading: next.value[0], articles: articles});
         }
+
+        this.chapters.sort(((a, b) => a.heading.localeCompare(b.heading)));
       }, error => {
         console.log('error: ' + error);
       });
@@ -104,6 +109,27 @@ export class ContentComponent implements OnInit, OnDestroy {
       });
 
     this.selectedYear = this.yearService.selectedYear;
+  }
+
+  private sort(a: Article, b: Article): number {
+    let aSortNumber = this.getSortNumber(a);
+    let bSortNumber = this.getSortNumber(b);
+    if (aSortNumber < bSortNumber) {
+      return -1;
+    } else if (aSortNumber > bSortNumber) {
+      return 1;
+    } else {
+      return a.title.localeCompare(b.title);
+    }
+  }
+
+  private getSortNumber(article: Article): number {
+    let sortFields = this.filterField('sort-number', article.fields);
+    if (sortFields.length === 1) {
+      return Number.parseInt(sortFields[0].value);
+    } else {
+      return 999;
+    }
   }
 
   get loggedIn() {
@@ -132,5 +158,9 @@ export class ContentComponent implements OnInit, OnDestroy {
 
   get showProgress() {
     return this.stateService.showProgress;
+  }
+
+  filterField(fieldName: string, fields: Field[]): Field[] {
+    return fields.filter(field => field.name === fieldName);
   }
 }

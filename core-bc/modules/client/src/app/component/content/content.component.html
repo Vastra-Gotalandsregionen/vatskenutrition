@@ -13,7 +13,7 @@
           <a class="article-link" routerLink="/" [queryParams]="{article: article.uuid}" queryParamsHandling="merge" routerLinkActive="active" (click)="scrollToTop()">{{article.title}} {{article.status === 2 ? '(Utkast)' : ''}}</a>
           <ul class="sub-chapter-list">
             <!--<li *ngFor="let field of article.fields" [ngStyle]="{'display': 'none'}">{{field.value}}</li>-->
-            <li *ngFor="let field of article.fields" [ngStyle]="(field.value && field.value.length > 0) ? {} : {'display': 'none'}">
+            <li *ngFor="let field of filterField('Rubrik1', article.fields)" [ngStyle]="(field.value && field.value.length > 0) ? {} : {'display': 'none'}">
               <a class="sub-chapter-link" (click)="scrollToSubChapter(field.value)">{{field.value}}</a>
             </li>
           </ul>

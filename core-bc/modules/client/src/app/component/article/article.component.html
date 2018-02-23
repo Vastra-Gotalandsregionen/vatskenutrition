@@ -1,7 +1,7 @@
 <div *ngIf="article">
   <h2 *ngIf="showTitle">{{article.title}}</h2>
 
-  <div class="{{getStyleOption(field)}}" *ngFor="let field of article.fields">
+  <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1', article.fields)">
 
     <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
 
