@@ -79,6 +79,7 @@ export class ContentComponent implements OnInit, OnDestroy {
         let entries = chapters.entries();
 
         while (!(next = entries.next()).done) {
+          // next: {value: [chapterName: string, articles: Article[]], done: boolean},
           let articles = <Article[]>next.value[1];
           articles.sort((a, b) => this.sort(a, b));
 

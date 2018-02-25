@@ -47,16 +47,20 @@ public class ArticleService {
     @PostConstruct
     @Scheduled(fixedRate = 600_000)
     public synchronized void update() {
-        if (fetchAllArticlesUrl == null || "".equals(fetchAllArticlesUrl)) {
-            LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
-            return;
+        try {
+            if (fetchAllArticlesUrl == null || "".equals(fetchAllArticlesUrl)) {
+                LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
+                return;
+            }
+
+            List<Article> articles = fetchArticlesFromExternalSource(fetchAllArticlesUrl);
+            startPageArticles = fetchArticlesFromExternalSource(fetchStartPageArticlesUrl);
+
+            articleRepository.deleteAll();
+            articleRepository.save(articles);
+        } catch (Exception e) {
+            LOGGER.error(e.getMessage(), e);
         }
-
-        List<Article> articles = fetchArticlesFromExternalSource(fetchAllArticlesUrl);
-        startPageArticles = fetchArticlesFromExternalSource(fetchStartPageArticlesUrl);
-
-        articleRepository.deleteAll();
-        articleRepository.save(articles);
     }
 
     public List<Article> findAllArticles() {

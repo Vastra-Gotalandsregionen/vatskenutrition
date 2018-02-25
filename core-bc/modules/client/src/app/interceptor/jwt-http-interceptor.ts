@@ -28,6 +28,8 @@ export class JwtHttpInterceptor implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
+    req = req.clone({setHeaders: {'Content-Type': '*/*; charset=utf-8'}});
+
     // Don't intercept login calls
     if (req.url == '/api/login') {
       return next.handle(req);
