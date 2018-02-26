@@ -1,0 +1,2550 @@
+[
+  {
+    "articleId": "1688301",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>asljdfhakjshdf</p> <p>&nbsp;</p> <p>asldöfasdfasdfasdf</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "En ny rubrik"
+      }
+    ],
+    "path": [
+      "2018",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Rehydrering",
+    "uuid": "257c697e-8d6a-436e-a279-7434c5157041",
+    "version": 1.3
+  },
+  {
+    "articleId": "1690206",
+    "fields": [
+      {
+        "children": [],
+        "name": "sort-number",
+        "value": "2"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Fortsatt vätsketerapi efter initial rehydrering.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Isoton vätska.</p> <p>• Låg glukostillförsel (ca 1-2g/kg/dygn).</p> <p>• Vätsketillförseln skall vara större än basala behovet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Glukos 25 mg/ml buffrad</strong> eller <strong>Rehydrex med glukos&nbsp;</strong><strong>25 mg/ml</strong> under första dygnet.&nbsp;</p> <p>• <strong>Glukos 50 mg/ml med Na 40 + K 20</strong> efter första dygnet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• 2000-4000 ml/dygn (35-45 ml/kg/dygn).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>Fysiologiskt balanserade lösningar för initial rehydrering och vätskeunderhåll:</strong></p> <p>• Glukos 25 mg/ml buffrad.</p> <p>• Rehydrex med glukos 25 mg/ml.&nbsp;</p> <p><strong>Dessa två lösningar är identiska!</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling efter rehydrering",
+    "uuid": "97de181a-ef2c-4e8d-a928-3f403c9c5144",
+    "version": 1.5
+  },
+  {
+    "articleId": "1692904",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<em><strong>asdfasdf</strong></em>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "fads"
+      }
+    ],
+    "path": [
+      "Version3"
+    ],
+    "status": 0,
+    "title": "Test",
+    "uuid": "45e9fbb6-6907-481f-8972-fb7d89de6180",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694501",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "fdsaasdf"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "asdf"
+      }
+    ],
+    "path": [
+      "2018",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "TEST",
+    "uuid": "d1b98a64-8039-4528-8615-82b93e97d896",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694513",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "asdf"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "test2"
+      }
+    ],
+    "path": [
+      "2018",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "test2345",
+    "uuid": "4b774ef1-d726-432c-9ea6-bc366129c87b",
+    "version": 1.3
+  },
+  {
+    "articleId": "1694717",
+    "fields": [
+      {
+        "children": [],
+        "name": "sort-number",
+        "value": "0"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Undernäring är vanligt vid sjukdom och leder till ökad sjuklighet, nedsatt funktion och livskvalitet, förlängd vårdtid samt ökad risk för död. Tillståndet karaktäriseras av brist på energi, protein och andra näringsämnen vilket orsakar mätbara ogynnsamma effekter på kroppens struktur (form, storlek och sammansättning), funktion och kliniskt förlopp.&nbsp;</p> <p>Sjukdomsrelaterad undernäring utvecklas genom två parallella processer, se figur nedan. Sjukdom ger ofta inflammation som leder till katabolism, vilket innebär att mekanismerna för anpassning till brist på energi och näring försämras. Samtidigt medför aptitlöshet lägre intag och negativ energibalans. Hur lång tid det tar att utveckla undernäring varierar bland annat beroende på nutritionsstatus före sjukdom, näringsintag samt typ och grad av sjukdom.&nbsp;</p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1695821&t=1519375877227"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikationer"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">För effektiv och säker nutritionsbehandling krävs ett strukturerat omhändertagande enligt den s k nutritionsvårdsprocessen:&nbsp;</span></p> <p><strong><span style=\"font-size:12.0pt;\">Screening </span></strong><span style=\"font-size:12.0pt;\">p <strong>Utredning </strong>p <strong>Behandling </strong>p&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">p <strong>Utvärdering </strong>p <strong>Dokumentation </strong></span><span style=\"font-size:12.0pt;\">och </span><strong><span style=\"font-size:12.0pt;\">kommunikation</span></strong></p> <p><strong><span style=\"font-size:16.0pt;\">Screening för att identifiera risk för undernäring</span></strong></p> <p><span style=\"font-size:12.0pt;\">Det är viktigt att på ett så tidigt stadium som möjligt fånga upp patienter som har eller har risk för att utveckla undernäring. Det finns ett flertal screeninginstrument som kombinerar olika nutritionsrelaterade variabler.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ofrivillig viktförlust</span></strong><span style=\"font-size:12.0pt;\">, oavsett tidsförlopp och omfattning.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">Ofrivillig viktminskning på &gt;5% under en månad eller&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">&gt;10% under ett halvår beräknat på ursprungsvikten,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">utgör ett tydligt tecken på negativ energibalans och&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">försämrat nutritionstillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätsvårigheter </span></strong><span style=\"font-size:12.0pt;\">t ex aptitlöshet, tugg- och sväljnings-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">problem, orkeslöshet och motoriska funktions-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">nedsättningar.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Undervikt</span></strong><span style=\"font-size:12.0pt;\">, vilket motsvarar Body Mass Index (BMI) &lt; 20&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">om &lt; 70 år eller &lt; 22 om &gt; 70 år. Enbart ett lågt BMI utan&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">viktsförlust och ätsvårigheter behöver inte betyda risk för&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">undernäring.</span></p> <p><span style=\"font-size:12.0pt;\">BMI = vikt (kg)</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">längd (m)<sup>2</sup></span></p> <p><span style=\"font-size:12.0pt;\">Risk för undernäring föreligger om patienten har en eller flera av riskfaktorerna.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSVÅRDSPROCESSEN"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">Vid identifierad risk bör patienten utredas för fastställande av bakgrund, art och grad av det aktuella nutritionsproblemet samt för ställningstagande till adekvata åtgärder.</span></p> <p><span style=\"font-size:12.0pt;\">Utredningen omfattar för individen relevanta faktorer som:</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bakomliggande sjukdom</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• Nyligen </span><strong><span style=\"font-size:12.0pt;\">genomförd eller pågående behandling </span></strong><span style=\"font-size:12.0pt;\">eller </span><strong><span style=\"font-size:12.0pt;\">medicinering&nbsp;</span></strong></p> <p><span style=\"font-size:12.0pt;\">som kan orsaka t.ex illamående, muntorrhet, förstoppning.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bristande aptit</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätrelaterade symptom </span></strong><span style=\"font-size:12.0pt;\">som t.ex. illamående, gasbesvär, diarré,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">magsmärta.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Funktionella svårigheter </span></strong><span style=\"font-size:12.0pt;\">att äta, t.ex. tugg- och sväljningssvårig-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">heter, motoriska handikapp, synhandikapp.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ökat energibehov </span></strong><span style=\"font-size:12.0pt;\">t.ex. vandrande beteende vid demens,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">förhöjd muskeltonus vid Parkinson eller ökat andningsarbete vid&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">svår KOL.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Kulturella, etniska och sociala faktorer </span></strong><span style=\"font-size:12.0pt;\">av betydelse för</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">matintaget, t ex. sorg, byte av boende.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Trötthet eller nedsatt motivation </span></strong><span style=\"font-size:12.0pt;\">på grund av t.ex. oro,</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">ångest, depression.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Bedömning av energibehov</span></strong></p> <p><span style=\"font-size:12.0pt;\">Beräkna patientens energibehov enligt nedanstående tabell:&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">kcal/kg/dygn</span></p> <p><span style=\"font-size:12.0pt;\">Basalmetabolism (BMR) 20</span></p> <p><span style=\"font-size:12.0pt;\">Sängbunden, BMR + 25% 25</span></p> <p><span style=\"font-size:12.0pt;\">Ej sängbunden, BMR + 50% 30</span></p> <p><span style=\"font-size:12.0pt;\">Förhöjt behov*, BMR + 75–100% 35–40</span></p> <p><span style=\"font-size:12.0pt;\">* Högre energitillförsel kan vara motiverat vid vissa tillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">Ovanstående värden korrigeras erfarenhetsmässigt om patienten är:</span></p> <p><span style=\"font-size:12.0pt;\">Mager + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">18-30 år + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">&gt;70 år - 10 %</span></p> <p><span style=\"font-size:12.0pt;\">För varje grads temperaturstegring + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">Kritiskt sjuk - 10–25 %</span></p> <p><span style=\"font-size:12.0pt;\">Vid övervikt (BMI &gt; 25) kan kroppsvikten motsvarande BMI 25 användas, med tillägg av 25 % av den överskjutande vikten.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Behandling</span></strong></p> <p><span style=\"font-size:12.0pt;\">En vårdplan med uppgifter om nutritionsdiagnos, ordinerad behandling, mål för behandling samt plan för uppföljning och utvärdering bör upprättas i samråd med patient och eventuellt närstående.</span></p> <p><span style=\"font-size:12.0pt;\">Med nutritionsbehandling avses tillförsel av energi och näringsämnen i syfte att tillgodose behoven på ett för omständigheterna optimalt sätt. Nutritionsterapi utgör ett samlingsbegrepp för de olika terapiformer som står till buds för nutritionsbehandling:</span></p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1695824&t=1519375877433"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UTREDNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-family:times,serif;\">Grunden för behandling är ofta oralt intag av mat. För hjälp med val av nutritionsterapi tillfråga dietist.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Utvärdering&nbsp;</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Behandlingen ska bedömas, dokumenteras och utvärderas under behandlingstiden. Vikt bör följas kontinuerligt, minst 1 gång/vecka.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Mat- och vätskeregistrering är ett sätt att värdera patientens energi- och vätskeintag. Registrering bör ske under 3-4 dagar för att utjämna dag-till-dag variationen. Allt patienten intar ska registreras, inklusive eventuell artificiell nutrition. Energi- och vätskeintaget ställs i relation till skattat behov av energi och näringsämnen samt viktutveckling.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Dokumentation och kommunikation</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Samtliga utredande och behandlande insatser ska journalföras. Information om nutritionstillstånd, behov, aktuell nutritionsordination och mål med behandlingen ska överrapporteras i samband med byte av vårdgivare.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Patientens värderingar, rätt till självbestämmande och behov av delaktighet ska respekteras i all nutritionsbehandling.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsbehandling",
+    "uuid": "b2180585-e9c7-48c6-be78-ff5a94f04971",
+    "version": 1.1
+  },
+  {
+    "articleId": "1694724",
+    "fields": [
+      {
+        "children": [],
+        "name": "sort-number",
+        "value": "1"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Innan PN påbörjas ska patienten vara cirkulatoriskt stabil, vätske- och elektrolytbalansen ska vara korrigerad.&nbsp;</p> <p>• Om patienten tillgodoser 50 % av sitt energiintag oralt/EN, kan man oftast starta utan upptrappning.</p> <p>• Starta med 15-20 kcal/kg/d och trappa upp tillförseln under 3-5 dygn.&nbsp;</p> <p>• Vid svår undernäring (BMI≤16 kg/kvm) och/eller kritiskt sjuk patient bör man starta ännu långsammare, se Refeeding syndrom (kapitel 14, sid 52).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UPPTRAPPNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Det går inte att rekommendera någon generell infusionshastighet. Hänsyn måste bland annat tas till vätskans koncentration och typ av infart. Se vidare i Fass.</p> <p>• All PN bör ges långsamt och jämnt över dygnet, helst under 20-24 tim.&nbsp;</p> <p>• En förutsättning för att infusionen skall kunna ges på mer än 12 timmar är att alla tillsatser sker i samband med att infusionen iordningsställs i beredningsrummet, och att man inte gör några ytterligare tillsatser till påsen under infusionstiden (se kapitel 14, sid 49).</p> <p>• Vid långtidnutrition i hemmet kan man göra uppehåll viss tid på dagen för att underlätta olika aktiviteter.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET OCH TID"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Vikt och viktutveckling. Kroppsvikten bör följas 2-4 ggr/vecka. Snabba förändringar beror ofta på förändrad vätskebalans i kroppen.&nbsp;</p> <p>• BMI&nbsp;</p> <p>• Bedömning av energi- och näringsbehovet&nbsp;</p> <p>• Beräkning av det totala energi- och näringsintaget (oralt-, EN och PN).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSUPPFÖLJNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>• Allmäntillstånd&nbsp;</strong></p> <p><strong>• Funktionsnivå&nbsp;</strong></p> <p><strong>• Munhälsa</strong></p> <p><strong>• Temperatur</strong></p> <p><strong>• Vätskebalans</strong></p> <p><strong>• Hjärtfunktion</strong></p> <p><strong>• Lungfunktion</strong></p> <p><strong>• Laboratorieanalys</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KLINISKA UNDERSÖKNINGAR"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>För att undvika komplikationer och felbehandling är det viktigt att regelbundet följa relevanta laboratorieproverm, t.ex. P-Na, P-K, P-Ca, P-Mg, P-Fosfat, B-Glukos, P-Kreatinin, P-Urea, P-Bilirubin, P-ALAT och P-ASAT, P-Albumin och P-triglycerider.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "LABORATORIEPROVER"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Läkaren har det medicinska ansvaret och därmed huvudansvaret för att patienten får en adekvat näringstillförsel. Läkaren ordinerar och utvärderar EN och PN, ofta på rekommendation av dietist.</p> <p>• Dietisten kan bedöma patientens nutritionsstatus, energi- och näringsbehov och ge råd om lämpliga enterala- och parenterala produkter, volymer, upptrappningstakt samt monitorering.</p> <p>• Sjuksköterskan ansvarar för att patienten får näringstillförsel enligt ordination.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "ANSVARSFÖRDELNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><b>Mat och näring för sjuka inom vård och omsorg&nbsp;</b><br /> Livsmedelsverket 2003</p> <p><b>Vårdhandboken</b><br /> www.vardhandboken.se</p> <p><b>Läkemedelboken ”Enteral/parenteral nutrition”</b><br /> www.lakemedelsverket.se/lakemedelsboken</p> <p><b>ESPEN Guidelines “Enteral/parenteral nutrition”</b><br /> www.espen.org för fullständig ref sök under Education</p> <p><b>God nutritionsvård, behandling av undernäring i vård och omsorg. Vägledning för vårdgivare, verksamhetschefer och personal. </b><br /> <span>Socialstyrelsen 2011</span></p> <p><b>Nationell satsning för ökad patientsäkerhet,Åtgärder för att förebygga undernäring.&nbsp;</b><br /> ISBN 978-91-7164-631-6, Sveriges kommuner och landsting 2011</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "blue"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "FÖRDJUPAD INFORMATION"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsövervakning",
+    "uuid": "616359b6-993c-4729-a447-8d72a68f6346",
+    "version": 1.1
+  },
+  {
+    "articleId": "1694731",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Intravenös vätskebehandling ges till barn med pågående eller tidigare vätskeförluster och som inte kan försörja sig enteralt.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Målet är att tillgodose det basala behovet av vätska, elektrolyter och energi, samt att korrigera&nbsp;pågående och tidigare uppkomna förluster.</p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALA VÄTSKEBEHOV&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">För barn i normal vätskebalans är behovet av vätska baserat på barnets ålder och vikt:&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn under ett års ålder:&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">ÅLDER</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 0-3 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">150-175 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 3-5 månader</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">120-150 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 5-12 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100-120 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> </tbody> </table> <p>&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Tumregel för barn över ett års ålder:&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT BASALT VÄTSKEBEHOV&nbsp;</span></span></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">10 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100 ml/kg (1000 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">11-20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1000 ml +50 ml/kg för varje kg &gt;10kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(20 kg = 1500 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">&gt; 20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1500 ml +20 ml/kg för varje kg &gt;20 kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(30 kg ≈ 1700 ml, 40 kg ≈ 1900 ml)</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Barn under 1 års ålder bör skötas i samråd med barnläkare&nbsp;</span></span></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Till patienter med kardiovaskulär sjukdom,&nbsp;njursjukdom, skalltrauma, encefalit eller meningit&nbsp;bör vätsketillförseln reduceras.&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">NORMALA BEHOV AV ELEKTROLYTER&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\">&nbsp;</p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">NATRIUM</span></span></p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">KALIUM&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Spädbarn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">2-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Äldre barn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätska och nutrition till barn"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling till barn",
+    "uuid": "c0f5d417-34cd-48d5-b0db-fe4dc05daf28",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694738",
+    "fields": [
+      {
+        "children": [],
+        "name": "sort-number",
+        "value": "1"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">Akuta vätskeförluster vid kräkningar, diarrér, ileus etc.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Måttlig dehydrering </b></span>= intorkning utan chock = 5% av&nbsp;</span>kroppsvikten = 2-4 l.</p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Grav dehydrering </b></span>= intorkning med chock = 10% av&nbsp;</span>kroppsvikten = 5-8 l.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INDIKATION"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Isoton lösning.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Elektrolytsammansättning som ECV (extracellulärvätskan).</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Motverka metabol acidos.</span></p> <h2 class=\"\\&quot;p2\\&quot;\">Extra underrubrik</h2>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KRAV"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• <span class=\"\\&quot;s1\\&quot;\"><b>Ringer-acetat </b></span>efter beräknat deficit och kliniskt svar!&nbsp;</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• När urinproduktionen kommit igång bör kaliumtillförsel&nbsp;</span><span class=\"\\&quot;s2\\&quot;\">övervägas, </span><b>med kaliumklorid 20 mmol per liter vätska.&nbsp;</b>OBS! Acidos p g a svält och/eller nedsatt perifer cirkulation kan ge hyperkalemi trots total kaliumbrist!&nbsp;<b>Kontrollera elektrolytstatus!</b></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "VÄTSKA"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid måttlig dehydrering ca 1000 ml/2 timmar.</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid grav dehydrering &gt;1000 ml/tim (OBS! Intensivvård).</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Rehydrering",
+    "uuid": "a342a1ed-b997-4df4-a7bd-a02d38cd0886",
+    "version": 1.1
+  },
+  {
+    "articleId": "1694743",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Fortsatt vätsketerapi efter initial rehydrering.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Isoton vätska.</p> <p>• Låg glukostillförsel (ca 1-2g/kg/dygn).</p> <p>• Vätsketillförseln skall vara större än basala behovet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Glukos 25 mg/ml buffrad</strong> eller <strong>Rehydrex med glukos&nbsp;</strong><strong>25 mg/ml</strong> under första dygnet.&nbsp;</p> <p>• <strong>Glukos 50 mg/ml med Na 40 + K 20</strong> efter första dygnet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• 2000-4000 ml/dygn (35-45 ml/kg/dygn).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>Fysiologiskt balanserade lösningar för initial rehydrering och vätskeunderhåll:</strong></p> <p>• Glukos 25 mg/ml buffrad.</p> <p>• Rehydrex med glukos 25 mg/ml.&nbsp;</p> <p><strong>Dessa två lösningar är identiska!</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling efter rehydrering",
+    "uuid": "1e6aed43-fe3f-4063-8a2a-16484d9e9750",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694748",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Vätske- och elektrolytrubbningar till följd av pågående eller redan uppkomna förluster. Förluster från mag/tarmkanalen innehåller varierande mängd natrium, kalium, klorid och bikarbonat (se nästa sida) och vid kräkningar förloras magsyra. Stora urinvolymer ger förlust av kalium och i mindre grad natrium.&nbsp;</p> <p>S-elektrolyter och svar på given behandling ger vägledning. Vid behov utför analys av U-elektrolyter och elektrolytinnehåll i övriga förlustvätskor. Kontrollera ev syra-basstatus</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Elektrolytsammansättning motsvarande aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Ringer-acetat</strong> alternativt <strong>Glukos 50 mg/ml</strong>.&nbsp;</p> <p>• Till vätskan görs <strong>tillsats av natriumklorid och kaliumklorid efter behov</strong>. <strong>Till Glukos 50 mg/ml kan tillsats av magnesium och fosfat</strong> (Glycophos) göras vid behov.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Beroende av aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Infusionslösningar som innehåller &gt;60 mmol K/liter bör ges med volym- eller sprutpump och CVK bör i så fall användas!&nbsp;</p> <p>• Ge aldrig &gt; 10 mmol K per timme! (undantag intensivvård)&nbsp;</p> <p>• Överväg EKG-övervakning vid svår hypokalemi!&nbsp;</p> <p>• Kalium är kärlretande! – Överväg alltid möjligheten till peroral tillförsel av kalium för att minimera kärlretning!</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Observera!"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border:none;\"> <tbody> <tr> <td style=\"width:121px;border:none;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td colspan=\"4\" style=\"width:483px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Elektrolytinnehåll (mmol/L)</p> </td> </tr> <tr> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Na<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">K<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Cl<sup>-</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">HCO<sub>3</sub><sup>-</sup></p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>Ventrikelsaft</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>35-60</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>9-20</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>84-150</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>0-7 (<strong>H<sup>+</sup>!!</strong>)</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> </tbody> </table>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Elektrolytinnehåll i förluster från mag-tarmkanalen"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Korrektionsbehandling",
+    "uuid": "93b2664b-1bb0-4391-b06d-1d821b298418",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694753",
+    "fields": [
+      {
+        "children": [],
+        "name": "sort-number",
+        "value": "2"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">Riktlinjer för preoperativ fasta finns framtagna av Svensk&nbsp;</span><span style=\"font-size: 14px;\">Förening för Anestesi och Intensivvård (SFAI). Dessa är allmänt&nbsp;</span><span style=\"font-size: 14px;\">accepterade och gäller som grundläggande rutin inom regionen&nbsp;</span><span style=\"font-size: 14px;\">(lokala avvikelser kan dock förekomma):&nbsp;</span></p> <h3 style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid planerad kirurgi:</b></span></h3> <p>Följande tidsgräns gäller för peroralt intag hos patienter med&nbsp;normal ventrikeltömning och avser tiden fram till anestesistart&nbsp;eller administration av opioid premedicinering:</p> <table border=\"0\" cellpadding=\"\" cellspacing=\"0\" style=\"width:500px;\"> <tbody> <tr> <td> <ul> <li>Vatten (med eller utan socker), kaffe, te,&nbsp;klar saft/juice och särskild preoperativ dryck</li> </ul> </td> <td>2 tim</td> </tr> <tr> <td> <ul> <li>Övrig dryck</li> </ul> </td> <td>6 tim</td> </tr> <tr> <td> <ul> <li>All fast och halvfast föda</li> </ul> </td> <td>6 tim</td> </tr> </tbody> </table> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid akut kirurgi:</b></span></p> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">I princip gäller ovanstående riktlinjer även vid akuta kirurgiska&nbsp;</span><span style=\"font-size: 14px;\">ingrepp. Dock kan patientens tillstånd i vissa fall nödvändiggöra&nbsp;</span><span style=\"font-size: 14px;\">att reglerna frångås. Risken för aspiration får då vägas mot&nbsp;</span><span style=\"font-size: 14px;\">risken med att fördröja ingreppet.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "PREOPERATIV FASTA - RUTINER"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Preoperativ vätskebehandling",
+    "uuid": "8f76bd01-d1ef-475b-8f4e-9278c093ca3d",
+    "version": 1.1
+  },
+  {
+    "articleId": "1694758",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "fsad"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "asdf"
+      }
+    ],
+    "path": [
+      "2017 kopia",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "TEST",
+    "uuid": "7e6b7019-3bcd-4723-abd5-40e5970e03e0",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694805",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Undernäring är vanligt vid sjukdom och leder till ökad sjuklighet, nedsatt funktion och livskvalitet, förlängd vårdtid samt ökad risk för död. Tillståndet karaktäriseras av brist på energi, protein och andra näringsämnen vilket orsakar mätbara ogynnsamma effekter på kroppens struktur (form, storlek och sammansättning), funktion och kliniskt förlopp.&nbsp;</p> <p>Sjukdomsrelaterad undernäring utvecklas genom två parallella processer, se figur nedan. Sjukdom ger ofta inflammation som leder till katabolism, vilket innebär att mekanismerna för anpassning till brist på energi och näring försämras. Samtidigt medför aptitlöshet lägre intag och negativ energibalans. Hur lång tid det tar att utveckla undernäring varierar bland annat beroende på nutritionsstatus före sjukdom, näringsintag samt typ och grad av sjukdom.&nbsp;</p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1694808&t=1517997604741"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikationer"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">För effektiv och säker nutritionsbehandling krävs ett strukturerat omhändertagande enligt den s k nutritionsvårdsprocessen:&nbsp;</span></p> <p><strong><span style=\"font-size:12.0pt;\">Screening </span></strong><span style=\"font-size:12.0pt;\">p <strong>Utredning </strong>p <strong>Behandling </strong>p&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">p <strong>Utvärdering </strong>p <strong>Dokumentation </strong></span><span style=\"font-size:12.0pt;\">och </span><strong><span style=\"font-size:12.0pt;\">kommunikation</span></strong></p> <p><strong><span style=\"font-size:16.0pt;\">Screening för att identifiera risk för undernäring</span></strong></p> <p><span style=\"font-size:12.0pt;\">Det är viktigt att på ett så tidigt stadium som möjligt fånga upp patienter som har eller har risk för att utveckla undernäring. Det finns ett flertal screeninginstrument som kombinerar olika nutritionsrelaterade variabler.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ofrivillig viktförlust</span></strong><span style=\"font-size:12.0pt;\">, oavsett tidsförlopp och omfattning.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">Ofrivillig viktminskning på &gt;5% under en månad eller&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">&gt;10% under ett halvår beräknat på ursprungsvikten,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">utgör ett tydligt tecken på negativ energibalans och&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">försämrat nutritionstillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätsvårigheter </span></strong><span style=\"font-size:12.0pt;\">t ex aptitlöshet, tugg- och sväljnings-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">problem, orkeslöshet och motoriska funktions-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">nedsättningar.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Undervikt</span></strong><span style=\"font-size:12.0pt;\">, vilket motsvarar Body Mass Index (BMI) &lt; 20&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">om &lt; 70 år eller &lt; 22 om &gt; 70 år. Enbart ett lågt BMI utan&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">viktsförlust och ätsvårigheter behöver inte betyda risk för&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">undernäring.</span></p> <p><span style=\"font-size:12.0pt;\">BMI = vikt (kg)</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">längd (m)<sup>2</sup></span></p> <p><span style=\"font-size:12.0pt;\">Risk för undernäring föreligger om patienten har en eller flera av riskfaktorerna.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSVÅRDSPROCESSEN"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">Vid identifierad risk bör patienten utredas för fastställande av bakgrund, art och grad av det aktuella nutritionsproblemet samt för ställningstagande till adekvata åtgärder.</span></p> <p><span style=\"font-size:12.0pt;\">Utredningen omfattar för individen relevanta faktorer som:</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bakomliggande sjukdom</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• Nyligen </span><strong><span style=\"font-size:12.0pt;\">genomförd eller pågående behandling </span></strong><span style=\"font-size:12.0pt;\">eller </span><strong><span style=\"font-size:12.0pt;\">medicinering&nbsp;</span></strong></p> <p><span style=\"font-size:12.0pt;\">som kan orsaka t.ex illamående, muntorrhet, förstoppning.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bristande aptit</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätrelaterade symptom </span></strong><span style=\"font-size:12.0pt;\">som t.ex. illamående, gasbesvär, diarré,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">magsmärta.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Funktionella svårigheter </span></strong><span style=\"font-size:12.0pt;\">att äta, t.ex. tugg- och sväljningssvårig-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">heter, motoriska handikapp, synhandikapp.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ökat energibehov </span></strong><span style=\"font-size:12.0pt;\">t.ex. vandrande beteende vid demens,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">förhöjd muskeltonus vid Parkinson eller ökat andningsarbete vid&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">svår KOL.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Kulturella, etniska och sociala faktorer </span></strong><span style=\"font-size:12.0pt;\">av betydelse för</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">matintaget, t ex. sorg, byte av boende.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Trötthet eller nedsatt motivation </span></strong><span style=\"font-size:12.0pt;\">på grund av t.ex. oro,</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">ångest, depression.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Bedömning av energibehov</span></strong></p> <p><span style=\"font-size:12.0pt;\">Beräkna patientens energibehov enligt nedanstående tabell:&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">kcal/kg/dygn</span></p> <p><span style=\"font-size:12.0pt;\">Basalmetabolism (BMR) 20</span></p> <p><span style=\"font-size:12.0pt;\">Sängbunden, BMR + 25% 25</span></p> <p><span style=\"font-size:12.0pt;\">Ej sängbunden, BMR + 50% 30</span></p> <p><span style=\"font-size:12.0pt;\">Förhöjt behov*, BMR + 75–100% 35–40</span></p> <p><span style=\"font-size:12.0pt;\">* Högre energitillförsel kan vara motiverat vid vissa tillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">Ovanstående värden korrigeras erfarenhetsmässigt om patienten är:</span></p> <p><span style=\"font-size:12.0pt;\">Mager + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">18-30 år + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">&gt;70 år - 10 %</span></p> <p><span style=\"font-size:12.0pt;\">För varje grads temperaturstegring + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">Kritiskt sjuk - 10–25 %</span></p> <p><span style=\"font-size:12.0pt;\">Vid övervikt (BMI &gt; 25) kan kroppsvikten motsvarande BMI 25 användas, med tillägg av 25 % av den överskjutande vikten.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Behandling</span></strong></p> <p><span style=\"font-size:12.0pt;\">En vårdplan med uppgifter om nutritionsdiagnos, ordinerad behandling, mål för behandling samt plan för uppföljning och utvärdering bör upprättas i samråd med patient och eventuellt närstående.</span></p> <p><span style=\"font-size:12.0pt;\">Med nutritionsbehandling avses tillförsel av energi och näringsämnen i syfte att tillgodose behoven på ett för omständigheterna optimalt sätt. Nutritionsterapi utgör ett samlingsbegrepp för de olika terapiformer som står till buds för nutritionsbehandling:</span></p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1694809&t=1517997604842"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UTREDNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-family:times,serif;\">Grunden för behandling är ofta oralt intag av mat. För hjälp med val av nutritionsterapi tillfråga dietist.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Utvärdering&nbsp;</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Behandlingen ska bedömas, dokumenteras och utvärderas under behandlingstiden. Vikt bör följas kontinuerligt, minst 1 gång/vecka.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Mat- och vätskeregistrering är ett sätt att värdera patientens energi- och vätskeintag. Registrering bör ske under 3-4 dagar för att utjämna dag-till-dag variationen. Allt patienten intar ska registreras, inklusive eventuell artificiell nutrition. Energi- och vätskeintaget ställs i relation till skattat behov av energi och näringsämnen samt viktutveckling.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Dokumentation och kommunikation</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Samtliga utredande och behandlande insatser ska journalföras. Information om nutritionstillstånd, behov, aktuell nutritionsordination och mål med behandlingen ska överrapporteras i samband med byte av vårdgivare.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Patientens värderingar, rätt till självbestämmande och behov av delaktighet ska respekteras i all nutritionsbehandling.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsbehandling",
+    "uuid": "b46cf13c-ac13-41a7-b13a-3883adf22b80",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694812",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Innan PN påbörjas ska patienten vara cirkulatoriskt stabil, vätske- och elektrolytbalansen ska vara korrigerad.&nbsp;</p> <p>• Om patienten tillgodoser 50 % av sitt energiintag oralt/EN, kan man oftast starta utan upptrappning.</p> <p>• Starta med 15-20 kcal/kg/d och trappa upp tillförseln under 3-5 dygn.&nbsp;</p> <p>• Vid svår undernäring (BMI≤16 kg/kvm) och/eller kritiskt sjuk patient bör man starta ännu långsammare, se Refeeding syndrom (kapitel 14, sid 52).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UPPTRAPPNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Det går inte att rekommendera någon generell infusionshastighet. Hänsyn måste bland annat tas till vätskans koncentration och typ av infart. Se vidare i Fass.</p> <p>• All PN bör ges långsamt och jämnt över dygnet, helst under 20-24 tim.&nbsp;</p> <p>• En förutsättning för att infusionen skall kunna ges på mer än 12 timmar är att alla tillsatser sker i samband med att infusionen iordningsställs i beredningsrummet, och att man inte gör några ytterligare tillsatser till påsen under infusionstiden (se kapitel 14, sid 49).</p> <p>• Vid långtidnutrition i hemmet kan man göra uppehåll viss tid på dagen för att underlätta olika aktiviteter.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET OCH TID"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Vikt och viktutveckling. Kroppsvikten bör följas 2-4 ggr/vecka. Snabba förändringar beror ofta på förändrad vätskebalans i kroppen.&nbsp;</p> <p>• BMI&nbsp;</p> <p>• Bedömning av energi- och näringsbehovet&nbsp;</p> <p>• Beräkning av det totala energi- och näringsintaget (oralt-, EN och PN).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSUPPFÖLJNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>• Allmäntillstånd&nbsp;</strong></p> <p><strong>• Funktionsnivå&nbsp;</strong></p> <p><strong>• Munhälsa</strong></p> <p><strong>• Temperatur</strong></p> <p><strong>• Vätskebalans</strong></p> <p><strong>• Hjärtfunktion</strong></p> <p><strong>• Lungfunktion</strong></p> <p><strong>• Laboratorieanalys</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KLINISKA UNDERSÖKNINGAR"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>För att undvika komplikationer och felbehandling är det viktigt att regelbundet följa relevanta laboratorieproverm, t.ex. P-Na, P-K, P-Ca, P-Mg, P-Fosfat, B-Glukos, P-Kreatinin, P-Urea, P-Bilirubin, P-ALAT och P-ASAT, P-Albumin och P-triglycerider.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "LABORATORIEPROVER"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Läkaren har det medicinska ansvaret och därmed huvudansvaret för att patienten får en adekvat näringstillförsel. Läkaren ordinerar och utvärderar EN och PN, ofta på rekommendation av dietist.</p> <p>• Dietisten kan bedöma patientens nutritionsstatus, energi- och näringsbehov och ge råd om lämpliga enterala- och parenterala produkter, volymer, upptrappningstakt samt monitorering.</p> <p>• Sjuksköterskan ansvarar för att patienten får näringstillförsel enligt ordination.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "ANSVARSFÖRDELNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><b>Mat och näring för sjuka inom vård och omsorg&nbsp;</b><br /> Livsmedelsverket 2003</p> <p><b>Vårdhandboken</b><br /> www.vardhandboken.se</p> <p><b>Läkemedelboken ”Enteral/parenteral nutrition”</b><br /> www.lakemedelsverket.se/lakemedelsboken</p> <p><b>ESPEN Guidelines “Enteral/parenteral nutrition”</b><br /> www.espen.org för fullständig ref sök under Education</p> <p><b>God nutritionsvård, behandling av undernäring i vård och omsorg. Vägledning för vårdgivare, verksamhetschefer och personal. </b><br /> <span>Socialstyrelsen 2011</span></p> <p><b>Nationell satsning för ökad patientsäkerhet,Åtgärder för att förebygga undernäring.&nbsp;</b><br /> ISBN 978-91-7164-631-6, Sveriges kommuner och landsting 2011</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "blue"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "FÖRDJUPAD INFORMATION"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsövervakning",
+    "uuid": "53bb4194-d941-460d-80b0-f8cacd89e104",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694819",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Intravenös vätskebehandling ges till barn med pågående eller tidigare vätskeförluster och som inte kan försörja sig enteralt.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Målet är att tillgodose det basala behovet av vätska, elektrolyter och energi, samt att korrigera&nbsp;pågående och tidigare uppkomna förluster.</p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALA VÄTSKEBEHOV&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">För barn i normal vätskebalans är behovet av vätska baserat på barnets ålder och vikt:&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn under ett års ålder:&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">ÅLDER</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 0-3 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">150-175 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 3-5 månader</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">120-150 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 5-12 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100-120 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> </tbody> </table> <p>&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Tumregel för barn över ett års ålder:&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT BASALT VÄTSKEBEHOV&nbsp;</span></span></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">10 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100 ml/kg (1000 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">11-20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1000 ml +50 ml/kg för varje kg &gt;10kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(20 kg = 1500 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">&gt; 20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1500 ml +20 ml/kg för varje kg &gt;20 kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(30 kg ≈ 1700 ml, 40 kg ≈ 1900 ml)</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Barn under 1 års ålder bör skötas i samråd med barnläkare&nbsp;</span></span></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Till patienter med kardiovaskulär sjukdom,&nbsp;njursjukdom, skalltrauma, encefalit eller meningit&nbsp;bör vätsketillförseln reduceras.&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">NORMALA BEHOV AV ELEKTROLYTER&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\">&nbsp;</p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">NATRIUM</span></span></p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">KALIUM&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Spädbarn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">2-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Äldre barn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätska och nutrition till barn"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling till barn",
+    "uuid": "b2562f62-481e-4e90-b00c-336f42446ad6",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694826",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">Akuta vätskeförluster vid kräkningar, diarrér, ileus etc.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Måttlig dehydrering </b></span>= intorkning utan chock = 5% av&nbsp;</span>kroppsvikten = 2-4 l.</p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Grav dehydrering </b></span>= intorkning med chock = 10% av&nbsp;</span>kroppsvikten = 5-8 l.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INDIKATION"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Isoton lösning.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Elektrolytsammansättning som ECV (extracellulärvätskan).</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Motverka metabol acidos.</span></p> <h2 class=\"\\&quot;p2\\&quot;\">Extra underrubrik</h2>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KRAV"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• <span class=\"\\&quot;s1\\&quot;\"><b>Ringer-acetat </b></span>efter beräknat deficit och kliniskt svar!&nbsp;</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• När urinproduktionen kommit igång bör kaliumtillförsel&nbsp;</span><span class=\"\\&quot;s2\\&quot;\">övervägas, </span><b>med kaliumklorid 20 mmol per liter vätska.&nbsp;</b>OBS! Acidos p g a svält och/eller nedsatt perifer cirkulation kan ge hyperkalemi trots total kaliumbrist!&nbsp;<b>Kontrollera elektrolytstatus!</b></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "VÄTSKA"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid måttlig dehydrering ca 1000 ml/2 timmar.</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid grav dehydrering &gt;1000 ml/tim (OBS! Intensivvård).</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Rehydrering",
+    "uuid": "9d44fbce-66c1-4f1d-8f61-04e813b2f761",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694831",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Fortsatt vätsketerapi efter initial rehydrering.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Isoton vätska.</p> <p>• Låg glukostillförsel (ca 1-2g/kg/dygn).</p> <p>• Vätsketillförseln skall vara större än basala behovet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Glukos 25 mg/ml buffrad</strong> eller <strong>Rehydrex med glukos&nbsp;</strong><strong>25 mg/ml</strong> under första dygnet.&nbsp;</p> <p>• <strong>Glukos 50 mg/ml med Na 40 + K 20</strong> efter första dygnet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• 2000-4000 ml/dygn (35-45 ml/kg/dygn).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>Fysiologiskt balanserade lösningar för initial rehydrering och vätskeunderhåll:</strong></p> <p>• Glukos 25 mg/ml buffrad.</p> <p>• Rehydrex med glukos 25 mg/ml.&nbsp;</p> <p><strong>Dessa två lösningar är identiska!</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling efter rehydrering",
+    "uuid": "30694f74-1321-4fe9-90f3-9ae1c158c312",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694836",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Vätske- och elektrolytrubbningar till följd av pågående eller redan uppkomna förluster. Förluster från mag/tarmkanalen innehåller varierande mängd natrium, kalium, klorid och bikarbonat (se nästa sida) och vid kräkningar förloras magsyra. Stora urinvolymer ger förlust av kalium och i mindre grad natrium.&nbsp;</p> <p>S-elektrolyter och svar på given behandling ger vägledning. Vid behov utför analys av U-elektrolyter och elektrolytinnehåll i övriga förlustvätskor. Kontrollera ev syra-basstatus</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Elektrolytsammansättning motsvarande aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Ringer-acetat</strong> alternativt <strong>Glukos 50 mg/ml</strong>.&nbsp;</p> <p>• Till vätskan görs <strong>tillsats av natriumklorid och kaliumklorid efter behov</strong>. <strong>Till Glukos 50 mg/ml kan tillsats av magnesium och fosfat</strong> (Glycophos) göras vid behov.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Beroende av aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Infusionslösningar som innehåller &gt;60 mmol K/liter bör ges med volym- eller sprutpump och CVK bör i så fall användas!&nbsp;</p> <p>• Ge aldrig &gt; 10 mmol K per timme! (undantag intensivvård)&nbsp;</p> <p>• Överväg EKG-övervakning vid svår hypokalemi!&nbsp;</p> <p>• Kalium är kärlretande! – Överväg alltid möjligheten till peroral tillförsel av kalium för att minimera kärlretning!</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Observera!"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border:none;\"> <tbody> <tr> <td style=\"width:121px;border:none;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td colspan=\"4\" style=\"width:483px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Elektrolytinnehåll (mmol/L)</p> </td> </tr> <tr> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Na<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">K<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Cl<sup>-</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">HCO<sub>3</sub><sup>-</sup></p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>Ventrikelsaft</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>35-60</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>9-20</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>84-150</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>0-7 (<strong>H<sup>+</sup>!!</strong>)</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> </tbody> </table>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Elektrolytinnehåll i förluster från mag-tarmkanalen"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Korrektionsbehandling",
+    "uuid": "e988a1dd-05ab-4990-83e5-76aae0c612c8",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694841",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">Riktlinjer för preoperativ fasta finns framtagna av Svensk&nbsp;</span><span style=\"font-size: 14px;\">Förening för Anestesi och Intensivvård (SFAI). Dessa är allmänt&nbsp;</span><span style=\"font-size: 14px;\">accepterade och gäller som grundläggande rutin inom regionen&nbsp;</span><span style=\"font-size: 14px;\">(lokala avvikelser kan dock förekomma):&nbsp;</span></p> <h3 style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid planerad kirurgi:</b></span></h3> <p>Följande tidsgräns gäller för peroralt intag hos patienter med&nbsp;normal ventrikeltömning och avser tiden fram till anestesistart&nbsp;eller administration av opioid premedicinering:</p> <table border=\"0\" cellpadding=\"\" cellspacing=\"0\" style=\"width:500px;\"> <tbody> <tr> <td> <ul> <li>Vatten (med eller utan socker), kaffe, te,&nbsp;klar saft/juice och särskild preoperativ dryck</li> </ul> </td> <td>2 tim</td> </tr> <tr> <td> <ul> <li>Övrig dryck</li> </ul> </td> <td>6 tim</td> </tr> <tr> <td> <ul> <li>All fast och halvfast föda</li> </ul> </td> <td>6 tim</td> </tr> </tbody> </table> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid akut kirurgi:</b></span></p> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">I princip gäller ovanstående riktlinjer även vid akuta kirurgiska&nbsp;</span><span style=\"font-size: 14px;\">ingrepp. Dock kan patientens tillstånd i vissa fall nödvändiggöra&nbsp;</span><span style=\"font-size: 14px;\">att reglerna frångås. Risken för aspiration får då vägas mot&nbsp;</span><span style=\"font-size: 14px;\">risken med att fördröja ingreppet.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "PREOPERATIV FASTA - RUTINER"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Preoperativ vätskebehandling",
+    "uuid": "65396803-48b9-4fef-bce6-c39c00177c47",
+    "version": 1.0
+  },
+  {
+    "articleId": "1694846",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "fsad"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "asdf"
+      }
+    ],
+    "path": [
+      "2017 kopia2",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "TEST",
+    "uuid": "d66f7b75-5afc-4baa-a928-f2c3ead159aa",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695010",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "fdsaasdf"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "asdf"
+      }
+    ],
+    "path": [
+      "2018 (2)",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "TEST",
+    "uuid": "6007abd5-a5e9-4e3e-ba39-c502f5106d66",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695015",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "asdf"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "test2"
+      }
+    ],
+    "path": [
+      "2018 (2)",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "test2345",
+    "uuid": "21949362-9049-4f7f-b7ab-9c71577007ea",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695905",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Undernäring är vanligt vid sjukdom och leder till ökad sjuklighet, nedsatt funktion och livskvalitet, förlängd vårdtid samt ökad risk för död. Tillståndet karaktäriseras av brist på energi, protein och andra näringsämnen vilket orsakar mätbara ogynnsamma effekter på kroppens struktur (form, storlek och sammansättning), funktion och kliniskt förlopp.&nbsp;</p> <p>Sjukdomsrelaterad undernäring utvecklas genom två parallella processer, se figur nedan. Sjukdom ger ofta inflammation som leder till katabolism, vilket innebär att mekanismerna för anpassning till brist på energi och näring försämras. Samtidigt medför aptitlöshet lägre intag och negativ energibalans. Hur lång tid det tar att utveckla undernäring varierar bland annat beroende på nutritionsstatus före sjukdom, näringsintag samt typ och grad av sjukdom.&nbsp;</p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1695908&t=1519580179113"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikationer"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">För effektiv och säker nutritionsbehandling krävs ett strukturerat omhändertagande enligt den s k nutritionsvårdsprocessen:&nbsp;</span></p> <p><strong><span style=\"font-size:12.0pt;\">Screening </span></strong><span style=\"font-size:12.0pt;\">p <strong>Utredning </strong>p <strong>Behandling </strong>p&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">p <strong>Utvärdering </strong>p <strong>Dokumentation </strong></span><span style=\"font-size:12.0pt;\">och </span><strong><span style=\"font-size:12.0pt;\">kommunikation</span></strong></p> <p><strong><span style=\"font-size:16.0pt;\">Screening för att identifiera risk för undernäring</span></strong></p> <p><span style=\"font-size:12.0pt;\">Det är viktigt att på ett så tidigt stadium som möjligt fånga upp patienter som har eller har risk för att utveckla undernäring. Det finns ett flertal screeninginstrument som kombinerar olika nutritionsrelaterade variabler.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ofrivillig viktförlust</span></strong><span style=\"font-size:12.0pt;\">, oavsett tidsförlopp och omfattning.&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">Ofrivillig viktminskning på &gt;5% under en månad eller&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">&gt;10% under ett halvår beräknat på ursprungsvikten,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">utgör ett tydligt tecken på negativ energibalans och&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">försämrat nutritionstillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätsvårigheter </span></strong><span style=\"font-size:12.0pt;\">t ex aptitlöshet, tugg- och sväljnings-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">problem, orkeslöshet och motoriska funktions-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">nedsättningar.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Undervikt</span></strong><span style=\"font-size:12.0pt;\">, vilket motsvarar Body Mass Index (BMI) &lt; 20&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">om &lt; 70 år eller &lt; 22 om &gt; 70 år. Enbart ett lågt BMI utan&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">viktsförlust och ätsvårigheter behöver inte betyda risk för&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">undernäring.</span></p> <p><span style=\"font-size:12.0pt;\">BMI = vikt (kg)</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">längd (m)<sup>2</sup></span></p> <p><span style=\"font-size:12.0pt;\">Risk för undernäring föreligger om patienten har en eller flera av riskfaktorerna.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSVÅRDSPROCESSEN"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-size:12.0pt;\">Vid identifierad risk bör patienten utredas för fastställande av bakgrund, art och grad av det aktuella nutritionsproblemet samt för ställningstagande till adekvata åtgärder.</span></p> <p><span style=\"font-size:12.0pt;\">Utredningen omfattar för individen relevanta faktorer som:</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bakomliggande sjukdom</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• Nyligen </span><strong><span style=\"font-size:12.0pt;\">genomförd eller pågående behandling </span></strong><span style=\"font-size:12.0pt;\">eller </span><strong><span style=\"font-size:12.0pt;\">medicinering&nbsp;</span></strong></p> <p><span style=\"font-size:12.0pt;\">som kan orsaka t.ex illamående, muntorrhet, förstoppning.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Bristande aptit</span></strong><span style=\"font-size:12.0pt;\">.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ätrelaterade symptom </span></strong><span style=\"font-size:12.0pt;\">som t.ex. illamående, gasbesvär, diarré,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">magsmärta.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Funktionella svårigheter </span></strong><span style=\"font-size:12.0pt;\">att äta, t.ex. tugg- och sväljningssvårig-&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">heter, motoriska handikapp, synhandikapp.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Ökat energibehov </span></strong><span style=\"font-size:12.0pt;\">t.ex. vandrande beteende vid demens,&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">förhöjd muskeltonus vid Parkinson eller ökat andningsarbete vid&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">svår KOL.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Kulturella, etniska och sociala faktorer </span></strong><span style=\"font-size:12.0pt;\">av betydelse för</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">matintaget, t ex. sorg, byte av boende.</span></p> <p><span style=\"font-size:12.0pt;\">• </span><strong><span style=\"font-size:12.0pt;\">Trötthet eller nedsatt motivation </span></strong><span style=\"font-size:12.0pt;\">på grund av t.ex. oro,</span>&nbsp;</p> <p><span style=\"font-size:12.0pt;\">ångest, depression.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Bedömning av energibehov</span></strong></p> <p><span style=\"font-size:12.0pt;\">Beräkna patientens energibehov enligt nedanstående tabell:&nbsp;</span></p> <p><span style=\"font-size:12.0pt;\">kcal/kg/dygn</span></p> <p><span style=\"font-size:12.0pt;\">Basalmetabolism (BMR) 20</span></p> <p><span style=\"font-size:12.0pt;\">Sängbunden, BMR + 25% 25</span></p> <p><span style=\"font-size:12.0pt;\">Ej sängbunden, BMR + 50% 30</span></p> <p><span style=\"font-size:12.0pt;\">Förhöjt behov*, BMR + 75–100% 35–40</span></p> <p><span style=\"font-size:12.0pt;\">* Högre energitillförsel kan vara motiverat vid vissa tillstånd.</span></p> <p><span style=\"font-size:12.0pt;\">Ovanstående värden korrigeras erfarenhetsmässigt om patienten är:</span></p> <p><span style=\"font-size:12.0pt;\">Mager + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">18-30 år + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">&gt;70 år - 10 %</span></p> <p><span style=\"font-size:12.0pt;\">För varje grads temperaturstegring + 10 %</span></p> <p><span style=\"font-size:12.0pt;\">Kritiskt sjuk - 10–25 %</span></p> <p><span style=\"font-size:12.0pt;\">Vid övervikt (BMI &gt; 25) kan kroppsvikten motsvarande BMI 25 användas, med tillägg av 25 % av den överskjutande vikten.</span></p> <p><strong><span style=\"font-size:16.0pt;\">Behandling</span></strong></p> <p><span style=\"font-size:12.0pt;\">En vårdplan med uppgifter om nutritionsdiagnos, ordinerad behandling, mål för behandling samt plan för uppföljning och utvärdering bör upprättas i samråd med patient och eventuellt närstående.</span></p> <p><span style=\"font-size:12.0pt;\">Med nutritionsbehandling avses tillförsel av energi och näringsämnen i syfte att tillgodose behoven på ett för omständigheterna optimalt sätt. Nutritionsterapi utgör ett samlingsbegrepp för de olika terapiformer som står till buds för nutritionsbehandling:</span></p> <p>&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": "/image/journal/article?img_id=1695909&t=1519580179206"
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UTREDNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><span style=\"font-family:times,serif;\">Grunden för behandling är ofta oralt intag av mat. För hjälp med val av nutritionsterapi tillfråga dietist.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Utvärdering&nbsp;</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Behandlingen ska bedömas, dokumenteras och utvärderas under behandlingstiden. Vikt bör följas kontinuerligt, minst 1 gång/vecka.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Mat- och vätskeregistrering är ett sätt att värdera patientens energi- och vätskeintag. Registrering bör ske under 3-4 dagar för att utjämna dag-till-dag variationen. Allt patienten intar ska registreras, inklusive eventuell artificiell nutrition. Energi- och vätskeintaget ställs i relation till skattat behov av energi och näringsämnen samt viktutveckling.</span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:16.0pt;\">Dokumentation och kommunikation</span></span></strong></p> <p><span style=\"font-family:times,serif;\">Samtliga utredande och behandlande insatser ska journalföras. Information om nutritionstillstånd, behov, aktuell nutritionsordination och mål med behandlingen ska överrapporteras i samband med byte av vårdgivare.&nbsp;</span></p> <p><span style=\"font-family:times,serif;\">Patientens värderingar, rätt till självbestämmande och behov av delaktighet ska respekteras i all nutritionsbehandling.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsbehandling",
+    "uuid": "c0b06d06-2063-409a-a142-faf53f6c85e0",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695912",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Innan PN påbörjas ska patienten vara cirkulatoriskt stabil, vätske- och elektrolytbalansen ska vara korrigerad.&nbsp;</p> <p>• Om patienten tillgodoser 50 % av sitt energiintag oralt/EN, kan man oftast starta utan upptrappning.</p> <p>• Starta med 15-20 kcal/kg/d och trappa upp tillförseln under 3-5 dygn.&nbsp;</p> <p>• Vid svår undernäring (BMI≤16 kg/kvm) och/eller kritiskt sjuk patient bör man starta ännu långsammare, se Refeeding syndrom (kapitel 14, sid 52).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "UPPTRAPPNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Det går inte att rekommendera någon generell infusionshastighet. Hänsyn måste bland annat tas till vätskans koncentration och typ av infart. Se vidare i Fass.</p> <p>• All PN bör ges långsamt och jämnt över dygnet, helst under 20-24 tim.&nbsp;</p> <p>• En förutsättning för att infusionen skall kunna ges på mer än 12 timmar är att alla tillsatser sker i samband med att infusionen iordningsställs i beredningsrummet, och att man inte gör några ytterligare tillsatser till påsen under infusionstiden (se kapitel 14, sid 49).</p> <p>• Vid långtidnutrition i hemmet kan man göra uppehåll viss tid på dagen för att underlätta olika aktiviteter.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET OCH TID"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Vikt och viktutveckling. Kroppsvikten bör följas 2-4 ggr/vecka. Snabba förändringar beror ofta på förändrad vätskebalans i kroppen.&nbsp;</p> <p>• BMI&nbsp;</p> <p>• Bedömning av energi- och näringsbehovet&nbsp;</p> <p>• Beräkning av det totala energi- och näringsintaget (oralt-, EN och PN).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "NUTRITIONSUPPFÖLJNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>• Allmäntillstånd&nbsp;</strong></p> <p><strong>• Funktionsnivå&nbsp;</strong></p> <p><strong>• Munhälsa</strong></p> <p><strong>• Temperatur</strong></p> <p><strong>• Vätskebalans</strong></p> <p><strong>• Hjärtfunktion</strong></p> <p><strong>• Lungfunktion</strong></p> <p><strong>• Laboratorieanalys</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KLINISKA UNDERSÖKNINGAR"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>För att undvika komplikationer och felbehandling är det viktigt att regelbundet följa relevanta laboratorieproverm, t.ex. P-Na, P-K, P-Ca, P-Mg, P-Fosfat, B-Glukos, P-Kreatinin, P-Urea, P-Bilirubin, P-ALAT och P-ASAT, P-Albumin och P-triglycerider.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "LABORATORIEPROVER"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Läkaren har det medicinska ansvaret och därmed huvudansvaret för att patienten får en adekvat näringstillförsel. Läkaren ordinerar och utvärderar EN och PN, ofta på rekommendation av dietist.</p> <p>• Dietisten kan bedöma patientens nutritionsstatus, energi- och näringsbehov och ge råd om lämpliga enterala- och parenterala produkter, volymer, upptrappningstakt samt monitorering.</p> <p>• Sjuksköterskan ansvarar för att patienten får näringstillförsel enligt ordination.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "ANSVARSFÖRDELNING"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><b>Mat och näring för sjuka inom vård och omsorg&nbsp;</b><br /> Livsmedelsverket 2003</p> <p><b>Vårdhandboken</b><br /> www.vardhandboken.se</p> <p><b>Läkemedelboken ”Enteral/parenteral nutrition”</b><br /> www.lakemedelsverket.se/lakemedelsboken</p> <p><b>ESPEN Guidelines “Enteral/parenteral nutrition”</b><br /> www.espen.org för fullständig ref sök under Education</p> <p><b>God nutritionsvård, behandling av undernäring i vård och omsorg. Vägledning för vårdgivare, verksamhetschefer och personal. </b><br /> <span>Socialstyrelsen 2011</span></p> <p><b>Nationell satsning för ökad patientsäkerhet,Åtgärder för att förebygga undernäring.&nbsp;</b><br /> ISBN 978-91-7164-631-6, Sveriges kommuner och landsting 2011</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "blue"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "FÖRDJUPAD INFORMATION"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Nutritionsbehandling"
+    ],
+    "status": 0,
+    "title": "Nutritionsövervakning",
+    "uuid": "a2b3f1b3-7b17-494c-a692-81cab82ab599",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695919",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Intravenös vätskebehandling ges till barn med pågående eller tidigare vätskeförluster och som inte kan försörja sig enteralt.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Målet är att tillgodose det basala behovet av vätska, elektrolyter och energi, samt att korrigera&nbsp;pågående och tidigare uppkomna förluster.</p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALA VÄTSKEBEHOV&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">För barn i normal vätskebalans är behovet av vätska baserat på barnets ålder och vikt:&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn under ett års ålder:&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">ÅLDER</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 0-3 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">150-175 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 3-5 månader</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">120-150 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Barn 5-12 mån</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100-120 ml/kg/dygn&nbsp;</span></span></p> </td> </tr> </tbody> </table> <p>&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">Tumregel för barn över ett års ålder:&nbsp;</span></span></strong></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT BASALT VÄTSKEBEHOV&nbsp;</span></span></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">VIKT</span></span></span></p> </td> <td style=\"width:302px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"color:#2F5597;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">BASALT VÄTSKEBEHOV&nbsp;</span></span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">10 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">100 ml/kg (1000 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">11-20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1000 ml +50 ml/kg för varje kg &gt;10kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(20 kg = 1500 ml)&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:302px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">&gt; 20 kg</span></span></p> </td> <td style=\"width:302px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1500 ml +20 ml/kg för varje kg &gt;20 kg&nbsp;</span></span></p> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">(30 kg ≈ 1700 ml, 40 kg ≈ 1900 ml)</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Barn under 1 års ålder bör skötas i samråd med barnläkare&nbsp;</span></span></p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">• Till patienter med kardiovaskulär sjukdom,&nbsp;njursjukdom, skalltrauma, encefalit eller meningit&nbsp;bör vätsketillförseln reduceras.&nbsp;</span></span></p> <p><strong><span style=\"font-family:helvetica,sans-serif;\"><span style=\"font-size:10.5pt;\">NORMALA BEHOV AV ELEKTROLYTER&nbsp;</span></span></strong></p> <table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border:none;\"> <tbody> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\">&nbsp;</p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">NATRIUM</span></span></p> </td> <td style=\"width:201px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">KALIUM&nbsp;</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Spädbarn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">2-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> <tr> <td style=\"width:201px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">Äldre barn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> <td style=\"width:201px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p style=\"margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;margin-left:0cm;\"><span style=\"font-family:helvetica neue,sans-serif;\"><span style=\"font-size:10.5pt;\">1-3mmol/kg/dygn</span></span></p> </td> </tr> </tbody> </table> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p> <p style=\"margin:0cm 0cm 7.5pt;background-position:initial initial;background-repeat:initial initial;\">&nbsp;</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätska och nutrition till barn"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling till barn",
+    "uuid": "8e445087-6feb-4dd6-b8ee-2474470f5ef6",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695926",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">Akuta vätskeförluster vid kräkningar, diarrér, ileus etc.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Måttlig dehydrering </b></span>= intorkning utan chock = 5% av&nbsp;</span>kroppsvikten = 2-4 l.</p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\"><span class=\"\\&quot;s1\\&quot;\"><b>Grav dehydrering </b></span>= intorkning med chock = 10% av&nbsp;</span>kroppsvikten = 5-8 l.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INDIKATION"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Isoton lösning.</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Elektrolytsammansättning som ECV (extracellulärvätskan).</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Motverka metabol acidos.</span></p> <h2 class=\"\\&quot;p2\\&quot;\">Extra underrubrik</h2>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "KRAV"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• <span class=\"\\&quot;s1\\&quot;\"><b>Ringer-acetat </b></span>efter beräknat deficit och kliniskt svar!&nbsp;</span></p> <p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• När urinproduktionen kommit igång bör kaliumtillförsel&nbsp;</span><span class=\"\\&quot;s2\\&quot;\">övervägas, </span><b>med kaliumklorid 20 mmol per liter vätska.&nbsp;</b>OBS! Acidos p g a svält och/eller nedsatt perifer cirkulation kan ge hyperkalemi trots total kaliumbrist!&nbsp;<b>Kontrollera elektrolytstatus!</b></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "VÄTSKA"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p class=\"\\&quot;p1\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid måttlig dehydrering ca 1000 ml/2 timmar.</span></p> <p class=\"\\&quot;p2\\&quot;\"><span style=\"\\&quot;font-size:14px;\\&quot;\">• Vid grav dehydrering &gt;1000 ml/tim (OBS! Intensivvård).</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "INFUSIONSHASTIGHET"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Rehydrering",
+    "uuid": "f925a02a-9c7c-4312-acc9-1bf3a6eebc1d",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695931",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Fortsatt vätsketerapi efter initial rehydrering.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Isoton vätska.</p> <p>• Låg glukostillförsel (ca 1-2g/kg/dygn).</p> <p>• Vätsketillförseln skall vara större än basala behovet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Glukos 25 mg/ml buffrad</strong> eller <strong>Rehydrex med glukos&nbsp;</strong><strong>25 mg/ml</strong> under första dygnet.&nbsp;</p> <p>• <strong>Glukos 50 mg/ml med Na 40 + K 20</strong> efter första dygnet.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• 2000-4000 ml/dygn (35-45 ml/kg/dygn).</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p><strong>Fysiologiskt balanserade lösningar för initial rehydrering och vätskeunderhåll:</strong></p> <p>• Glukos 25 mg/ml buffrad.</p> <p>• Rehydrex med glukos 25 mg/ml.&nbsp;</p> <p><strong>Dessa två lösningar är identiska!</strong></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": ""
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Vätskebehandling efter rehydrering",
+    "uuid": "03c5b7b8-68ca-46a3-8387-da652004213b",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695936",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>Vätske- och elektrolytrubbningar till följd av pågående eller redan uppkomna förluster. Förluster från mag/tarmkanalen innehåller varierande mängd natrium, kalium, klorid och bikarbonat (se nästa sida) och vid kräkningar förloras magsyra. Stora urinvolymer ger förlust av kalium och i mindre grad natrium.&nbsp;</p> <p>S-elektrolyter och svar på given behandling ger vägledning. Vid behov utför analys av U-elektrolyter och elektrolytinnehåll i övriga förlustvätskor. Kontrollera ev syra-basstatus</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Indikation"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Elektrolytsammansättning motsvarande aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Krav"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• <strong>Ringer-acetat</strong> alternativt <strong>Glukos 50 mg/ml</strong>.&nbsp;</p> <p>• Till vätskan görs <strong>tillsats av natriumklorid och kaliumklorid efter behov</strong>. <strong>Till Glukos 50 mg/ml kan tillsats av magnesium och fosfat</strong> (Glycophos) göras vid behov.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Vätska"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Beroende av aktuell brist och pågående förluster.</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Infusionshastighet"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>• Infusionslösningar som innehåller &gt;60 mmol K/liter bör ges med volym- eller sprutpump och CVK bör i så fall användas!&nbsp;</p> <p>• Ge aldrig &gt; 10 mmol K per timme! (undantag intensivvård)&nbsp;</p> <p>• Överväg EKG-övervakning vid svår hypokalemi!&nbsp;</p> <p>• Kalium är kärlretande! – Överväg alltid möjligheten till peroral tillförsel av kalium för att minimera kärlretning!</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Observera!"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-collapse:collapse;border:none;\"> <tbody> <tr> <td style=\"width:121px;border:none;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td colspan=\"4\" style=\"width:483px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Elektrolytinnehåll (mmol/L)</p> </td> </tr> <tr> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Na<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">K<sup>+</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">Cl<sup>-</sup></p> </td> <td style=\"width:121px;border:solid windowtext 1.0pt;border-left:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p align=\"center\" style=\"text-align:center;\">HCO<sub>3</sub><sup>-</sup></p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>Ventrikelsaft</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>35-60</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>9-20</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>84-150</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>0-7 (<strong>H<sup>+</sup>!!</strong>)</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> <tr> <td style=\"width:121px;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> <td style=\"width:121px;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;vertical-align:top;\"> <p>&nbsp;</p> </td> </tr> </tbody> </table>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "Elektrolytinnehåll i förluster från mag-tarmkanalen"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Korrektionsbehandling",
+    "uuid": "b3bdea3f-ba73-43e5-b53f-6a942fa72c16",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695941",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">Riktlinjer för preoperativ fasta finns framtagna av Svensk&nbsp;</span><span style=\"font-size: 14px;\">Förening för Anestesi och Intensivvård (SFAI). Dessa är allmänt&nbsp;</span><span style=\"font-size: 14px;\">accepterade och gäller som grundläggande rutin inom regionen&nbsp;</span><span style=\"font-size: 14px;\">(lokala avvikelser kan dock förekomma):&nbsp;</span></p> <h3 style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid planerad kirurgi:</b></span></h3> <p>Följande tidsgräns gäller för peroralt intag hos patienter med&nbsp;normal ventrikeltömning och avser tiden fram till anestesistart&nbsp;eller administration av opioid premedicinering:</p> <table border=\"0\" cellpadding=\"\" cellspacing=\"0\" style=\"width:500px;\"> <tbody> <tr> <td> <ul> <li>Vatten (med eller utan socker), kaffe, te,&nbsp;klar saft/juice och särskild preoperativ dryck</li> </ul> </td> <td>2 tim</td> </tr> <tr> <td> <ul> <li>Övrig dryck</li> </ul> </td> <td>6 tim</td> </tr> <tr> <td> <ul> <li>All fast och halvfast föda</li> </ul> </td> <td>6 tim</td> </tr> </tbody> </table> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\"><b>Fasta inför anestesi vid akut kirurgi:</b></span></p> <p style=\"margin-bottom: 0px; font-size: 8px; line-height: normal; font-family: Helvetica;\"><span style=\"font-size:14px;\">I princip gäller ovanstående riktlinjer även vid akuta kirurgiska&nbsp;</span><span style=\"font-size: 14px;\">ingrepp. Dock kan patientens tillstånd i vissa fall nödvändiggöra&nbsp;</span><span style=\"font-size: 14px;\">att reglerna frångås. Risken för aspiration får då vägas mot&nbsp;</span><span style=\"font-size: 14px;\">risken med att fördröja ingreppet.</span></p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "box"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "PREOPERATIV FASTA - RUTINER"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "Preoperativ vätskebehandling",
+    "uuid": "f41dfdbc-fb48-4663-94f4-23ef0b326104",
+    "version": 1.0
+  },
+  {
+    "articleId": "1695946",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "fsad"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "asdf"
+      }
+    ],
+    "path": [
+      "Xyzåäö",
+      "Vätskebehandling"
+    ],
+    "status": 0,
+    "title": "TEST",
+    "uuid": "a09e69ba-a940-4cbc-9c3d-40ef927471f0",
+    "version": 1.0
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "articleId": "1695345",
+    "fields": [
+      {
+        "children": [
+          {
+            "children": [],
+            "name": "rich_content",
+            "value": "<p>asdf</p> <p>asdfasdfasdf</p>"
+          },
+          {
+            "children": [],
+            "name": "style-option",
+            "value": "plain"
+          },
+          {
+            "children": [],
+            "name": "image",
+            "value": ""
+          }
+        ],
+        "name": "Rubrik1",
+        "value": "estaste"
+      },
+      {
+        "children": [],
+        "name": "Använd_ej",
+        "value": ""
+      }
+    ],
+    "path": [
+      "2017"
+    ],
+    "status": 0,
+    "title": "test",
+    "uuid": "1a17654f-470f-4fa1-bbc2-9ae06cc510c8",
+    "version": 1.0
+  }
+]
