@@ -1,7 +1,7 @@
 package se.vgregion.vatskenutrition.service;
 
 import org.apache.commons.io.IOUtils;
-import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,13 +12,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.util.concurrent.ListenableFutureCallback;
 import se.vgregion.vatskenutrition.config.AppITConfig;
 import se.vgregion.vatskenutrition.model.Article;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -62,29 +69,84 @@ public class ArticleServiceIT {
                         .withHeader("Content-Type", "application/json;charset=UTF-8"));
     }
 
-    @After
-    public void stopProxy() {
+    @AfterClass
+    public static void stopProxy() {
         mockServer.stop();
     }
 
     @Test
     public void findAllArticles() throws Exception {
-        List<Article> allArticles = articleService.findAllArticles();
-        System.out.println(allArticles);
-        assertTrue(allArticles.size() > 0);
+        CompletableFuture<Object> completableFuture = new CompletableFuture<>();
+        CountDownLatch lock = new CountDownLatch(1);
+
+        // Given (preparation)
+        articleService.update(Optional.of(completableFuture));
+
+        // Just to wait...
+        completableFuture.whenComplete((o, v) -> {
+            // When
+            List<Article> allArticles = articleService.findAllArticles();
+
+            // Then
+            assertTrue(allArticles.size() > 0);
+
+            lock.countDown();
+        });
+
+        lock.await(5, TimeUnit.SECONDS);
     }
 
     @Test
     public void findByYear() throws Exception {
-        List<Article> byYear = articleService.findByYear("2017");
-        assertTrue(byYear.size() > 0);
+
+        CountDownLatch lock = new CountDownLatch(1);
+
+        CompletableFuture<Object> completableFuture = new CompletableFuture<>();
+
+        // Given (preparation)
+        articleService.update(Optional.of(completableFuture));
+
+        // Just to wait...
+        completableFuture.whenComplete((o, v) -> {
+            // When
+            List<Article> byYear = articleService.findByYear("2017");
+
+            // Then
+            assertTrue(byYear.size() > 0);
+
+            lock.countDown();
+        });
+
+        lock.await(5, TimeUnit.SECONDS);
     }
 
     @Test
     public void fetchArticlesFromExternalSource() throws Exception {
-        List<Article> articles = articleService.fetchArticlesFromExternalSource(fetchAllArticlesUrl);
+        CountDownLatch lock = new CountDownLatch(1);
+        final List<Article>[] articles = new List[]{null};
 
-        LOGGER.info("Articles size: " + articles.size());
+        ListenableFutureCallback<ResponseEntity<Article[]>> callback = new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+
+            @Override
+            public void onFailure(Throwable ex) {
+                ex.printStackTrace();
+            }
+
+            @Override
+            public void onSuccess(ResponseEntity<Article[]> result) {
+                articles[0] = Arrays.asList(result.getBody());
+
+                lock.countDown();
+            }
+        };
+        articleService.fetchArticlesFromExternalSource(
+                fetchAllArticlesUrl, callback);
+
+        lock.await(5, TimeUnit.SECONDS);
+
+        assertNotNull(articles[0]);
+
+        LOGGER.info("Articles size: " + articles[0].size());
     }
 
     @Test

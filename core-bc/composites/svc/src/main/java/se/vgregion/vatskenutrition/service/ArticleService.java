@@ -8,11 +8,10 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.util.concurrent.ListenableFuture;
+import org.springframework.util.concurrent.ListenableFutureCallback;
+import org.springframework.web.client.AsyncRestTemplate;
 import se.vgregion.vatskenutrition.model.Article;
-import se.vgregion.vatskenutrition.model.Child;
-import se.vgregion.vatskenutrition.model.Field;
 import se.vgregion.vatskenutrition.repository.ArticleRepository;
 
 import javax.annotation.PostConstruct;
@@ -21,6 +20,10 @@ import java.util.Arrays;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Patrik Björk
@@ -44,20 +47,66 @@ public class ArticleService {
 
     private List<Article> startPageArticles;
 
+    private static Lock dbLock = new ReentrantLock();
+
     @PostConstruct
     @Scheduled(fixedRate = 600_000)
     public synchronized void update() {
+        update(Optional.empty());
+    }
+
+    void update(Optional<CompletableFuture<Object>> doneConsumer) {
         try {
             if (fetchAllArticlesUrl == null || "".equals(fetchAllArticlesUrl)) {
                 LOGGER.warn("fetchAllArticlesUrl is not set. Skip fetch articles.");
                 return;
             }
 
-            List<Article> articles = fetchArticlesFromExternalSource(fetchAllArticlesUrl);
-            startPageArticles = fetchArticlesFromExternalSource(fetchStartPageArticlesUrl);
+            CompletableFuture<Object> completableFuture1 = new CompletableFuture<>();
+            CompletableFuture<Object> completableFuture2 = new CompletableFuture<>();
 
-            articleRepository.deleteAll();
-            articleRepository.save(articles);
+            fetchArticlesFromExternalSource(fetchAllArticlesUrl,
+                    new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+
+                @Override
+                public void onFailure(Throwable throwable) {
+                    LOGGER.error(throwable.getMessage(), throwable);
+                    completableFuture1.complete(null);
+                }
+
+                @Override
+                public void onSuccess(ResponseEntity<Article[]> responseEntity) {
+                    List<Article> articles = Arrays.asList(responseEntity.getBody());
+
+                    dbLock.lock();
+                    articleRepository.deleteAll();
+                    articleRepository.save(articles);
+                    dbLock.unlock();
+
+                    completableFuture1.complete(null);
+                }
+            });
+
+            fetchArticlesFromExternalSource(fetchStartPageArticlesUrl,
+                    new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+                        @Override
+                        public void onFailure(Throwable throwable) {
+                            LOGGER.error(throwable.getMessage(), throwable);
+                            completableFuture2.complete(new Object());
+                        }
+
+                        @Override
+                        public void onSuccess(ResponseEntity<Article[]> responseEntity) {
+                            startPageArticles = Arrays.asList(responseEntity.getBody());
+                            completableFuture2.complete(new Object());
+                        }
+                    });
+
+            if (doneConsumer.isPresent()) {
+                CompletableFuture.allOf(completableFuture1, completableFuture2)
+                        .thenAccept(o -> doneConsumer.get().complete(new Object()));
+            }
+
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
         }
@@ -86,20 +135,18 @@ public class ArticleService {
                 .orElse(null);
     }
 
-    public List<Article> fetchArticlesFromExternalSource(String url) {
+    void fetchArticlesFromExternalSource(String url, ListenableFutureCallback<ResponseEntity<Article[]>> callback) {
 
         try {
 
-            RestTemplate skinnyTemplate = new RestTemplate();
+            AsyncRestTemplate asyncRestTemplate = new AsyncRestTemplate();
 
-            ResponseEntity<Article[]> skinnyResponse = skinnyTemplate.getForEntity(
+            ListenableFuture<ResponseEntity<Article[]>> listenableFuture = asyncRestTemplate.getForEntity(
                     url,
                     Article[].class,
                     new HashMap<>());
 
-            Article[] articleArray = skinnyResponse.getBody();
-
-            return Arrays.asList(articleArray);
+            listenableFuture.addCallback(callback);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
