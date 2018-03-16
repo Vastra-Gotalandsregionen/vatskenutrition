@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="col-8 scroll-container  {{article ? 'active' : 'inactive'}} {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
+  <div class="col-8 {{article ? 'active' : 'inactive'}} {{(watermarkText() | async) ? 'watermark-draft' : ''}}">
     <app-article [article]="article" [showTitle]="true" *ngIf="article; else noArticle"></app-article>
   </div>
 

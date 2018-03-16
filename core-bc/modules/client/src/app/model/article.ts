@@ -5,6 +5,7 @@ export class Article {
   uuid: string;
   title: string;
   fields: Field[];
+  path: string[];
   status: number;
   version: string;
 }

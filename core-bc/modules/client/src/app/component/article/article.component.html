@@ -1,16 +1,18 @@
-<div *ngIf="article">
-  <h2 *ngIf="showTitle">{{article.title}}</h2>
+<div id="container" *ngIf="article">
+  <h2 *ngIf="showTitle">{{article.path[1]}}<span class="fa fa-caret-right"></span>{{article.title}}</h2>
 
-  <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1', article.fields)">
+  <div class="scroll-container" >
+    <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1', article.fields)">
 
-    <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
+      <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
 
-    <div [innerHTML]="getRichContent(field)"></div>
+      <div [innerHTML]="getRichContent(field)"></div>
 
-    <div *ngIf="getImage(field)">
-      <p>
-        <img src="/api/image?url={{getImage(field)}}"/>
-      </p>
+      <div *ngIf="getImage(field)">
+        <p>
+          <img src="/api/image?url={{getImage(field)}}"/>
+        </p>
+      </div>
     </div>
   </div>
 </div>

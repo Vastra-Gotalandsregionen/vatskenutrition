@@ -1,11 +1,10 @@
 @import '../../../assets/scss/shared';
 
-/*
-md-grid-tile {
-  overflow-y: scroll;
+app-article {
+  display: block;
+  height: calc(100% - 16px);
+  padding: 16px 16px 0 16px;
 }
-*/
-
 
 .content {
   height: 100%;
@@ -27,12 +26,7 @@ md-grid-tile {
   position: relative;
 }
 
-.scroll-container {
-  overflow-y: scroll;
-}
-
 .col-4 {
-  //background: #ffda5c;
   background: #ffffff;
   border-right: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 16px;
@@ -54,10 +48,7 @@ md-grid-tile {
 }
 
 .col-8 {
-  //background: beige;
-  //background: #ffffff;
   width: 67%;
-  padding: 16px;
 
   &.transparent {
     background: transparent;
