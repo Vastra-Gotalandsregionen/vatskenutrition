@@ -3,7 +3,6 @@
   height: 100%;
   color: #fff;
   vertical-align: middle;
-  line-height: 56px;
   padding: 0 8px;
 
   a {
@@ -16,6 +15,7 @@
 
   .title {
     position: absolute;
+    line-height: 42px;
     text-align: center;
     margin: 0 auto 0 calc(50% - 182px);
     text-decoration: none;
@@ -40,4 +40,14 @@ app-back-link {
     transform: translateX(0);
   }
 
+}
+
+.sub-title {
+  position: absolute;
+  text-align: center;
+  margin: 0 auto 0 calc(50% - 141px);
+  text-decoration: none;
+  font-size: 13px;
+  bottom: 6px;
+  line-height: 12px;
 }

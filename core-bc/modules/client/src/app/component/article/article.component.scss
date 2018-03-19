@@ -2,7 +2,7 @@ img {
   max-width: 100%;
 }
 
-#container {
+#article-container {
   height: 100%;
 }
 
@@ -13,12 +13,12 @@ h2 {
   padding-bottom: 12px;
 
   .fa-caret-right {
-    margin: 0 12px
+    margin: 0 16px
   }
 }
 
 .scroll-container {
   box-sizing: border-box;
   height: calc(100% - 40px);
-  padding-bottom: 24px;
+  padding-bottom: 50px;
 }

@@ -148,7 +148,7 @@ export class ContentComponent implements OnInit, OnDestroy {
   }
 
   scrollToTop() {
-    document.querySelector('.col-8').scrollTop = 0;
+    document.querySelector('.col-8 .scroll-container').scrollTop = 0;
   }
 
   watermarkText(): Observable<boolean> {

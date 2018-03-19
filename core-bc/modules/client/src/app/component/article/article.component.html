@@ -1,5 +1,5 @@
-<div id="container" *ngIf="article">
-  <h2 *ngIf="showTitle">{{article.path[1]}}<span class="fa fa-caret-right"></span>{{article.title}}</h2>
+<div id="article-container" *ngIf="article">
+  <h2 *ngIf="showTitle"><span class="nowrap">{{article.path[1]}}</span><span class="fa fa-caret-right"></span><span class="nowrap">{{article.title}}</span></h2>
 
   <div class="scroll-container" >
     <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1', article.fields)">
