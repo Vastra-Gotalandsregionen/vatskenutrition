@@ -84,15 +84,6 @@ app-article {
   }
 }
 
-.box {
-  border: 1px solid #80c0e3;
-  padding: 4px 12px;
-}
-
-.blue {
-  color: #3c82c8
-}
-
 .anchor-element:hover {
   cursor: text;
 }
@@ -100,13 +91,9 @@ app-article {
 #background{
   position:absolute;
   z-index:0;
-  //background:white;
   display:block;
   min-height:50%;
   min-width:50%;
-  //color:yellow;
-
-  //opacity: 0.7;
   line-height: 3em;
   letter-spacing: 2px;
   word-spacing: 5px;
@@ -115,7 +102,6 @@ app-article {
   top: -75%;
   left: -175%;
 
-  display: block;
   width: 350%;
   height: 150%;
 
