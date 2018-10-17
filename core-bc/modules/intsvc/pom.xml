@@ -17,7 +17,6 @@
   <name>${project.artifactId}</name>
 
   <properties>
-    <jackson.version>1.9.10</jackson.version>
     <jdk.version>1.8</jdk.version>
   </properties>
 
