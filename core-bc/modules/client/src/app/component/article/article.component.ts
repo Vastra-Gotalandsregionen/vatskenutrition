@@ -27,8 +27,11 @@ export class ArticleComponent implements OnInit {
     return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, 'rich_content'));
   }
 
-  getImage(field: Field): string {
-    return this.getChildValue(field, 'image');
+  getImage(field: Field): {groupId, uuid} {
+    let childValue = this.getChildValue(field, 'image');
+    if (childValue && childValue.length > 0) {
+      return JSON.parse(childValue);
+    }
   }
 
   getStyleOption(field: Field) {
@@ -39,7 +42,7 @@ export class ArticleComponent implements OnInit {
     return fields.filter(field => field.name === fieldName);
   }
 
-  private getChildValue(field: Field, fieldName: string) {
+  private getChildValue(field: Field, fieldName: string): string {
     let result = null;
     field.children.forEach(child => {
       if (child.name === fieldName) {

@@ -8,9 +8,9 @@
 
       <div [innerHTML]="getRichContent(field)"></div>
 
-      <div *ngIf="getImage(field)">
+      <div *ngIf="getImage(field) as image">
         <p>
-          <img src="/api/image?url={{getImage(field)}}"/>
+          <img src="/api/image/{{image.groupId}}/{{image.uuid}}"/>
         </p>
       </div>
     </div>
