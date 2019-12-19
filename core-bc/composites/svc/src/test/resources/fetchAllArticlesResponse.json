@@ -38,7 +38,7 @@
     "fields": [
       {
         "children": [],
-        "name": "sort-number",
+        "name": "sortnumber",
         "value": "2"
       },
       {
@@ -262,7 +262,7 @@
     "fields": [
       {
         "children": [],
-        "name": "sort-number",
+        "name": "sortnumber",
         "value": "0"
       },
       {
@@ -364,7 +364,7 @@
     "fields": [
       {
         "children": [],
-        "name": "sort-number",
+        "name": "sortnumber",
         "value": "1"
       },
       {
@@ -584,7 +584,7 @@
     "fields": [
       {
         "children": [],
-        "name": "sort-number",
+        "name": "sortnumber",
         "value": "1"
       },
       {
@@ -943,7 +943,7 @@
     "fields": [
       {
         "children": [],
-        "name": "sort-number",
+        "name": "sortnumber",
         "value": "2"
       },
       {

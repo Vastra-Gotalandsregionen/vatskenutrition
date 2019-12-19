@@ -125,8 +125,8 @@ export class ContentComponent implements OnInit, OnDestroy {
   }
 
   private getSortNumber(article: Article): number {
-    let sortFields = this.filterField('sort-number', article.fields);
-    if (sortFields.length === 1) {
+    let sortFields = this.filterField('sortnumber', article.fields);
+    if (sortFields.length === 1 && !!sortFields[0].value) {
       return Number.parseInt(sortFields[0].value);
     } else {
       return 999;
