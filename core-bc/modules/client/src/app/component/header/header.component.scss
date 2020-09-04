@@ -2,7 +2,10 @@
   background: #005292;
   height: 100%;
   color: #fff;
-  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 0 8px;
 
   a {
@@ -14,10 +17,10 @@
   }
 
   .title {
-    position: absolute;
-    line-height: 42px;
-    text-align: center;
-    margin: 0 auto 0 calc(50% - 160px);
+    //position: absolute;
+    //line-height: 42px;
+    //text-align: center;
+    //margin: 0 auto 0 calc(50% - 160px);
     text-decoration: none;
     font-weight: 400;
     font-size: 22px;
@@ -30,6 +33,7 @@
 
 app-back-link {
 
+  left: 0;
   transform: translateX(32px);
   transition: all ease .2s;
   opacity: 0;
@@ -43,11 +47,11 @@ app-back-link {
 }
 
 .sub-title {
-  position: absolute;
-  text-align: center;
-  margin: 0 auto 0 calc(50% - 143px);
+  //position: absolute;
+  //text-align: center;
+  //margin: 0 auto 0 calc(50% - 143px);
   text-decoration: none;
   font-size: 13px;
   bottom: 6px;
-  line-height: 12px;
+  //line-height: 12px;
 }
