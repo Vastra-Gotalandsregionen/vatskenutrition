@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('vatskenutrition-client App', () => {
+describe('aldrekompassen-client App', () => {
   let page: AppPage;
 
   beforeEach(() => {
