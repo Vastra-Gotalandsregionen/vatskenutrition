@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 @Service
 public class JwtTokenFactory {
 
-    private static final String ISSUER = "Vatskenutrition"; // todo Make property
+    private static final String ISSUER = "Aldrekompassen"; // todo Make property
     private static final int EXPIRATION_MINUTES = 60; // todo Make property
     private static final int REFRESH_TOKEN_EXPIRATION_TIME = 120; // todo Make property
 

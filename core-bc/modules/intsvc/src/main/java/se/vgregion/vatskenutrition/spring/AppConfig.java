@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 @EnableWebMvc
 @EnableScheduling
 @ComponentScan(basePackageClasses = {ArticleController.class, HttpUtil.class, ArticleService.class})
-@PropertySource(value = "file://${user.home}/.app/vatskenutrition/application.properties", ignoreResourceNotFound = false)
+@PropertySource(value = "file://${user.home}/.app/aldrekompassen/application.properties", ignoreResourceNotFound = false)
 @EnableJpaRepositories(basePackageClasses = {ArticleRepository.class})
 public class AppConfig {
 

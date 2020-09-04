@@ -6,13 +6,13 @@
 
   <parent>
     <groupId>se.vgregion.vatskenutrition</groupId>
-    <artifactId>vatskenutrition-bc</artifactId>
+    <artifactId>aldrekompassen-bc</artifactId>
     <version>1.0-SNAPSHOT</version>
     <relativePath>../../pom.xml</relativePath>
   </parent>
 
   <groupId>se.vgregion.vatskenutrition</groupId>
-  <artifactId>vatskenutrition-bc-module-intsvc</artifactId>
+  <artifactId>aldrekompassen-bc-module-intsvc</artifactId>
   <packaging>war</packaging>
   <name>${project.artifactId}</name>
 
@@ -58,7 +58,7 @@
 
     <dependency>
       <groupId>se.vgregion.vatskenutrition</groupId>
-      <artifactId>vatskenutrition-bc-composite-svc</artifactId>
+      <artifactId>aldrekompassen-bc-composite-svc</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
 <!--
@@ -72,7 +72,7 @@
   </dependencies>
 
   <build>
-    <finalName>vatskenutrition-data</finalName>
+    <finalName>aldrekompassen-data</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
