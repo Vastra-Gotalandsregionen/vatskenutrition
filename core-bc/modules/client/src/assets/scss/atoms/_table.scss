@@ -1,5 +1,19 @@
 table {
+
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  th {
+    background: $vgr-red;
+    border: 0;
+    color: #fff;
+    font-weight: 500;
+  }
+
   td {
+    background-color: #fafafa;
+    border: 1px solid #dadada;
     padding: 6px 8px;
   }
 
