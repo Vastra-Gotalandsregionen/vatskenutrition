@@ -8,12 +8,15 @@ img {
 
 h2 {
   border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 12px;
 
   .fa-caret-right {
-    margin: 0 16px
+    line-height: 25px;
+    margin: 0 16px;
   }
 }
 

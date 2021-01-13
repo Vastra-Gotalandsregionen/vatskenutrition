@@ -169,6 +169,10 @@ table td {
   &.only-desktop {
     margin-top: 24px;
   }
+
+  img {
+    max-width: 95%;
+  }
 }
 
 .icon.icon-spinner {
