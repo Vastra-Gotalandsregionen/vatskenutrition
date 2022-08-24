@@ -10,7 +10,7 @@ public class Child {
     @Column
     private String name;
 
-    @Column
+    @Column(name = "value_")
     @Lob
     private String value;
 
