@@ -76,14 +76,20 @@ public class ArticleService {
 
                 @Override
                 public void onSuccess(ResponseEntity<Article[]> responseEntity) {
-                    List<Article> articles = Arrays.asList(responseEntity.getBody());
+                    try {
+                        List<Article> articles = Arrays.asList(responseEntity.getBody());
 
-                    dbLock.lock();
-                    articleRepository.deleteAll();
-                    articleRepository.save(articles);
-                    dbLock.unlock();
+                        dbLock.lock();
 
-                    completableFuture1.complete(null);
+                        articleRepository.deleteAll();
+                        articleRepository.save(articles);
+
+                        completableFuture1.complete(null);
+                    } catch (Exception e) {
+                        LOGGER.error(e.getMessage(), e);
+                    } finally {
+                        dbLock.unlock();
+                    }
                 }
             });
 
@@ -97,8 +103,12 @@ public class ArticleService {
 
                         @Override
                         public void onSuccess(ResponseEntity<Article[]> responseEntity) {
-                            startPageArticles = Arrays.asList(responseEntity.getBody());
-                            completableFuture2.complete(new Object());
+                            try {
+                                startPageArticles = Arrays.asList(responseEntity.getBody());
+                                completableFuture2.complete(new Object());
+                            } catch (Exception e) {
+                                LOGGER.error(e.getMessage(), e);
+                            }
                         }
                     });
 

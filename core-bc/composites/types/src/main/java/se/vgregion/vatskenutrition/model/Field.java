@@ -1,17 +1,10 @@
 package se.vgregion.vatskenutrition.model;
 
-import javax.persistence.Column;
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.OrderColumn;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "field_")
 public class Field {
 
     @Id
@@ -25,7 +18,7 @@ public class Field {
     @OrderColumn
     private List<Child> children;
 
-    @Column
+    @Column(name = "value_")
     @Lob
     private String value;
 
