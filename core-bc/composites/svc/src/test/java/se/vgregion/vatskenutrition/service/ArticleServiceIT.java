@@ -151,6 +151,12 @@ public class ArticleServiceIT {
 
     @Test
     public void findStartPageArticle() throws Exception {
+        CompletableFuture<Object> value = new CompletableFuture<>();
+        articleService.update(Optional.of(value));
+
+        // Wait to assure the articles are fetched and stored.
+        value.get(2, TimeUnit.SECONDS);
+
         Article startPageArticle = articleService.findStartPageArticle("2017");
 
         assertNotNull(startPageArticle);
