@@ -18,28 +18,4 @@
 
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 
-    <!-- Uses by default transaction bean with name transactionManager -->
-    <tx:annotation-driven />
-
-    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-        <property name="entityManagerFactory" ref="entityManagerFactory" />
-    </bean>
-
-    <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="dataSource" ref="dataSource" />
-        <property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml"></property>
-        <property name="jpaVendorAdapter" ref="jpaVendor" />
-        <property name="jpaPropertyMap">
-            <map>
-                <entry key="hibernate.format_sql" value="false" />
-            </map>
-        </property>
-    </bean>
-
-    <bean id="jpaVendor" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
-        <property name="database" value="H2" />
-        <property name="databasePlatform" value="org.hibernate.dialect.H2Dialect" />
-        <property name="generateDdl" value="true" />
-        <property name="showSql" value="false" />
-    </bean>
 </beans>

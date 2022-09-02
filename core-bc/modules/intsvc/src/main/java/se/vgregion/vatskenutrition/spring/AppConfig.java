@@ -25,19 +25,6 @@ import javax.sql.DataSource;
 @EnableScheduling
 @ComponentScan(basePackageClasses = {ArticleController.class, HttpUtil.class, ArticleService.class})
 @PropertySource(value = "file://${user.home}/.app/vatskenutrition/application.properties", ignoreResourceNotFound = false)
-@EnableJpaRepositories(basePackageClasses = {ArticleRepository.class})
 public class AppConfig {
 
-    @Bean
-    public DataSource dataSource() {
-
-        // no need shutdown, EmbeddedDatabaseFactoryBean will take care of this
-        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        EmbeddedDatabase db = builder
-                .setType(EmbeddedDatabaseType.H2) //.H2 or .DERBY
-//                .addScript("db/sql/create-db.sql")
-//                .addScript("db/sql/insert-data.sql")
-                .build();
-        return db;
-    }
 }
