@@ -2,7 +2,6 @@ package se.vgregion.vatskenutrition.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -12,18 +11,15 @@ import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.client.AsyncRestTemplate;
 import se.vgregion.vatskenutrition.model.Article;
-import se.vgregion.vatskenutrition.repository.ArticleRepository;
 
 import javax.annotation.PostConstruct;
 import java.nio.charset.Charset;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @author Patrik Björk
@@ -32,9 +28,6 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ArticleService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ArticleService.class);
-
-    @Autowired
-    private ArticleRepository articleRepository;
 
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;
@@ -46,6 +39,8 @@ public class ArticleService {
     private String defaultRevision;
 
     private List<Article> startPageArticles;
+    private List<Article> allArticles;
+    private Map<String, Article> allArticlesByUuid;
 
     private static Lock dbLock = new ReentrantLock();
 
@@ -81,8 +76,12 @@ public class ArticleService {
 
                         dbLock.lock();
 
-                        articleRepository.deleteAll();
-                        articleRepository.save(articles);
+                        allArticles = new ArrayList<>(articles);
+
+                        allArticlesByUuid = allArticles.stream().collect(Collectors.toUnmodifiableMap(
+                                Article::getUuid,
+                                Function.identity()
+                        ));
 
                         completableFuture1.complete(null);
                     } catch (Exception e) {
@@ -123,15 +122,24 @@ public class ArticleService {
     }
 
     public List<Article> findAllArticles() {
-        return articleRepository.findAll();
+        return new ArrayList<>(allArticles);
     }
 
     public List<Article> findByYear(String year) {
-        return articleRepository.findArticles(year, 0);
+        return allArticles.stream().filter(a -> a.getPaths().contains(year)
+                && (a.getStatus() == 0)).collect(Collectors.toList());
     }
 
     public List<String> findAvailableYears() {
-        return articleRepository.findAvailableYears();
+        Set<String> years = new TreeSet<>();
+
+        for (Article article : allArticles) {
+            if (article.getPaths() != null && article.getPaths().size() > 0) {
+                years.add(article.getPaths().get(0));
+            }
+        }
+
+        return new ArrayList<>(years);
     }
 
     public String getDefaultRevision() {
@@ -173,12 +181,6 @@ public class ArticleService {
     }
 
     public Article findArticle(String articleUuid) {
-        Article article = articleRepository.findOne(articleUuid);
-
-        if (article == null) {
-            return null;
-        }
-
-        return article;
+        return allArticlesByUuid.get(articleUuid);
     }
 }
