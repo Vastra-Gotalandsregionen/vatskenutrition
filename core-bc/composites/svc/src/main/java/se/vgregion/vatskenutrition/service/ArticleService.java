@@ -183,4 +183,10 @@ public class ArticleService {
     public Article findArticle(String articleUuid) {
         return allArticlesByUuid.get(articleUuid);
     }
+
+    public Article findArticle(String articleTitle, String year) {
+        return allArticles.stream().filter(article ->
+            article.getPaths().get(0).equals(year) && article.getTitle().equals(articleTitle)
+        ).findFirst().orElse(null);
+    }
 }
