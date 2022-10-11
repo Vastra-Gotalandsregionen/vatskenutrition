@@ -82,6 +82,29 @@ public class ArticleController {
         return ResponseEntity.ok(articleService.findStartPageArticle(defaultRevision));
     }
 
+    @RequestMapping(value = "/{year}/{articleTitle}", method = RequestMethod.GET)
+    public ResponseEntity<Article> getArticleByYearAndTitle(@PathVariable("articleTitle") String articleTitle,
+                                                            @PathVariable("year") String year) {
+
+        articleTitle = articleTitle.replace("_", " ");
+
+        Article article = articleService.findArticle(articleTitle, year);
+
+        if (article == null) {
+            // Fallback to handle old links.
+            return getArticleByUuid(articleTitle);
+        }
+
+        // If fetching other than default revision authenication is required.
+        if (!article.getPaths().get(0).equals(articleService.getDefaultRevision())
+                && httpUtil.getUserIdFromRequest(request) == null) {
+
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        return ResponseEntity.ok(article);
+    }
+
     @RequestMapping(value = "/{articleUuid}", method = RequestMethod.GET)
     public ResponseEntity<Article> getArticleByUuid(@PathVariable("articleUuid") String articleUuid) {
 
@@ -98,8 +121,6 @@ public class ArticleController {
 
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
         }
-
-        // todo check which revision it belongs too and if other than default require auth
 
         return ResponseEntity.ok(article);
     }

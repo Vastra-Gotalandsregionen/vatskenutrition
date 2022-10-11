@@ -16,6 +16,8 @@ import 'rxjs/add/operator/combineLatest';
 import {HttpClient} from "@angular/common/http";
 import {AuthStateService} from "../../service/auth/auth-state.service";
 import {StateService} from "../../service/state/state.service";
+import {combineLatest} from "rxjs/observable/combineLatest";
+import {debounceTime} from "rxjs/operators";
 
 @Component({
   selector: 'app-content',
@@ -91,8 +93,11 @@ export class ContentComponent implements OnInit, OnDestroy {
         console.log('error: ' + error);
       });
 
-    this.route.queryParams
-      .subscribe(params => {
+    combineLatest(this.yearService.selectedYear, this.route.queryParams).pipe(
+      debounceTime(20)
+    ).subscribe(value => {
+        const year = value[0];
+        const params = value[1];
 
         if (params.article) {
           const timerSubscription: Subscription = Observable.timer(250) // Delay when progress indicator is shown.
@@ -101,15 +106,20 @@ export class ContentComponent implements OnInit, OnDestroy {
               this.article = null; // Makes view show progress indidator
             });
 
-          this.httpClient.get<Article>('/api/article/' + params.article)
+          this.httpClient.get<Article>('/api/article/' + year + '/' + params.article)
             .finally(() => timerSubscription.unsubscribe())
             .subscribe(article => this.article = article);
         } else {
           this.article = null;
         }
-      });
+      }
+    );
 
     this.selectedYear = this.yearService.selectedYear;
+  }
+
+  prettify(title: string): string {
+    return title ? title.replace(/ /g, '_') : title;
   }
 
   private sort(a: Article, b: Article): number {
