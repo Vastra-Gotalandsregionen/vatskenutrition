@@ -29,23 +29,10 @@ export class AppComponent implements OnInit {
     let currentYearObservable = this.http.get('/api/year/currentYear', {responseType: 'text'});
     let paramsObservable = this.route.queryParams;
 
-    currentYearObservable.combineLatest(paramsObservable, (currentYear, params) => [currentYear, params])
-      .subscribe(array => {
-
-        let defaultYear = array[0];
-        let params = array[1];
-
-        this.yearService.defaultYear = <string>defaultYear;
-
-        let selectedYearFromParams = (<Params>params).selectedYear;
-        if (selectedYearFromParams) {
-          let selectedYear = selectedYearFromParams;
-
-            this.yearService.setSelectedYear(selectedYear);
-        } else {
-          this.yearService.setSelectedYear(<string>defaultYear);
-        }
-      });
+    currentYearObservable.subscribe(year => {
+      this.yearService.setSelectedYear(year)
+      this.yearService.defaultYear = year;
+    });
   }
 
   get loggedIn(): boolean {
