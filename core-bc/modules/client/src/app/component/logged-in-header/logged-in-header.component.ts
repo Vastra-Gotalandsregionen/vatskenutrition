@@ -31,11 +31,7 @@ export class LoggedInHeaderComponent implements OnInit {
   }
 
   saveSelectedYear() {
-    let queryParams = {
-      'selectedYear': this.selectedYear
-    };
-
-    this.router.navigate([''], {queryParams: queryParams});
+    this.yearService.setSelectedYear(this.selectedYear);
   }
 
   selectedYearIsSameAsDefaultYear() {

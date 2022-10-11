@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -50,8 +49,11 @@ public class ArticleController {
     }
 
     @RequestMapping(value = "/year/{year}", method = RequestMethod.GET)
-    @PreAuthorize("isAuthenticated()")
-    public Object getArticlesByYear(@PathVariable("year") String year) {
+    public Object getArticlesByYear(@PathVariable("year") String year, HttpServletRequest request) {
+        if (request.getUserPrincipal() == null && !year.equals(defaultRevision)) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
         return articleService.findByYear(year);
     }
 
@@ -85,6 +87,10 @@ public class ArticleController {
     @RequestMapping(value = "/{year}/{articleTitle}", method = RequestMethod.GET)
     public ResponseEntity<Article> getArticleByYearAndTitle(@PathVariable("articleTitle") String articleTitle,
                                                             @PathVariable("year") String year) {
+
+        if (year.equals("currentYear")) {
+            year = articleService.getDefaultRevision();
+        }
 
         articleTitle = articleTitle.replace("_", " ");
 
