@@ -92,7 +92,9 @@ public class ArticleController {
             year = articleService.getDefaultRevision();
         }
 
-        articleTitle = articleTitle.replace("_", " ");
+        articleTitle = articleTitle
+                .replace("_", " ")
+                .replace("--slash--", "/");
 
         Article article = articleService.findArticle(articleTitle, year);
 

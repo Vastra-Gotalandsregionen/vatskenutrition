@@ -106,7 +106,7 @@ export class ContentComponent implements OnInit, OnDestroy {
               this.article = null; // Makes view show progress indidator
             });
 
-          this.httpClient.get<Article>('/api/article/' + year + '/' + params.article)
+          this.httpClient.get<Article>('/api/article/' + year + '/' + params.article.replace('/', '--slash--'))
             .finally(() => timerSubscription.unsubscribe())
             .subscribe(article => this.article = article);
         } else {
