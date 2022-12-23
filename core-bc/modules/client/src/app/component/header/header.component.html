@@ -1,6 +1,6 @@
 <div class="header">
 
   <app-back-link class="{{showBackLink ? 'show' : 'hide'}}"></app-back-link>
-  <div class="title"><a [routerLink]="['/']" queryParamsHandling="merge" [queryParams]="{article: null}">Äldrekompassen</a></div>
+  <div class="title"><a [routerLink]="['/']" queryParamsHandling="merge" [queryParams]="{article: null}">Äldrekompassen<span *ngIf="additionalHeadingText | async"> {{ additionalHeadingText | async}}</span></a></div>
   <div class="sub-title">Läkemedelskommittén i Västra Götalandsregionen</div>
 </div>
