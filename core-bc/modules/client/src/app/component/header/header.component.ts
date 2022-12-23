@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {YearService} from "../../service/year.service";
-import {AuthStateService} from "../../service/auth/auth-state.service";
-import {ActivatedRoute} from "@angular/router";
+import {Observable} from 'rxjs/Observable';
+import {YearService} from '../../service/year.service';
+import {AuthStateService} from '../../service/auth/auth-state.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class HeaderComponent implements OnInit {
 
-  selectedYear: Observable<string>;
+  additionalHeadingText: Observable<string>;
 
   showBackLink: boolean;
 
@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.selectedYear = this.yearService.selectedYear;
+    this.additionalHeadingText = this.yearService.additionalHeadingText;
 
     this.route.queryParams.subscribe(params => {
       if (params.article) {
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
       } else {
         this.showBackLink = false;
       }
-    })
+    });
   }
 
 }

@@ -1,6 +1,7 @@
 package se.vgregion.vatskenutrition.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,12 +13,20 @@ import java.util.List;
 @RequestMapping("/year")
 public class YearController {
 
+    @Value("${additionalHeadingText}")
+    private String additionalHeadingText;
+
     @Autowired
     private ArticleService articleService;
 
     @RequestMapping(value = "/currentYear", method = RequestMethod.GET)
     public String getCurrentYear() {
         return articleService.getDefaultRevision();
+    }
+
+    @RequestMapping(value = "/additionalHeadingText", method = RequestMethod.GET)
+    public String getAdditionalHeadingText() {
+        return additionalHeadingText;
     }
 
     @RequestMapping(value = "/availableYears", method = RequestMethod.GET)

@@ -28,10 +28,15 @@ export class AppComponent implements OnInit {
 
     let currentYearObservable = this.http.get('/api/year/currentYear', {responseType: 'text'});
     let paramsObservable = this.route.queryParams;
+    const additionalHeadingTextObservable = this.http.get('/api/year/additionalHeadingText', {responseType: 'text'});
 
     currentYearObservable.subscribe(year => {
-      this.yearService.setSelectedYear(year)
+      this.yearService.setSelectedYear(year);
       this.yearService.defaultYear = year;
+    });
+
+    additionalHeadingTextObservable.subscribe(text => {
+      this.yearService.setAdditionalHeadingText(text);
     });
   }
 
