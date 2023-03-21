@@ -73,7 +73,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable()
 				.authorizeRequests()
-				.antMatchers("/year/currentYear", "/article/startPageArticle/currentYear", "/auth/token", "/article/year/currentYear", "/article/*", "/article/*/*", "/image/**")
+				.antMatchers("/year/currentYear", "/year/additionalHeadingText", "/article/startPageArticle/currentYear", "/auth/token", "/article/year/currentYear", "/article/*", "/article/*/*", "/image/**")
 				.permitAll()
 				.anyRequest().authenticated()
 				.and()
