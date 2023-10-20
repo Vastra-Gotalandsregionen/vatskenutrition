@@ -1,18 +1,25 @@
 package se.vgregion.vatskenutrition.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import org.springframework.web.client.AsyncRestTemplate;
-import se.vgregion.vatskenutrition.model.Article;
+import se.vgregion.vatskenutrition.model.v2.Article;
+import se.vgregion.vatskenutrition.model.v2.Folder;
+import se.vgregion.vatskenutrition.model.v2.ItemResponse;
 
 import javax.annotation.PostConstruct;
+import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
@@ -29,17 +36,26 @@ public class ArticleService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ArticleService.class);
 
+    @Value("${api.username}")
+    private String username;
+    @Value("${api.password}")
+    private String password;
+
     @Value("${fetchAllArticlesUrl}")
     private String fetchAllArticlesUrl;
 
     @Value("${fetchStartPageArticlesUrl}")
     private String fetchStartPageArticlesUrl;
 
+    @Value("${fetchFolderUrl}")
+    private String fetchFolderUrl;
+
     @Value("${defaultRevision}")
     private String defaultRevision;
 
     private List<Article> startPageArticles;
     private List<Article> allArticles;
+    private Map<Integer, Folder> allFolders;
     private Map<String, Article> allArticlesByUuid;
 
     private static Lock dbLock = new ReentrantLock();
@@ -59,9 +75,10 @@ public class ArticleService {
 
             CompletableFuture<Object> completableFuture1 = new CompletableFuture<>();
             CompletableFuture<Object> completableFuture2 = new CompletableFuture<>();
+            CompletableFuture<Object> completableFuture3 = new CompletableFuture<>();
 
             fetchArticlesFromExternalSource(fetchAllArticlesUrl,
-                    new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+                    new ListenableFutureCallback<ResponseEntity<ItemResponse<Article>>>() {
 
                 @Override
                 public void onFailure(Throwable throwable) {
@@ -70,9 +87,23 @@ public class ArticleService {
                 }
 
                 @Override
-                public void onSuccess(ResponseEntity<Article[]> responseEntity) {
+                public void onSuccess(ResponseEntity<ItemResponse<Article>> responseEntity) {
                     try {
-                        List<Article> articles = Arrays.asList(responseEntity.getBody());
+                        List<Article> articles = responseEntity.getBody().getItems();
+
+                        articles.forEach(article -> {
+                            LinkedList<String> path = new LinkedList<>();
+                            Integer folderId = article.getStructuredContentFolderId();
+
+                            Folder folder = allFolders.get(folderId);
+                            path.addFirst(folder.getName());
+                            while (folder.getParentStructuredContentFolderId() != null) {
+                                folder = allFolders.get(folder.getParentStructuredContentFolderId());
+                                path.addFirst(folder.getName());
+                            }
+
+                            article.setPath(path);
+                        });
 
                         dbLock.lock();
 
@@ -90,10 +121,10 @@ public class ArticleService {
                         dbLock.unlock();
                     }
                 }
-            });
+            }, Article.class);
 
             fetchArticlesFromExternalSource(fetchStartPageArticlesUrl,
-                    new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+                    new ListenableFutureCallback<ResponseEntity<ItemResponse<Article>>>() {
                         @Override
                         public void onFailure(Throwable throwable) {
                             LOGGER.error(throwable.getMessage(), throwable);
@@ -101,18 +132,45 @@ public class ArticleService {
                         }
 
                         @Override
-                        public void onSuccess(ResponseEntity<Article[]> responseEntity) {
+                        public void onSuccess(ResponseEntity<ItemResponse<Article>> responseEntity) {
                             try {
-                                startPageArticles = Arrays.asList(responseEntity.getBody());
+                                startPageArticles = Objects.requireNonNull(responseEntity.getBody()).getItems();
                                 completableFuture2.complete(new Object());
                             } catch (Exception e) {
                                 LOGGER.error(e.getMessage(), e);
                             }
                         }
-                    });
+                    }, Article.class);
+
+            fetchArticlesFromExternalSource(fetchFolderUrl,
+                    new ListenableFutureCallback<ResponseEntity<ItemResponse<Folder>>>() {
+                        @Override
+                        public void onFailure(Throwable throwable) {
+                            LOGGER.error(throwable.getMessage(), throwable);
+                            completableFuture3.complete(new Object());
+                        }
+
+                        @Override
+                        public void onSuccess(ResponseEntity<ItemResponse<Folder>> responseEntity) {
+                            try {
+                                List<Folder> folders = Objects.requireNonNull(responseEntity.getBody()).getItems();
+
+                                Map<Integer, Folder> newMap = new HashMap<>();
+
+                                for (Folder folder : folders) {
+                                    newMap.put(folder.getId(), folder);
+                                }
+
+                                allFolders = newMap;
+                                completableFuture3.complete(new Object());
+                            } catch (Exception e) {
+                                LOGGER.error(e.getMessage(), e);
+                            }
+                        }
+                    }, Folder.class);
 
             if (doneConsumer.isPresent()) {
-                CompletableFuture.allOf(completableFuture1, completableFuture2)
+                CompletableFuture.allOf(completableFuture1, completableFuture2, completableFuture3)
                         .thenAccept(o -> doneConsumer.get().complete(new Object()));
             }
 
@@ -126,17 +184,26 @@ public class ArticleService {
     }
 
     public List<Article> findByYear(String year) {
-        return allArticles.stream().filter(a -> a.getPaths().contains(year)
-                && (a.getStatus() == 0)).collect(Collectors.toList());
+        return allArticles.stream().filter(a -> getRootFolder(a).getName().contains(year)).collect(Collectors.toList());
+    }
+
+    public Folder getRootFolder(Article article) {
+        Integer folderId = article.getStructuredContentFolderId();
+
+        Folder folder = allFolders.get(folderId);
+
+        while (folder.getParentStructuredContentFolderId() != null) {
+            folder = allFolders.get(folder.getParentStructuredContentFolderId());
+        }
+
+        return folder;
     }
 
     public List<String> findAvailableYears() {
         Set<String> years = new TreeSet<>();
 
         for (Article article : allArticles) {
-            if (article.getPaths() != null && article.getPaths().size() > 0) {
-                years.add(article.getPaths().get(0));
-            }
+            years.add(getRootFolder(article).getName());
         }
 
         return new ArrayList<>(years);
@@ -148,21 +215,30 @@ public class ArticleService {
 
     public Article findStartPageArticle(String year) {
         return startPageArticles.stream()
-                .filter(article -> article.getPaths().get(0).equals(year))
+                .filter(article -> getRootFolder(article).getName().equals(year))
                 .findFirst()
                 .orElse(null);
     }
 
-    void fetchArticlesFromExternalSource(String url, ListenableFutureCallback<ResponseEntity<Article[]>> callback) {
+    <T> void fetchArticlesFromExternalSource(String url,
+                                             ListenableFutureCallback<ResponseEntity<ItemResponse<T>>> callback,
+                                             Class<T> clazz) {
 
         try {
 
             AsyncRestTemplate asyncRestTemplate = new AsyncRestTemplate();
 
-            ListenableFuture<ResponseEntity<Article[]>> listenableFuture = asyncRestTemplate.getForEntity(
+            ListenableFuture<ResponseEntity<ItemResponse<T>>> listenableFuture = asyncRestTemplate.exchange(
                     url,
-                    Article[].class,
-                    new HashMap<>());
+                    HttpMethod.GET,
+                    new HttpEntity<>(null, createHeaders(username, password)),
+                    new ParameterizedTypeReference<>() {
+                        @Override
+                        public Type getType() {
+                            return new ObjectMapper().getTypeFactory().constructParametricType(ItemResponse.class, clazz);
+                        }
+                    }
+            );
 
             listenableFuture.addCallback(callback);
         } catch (Exception e) {
@@ -186,7 +262,7 @@ public class ArticleService {
 
     public Article findArticle(String articleTitle, String year) {
         return allArticles.stream().filter(article ->
-            article.getPaths().get(0).equals(year) && article.getTitle().equals(articleTitle)
+            getRootFolder(article).getName().equals(year) && article.getTitle().equals(articleTitle)
         ).findFirst().orElse(null);
     }
 }

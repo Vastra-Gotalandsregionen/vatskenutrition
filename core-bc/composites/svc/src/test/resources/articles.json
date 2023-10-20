@@ -1,0 +1,609 @@
+{
+  "actions" : {
+    "updateBatch" : {
+      "method" : "PUT",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/batch"
+    },
+    "get" : {
+      "method" : "GET",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-contents"
+    },
+    "create" : {
+      "method" : "POST",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-contents"
+    },
+    "createBatch" : {
+      "method" : "POST",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-contents/batch"
+    },
+    "deleteBatch" : {
+      "method" : "DELETE",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/batch"
+    }
+  },
+  "facets" : [ ],
+  "items" : [ {
+    "actions" : {
+      "get-rendered-content" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/rendered-content/{contentTemplateId}"
+      },
+      "get-rendered-content-by-display-page" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/rendered-content-by-display-page/{displayPageKey}"
+      },
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632"
+      },
+      "update" : {
+        "method" : "PATCH",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632"
+      }
+    },
+    "availableLanguages" : [ "sv-SE" ],
+    "contentFields" : [ {
+      "contentFieldValue" : {
+        "data" : ""
+      },
+      "dataType" : "integer",
+      "label" : "Sorteringstal",
+      "name" : "sortnumber",
+      "nestedContentFields" : [ ],
+      "repeatable" : false
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "INDIKATIONER"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>Undernäring är vanligt vid sjukdom och leder till ökad sjuklighet, nedsatt funktion och livskvalitet, förlängd vårdtid samt ökad risk för död. Tillståndet karaktäriseras av brist på energi, protein och andra näringsämnen vilket orsakar mätbara ogynnsamma effekter på kroppens struktur (form, storlek och sammansättning), funktion och kliniskt förlopp. Sjukdomsrelaterad undernäring utvecklas genom två parallella processer, se figur nedan. Sjukdom ger ofta inflammation som leder till katabolism, vilket innebär att mekanismerna för anpassning till brist på energi och näring försämras. Samtidigt medför aptitlöshet lägre intag och negativ energibalans. Hur lång tid det tar att utveckla undernäring varierar bland annat beroende på nutritionsstatus före sjukdom, näringsintag samt typ och grad av sjukdom.</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "image" : {
+              "contentType" : "Document",
+              "contentUrl" : "/documents/36727/36729/6319402/32477866-9d2f-2988-5fa4-1d29b641ffba?t=1551251651835",
+              "description" : "",
+              "encodingFormat" : "png",
+              "fileExtension" : "",
+              "id" : 37560,
+              "sizeInBytes" : 24635,
+              "title" : "6319402"
+            }
+          },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "NUTRITIONSVÅRDSPROCESSEN"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>För effektiv och säker nutritionsbehandling krävs ett strukturerat omhändertagande enligt den s k nutritionsvårdsprocessen:</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "image" : {
+              "contentType" : "Document",
+              "contentUrl" : "/documents/36727/36729/6319403/fa7b270a-131e-c68b-dc59-6d9bab1fb491?t=1551251651811",
+              "description" : "",
+              "encodingFormat" : "png",
+              "fileExtension" : "",
+              "id" : 37564,
+              "sizeInBytes" : 8302,
+              "title" : "6319403"
+            }
+          },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "SCREENING"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>Det är viktigt att på ett så tidigt stadium som möjligt fånga upp patienter som har eller har risk för att utveckla undernäring. Det finns ett flertal screeninginstrument som kombinerar olika nutritionsrelaterade variabler.</p>\n\n<ul>\n\t<li>Ofrivillig viktförlust, oavsett tidsförlopp och omfattning. Ofrivillig viktminskning på &gt;5% under en månad eller &gt;10% under ett halvår beräknat på ursprungsvikten, utgör ett tydligt tecken på negativ energibalans och försämrat nutritionstillstånd.</li>\n\t<li>Ätsvårigheter t ex aptitlöshet, tugg- och sväljningsproblem, orkeslöshet och motoriska funktionsnedsättningar.</li>\n\t<li>Undervikt, vilket motsvarar Body Mass Index (BMI) &lt; 20 om &lt; 70 år eller &lt; 22 om &gt; 70 år. Enbart ett lågt BMI utan viktsförlust och ätsvårigheter behöver inte betyda risk för undernäring.</li>\n</ul>\n\n<p>BMI = vikt (kg)/längd (m<sup><font size=\"2\">2</font></sup>)</p>\n\n<p>Risk för undernäring föreligger om patienten har en eller flera av riskfaktorerna.</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "UTREDNING"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>Vid identifierad risk bör patienten utredas för fastställande av bakgrund, art och grad av det aktuella nutritionsproblemet samt för ställningstagande till adekvata åtgärder.<br />\nUtredningen omfattar:</p>\n\n<ul>\n\t<li>Bakomliggande sjukdom.</li>\n\t<li>Nyligen genomförd eller pågående behandling eller medicinering som kan orsaka t.ex illamående, muntorrhet, förstoppning.</li>\n\t<li>Bristande aptit.</li>\n\t<li>Ätrelaterade symptom som t.ex. illamående, gasbesvär, diarré, magsmärta.</li>\n\t<li>Funktionella svårigheter att äta, t.ex. tugg- och sväljningssvårig- heter, motoriska handikapp, synhandikapp.</li>\n\t<li>Ökat energibehov t.ex. vandrande beteende vid demens, förhöjd muskeltonus vid Parkinson eller ökat andningsarbete vid svår KOL.</li>\n\t<li>Kulturella, etniska och sociala faktorer av betydelse för matintaget, t ex. sorg, byte av boende.</li>\n\t<li>Trötthet eller nedsatt motivation på grund av t.ex. oro, ångest, depression.</li>\n</ul>\n\n<p><strong>Bedömning av energibehov</strong><br />\nBeräkna patientens energibehov enligt nedanstående tabell:</p>\n\n<table align=\"left\" border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 500px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>&nbsp;</td>\n\t\t\t<td>Kcal/kg/dygn</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Basalmetabolism (BMR)</td>\n\t\t\t<td>20</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Sängbunden, BMR + 25%</td>\n\t\t\t<td>25</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Ej sängbunden, BMR + 50%</td>\n\t\t\t<td>30</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Förhöjt behov*, BMR + 75–100%</td>\n\t\t\t<td>35–40</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p>&nbsp;</p>\n\n<p><br />\n<span style=\"font-size: 11px;\">* Högre energitillförsel kan vara motiverat vid vissa tillstånd.</span></p>\n\n<p>Ovanstående värden korrigeras erfarenhetsmässigt om patienten är:</p>\n\n<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 500px;\">\n\t<tbody>\n\t\t<tr>\n\t\t\t<td>Undervikt</td>\n\t\t\t<td>+ 10%</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>18-30 år</td>\n\t\t\t<td>+ 10 %</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>&gt;70 år</td>\n\t\t\t<td>- 10 %</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>För varje grads temperaturstegring</td>\n\t\t\t<td>+ 10 %</td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Kritiskt sjuk</td>\n\t\t\t<td>- 10–25 %</td>\n\t\t</tr>\n\t</tbody>\n</table>\n\n<p><br />\nVid övervikt (BMI &gt; 25) kan kroppsvikten motsvarande BMI 25 användas, med tillägg av 25 % av den överskjutande vikten</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "BEHANDLING"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>En vårdplan med uppgifter om nutritionsdiagnos, ordinerad behandling, mål för behandling samt plan för uppföljning och utvärdering bör upprättas i samråd med patient och eventuellt närstående.Grunden för behandling är ofta oralt intag av mat. För hjälp med val av nutritionsterapi tillfråga dietist.<br />\nMed nutritionsbehandling avses tillförsel av energi och näringsämnen i syfte att tillgodose behoven på ett för omständigheterna optimalt sätt. Nutritionsterapi utgör ett samlingsbegrepp för de olika terapiformer som står till buds för nutritionsbehandling.</p>\n\n<p>&nbsp;</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "image" : {
+              "contentType" : "Document",
+              "contentUrl" : "/documents/36727/36729/6319408/b2dfdca5-a1de-6283-61c8-8632438a8fb4?t=1551251651773",
+              "description" : "",
+              "encodingFormat" : "png",
+              "fileExtension" : "",
+              "id" : 37568,
+              "sizeInBytes" : 15863,
+              "title" : "6319408"
+            }
+          },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "ARTIFICELL NUTRITION (ta bort?)"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>Artificiell nutrition är ett samlingsbegrepp för nutrition som tillförs via sond i mag-tarmkanalen, s k enteral nutrition (EN) och nutrition som tillförs via venkateter i blodbanan, s k parenteral nutrition (PN). Syftet är att upprätthålla adekvat näringstillförsel, när förmågan att inta eller tillgodogöra sig vanlig mat är kraftigt nedsatt eller upphävd. Nutritionsbehandlingen måste utformas, övervakas och följas upp för att undvika komplikationer. Riskerna med behandlingen måste alltid vägas mot den förväntade nyttan. Artificiell nutritionsbehandling ordineras av läkare utifrån en samlad bedömning av patientens tillstånd. Konsultera gärna dietist för bedömning av patientens nutritionsstatus och för råd om lämplig ordination.<br />\nDen generella indikationen för artificiell nutrition är bristande näringsintag på grund av sjukdom under en period som överstiger eller beräknas överstiga en vecka, och där medicinsk bedömning talar för att nutritionsbehandling troligen kan förbättra situationen.</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "VAL AV LÄMPLIG TILLFÖRSELVÄG"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : ""
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "image" : {
+              "contentType" : "Document",
+              "contentUrl" : "/documents/36727/36729/6319411/58c7247e-55fd-e37f-dff1-c8a3e886a507?t=1551251651764",
+              "description" : "",
+              "encodingFormat" : "png",
+              "fileExtension" : "",
+              "id" : 37572,
+              "sizeInBytes" : 33670,
+              "title" : "6319411"
+            }
+          },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "UTVÄRDERING OCH DOKUMENTATION"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>Behandlingen ska bedömas, dokumenteras och utvärderas under behandlingstiden. Vikt bör följas kontinuerligt, minst 1 gång/vecka.<br />\nMat- och vätskeregistrering är ett sätt att värdera patientens energi- och vätskeintag. Registrering bör ske under 3-4 dagar för att utjämna dag-till-dag variationen.&nbsp;All&nbsp;vätske- och näringstillförsel ska dokumenteras.&nbsp;Energi- och vätskeintaget ställs i relation till skattat behov av energi och näringsämnen samt viktutveckling.</p>\n\n<p><br />\nSamtliga utredande och behandlande insatser ska journalföras. Information om nutritionstillstånd, behov, aktuell nutritionsordination och mål med behandlingen ska överrapporteras i samband med byte av vårdgivare.</p>\n\n<p><br />\nPatientens värderingar, rätt till självbestämmande och behov av delaktighet ska respekteras i all nutritionsbehandling</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    }, {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "Rubrik1FieldSet",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : "ANSVARSFÖRDELNING"
+        },
+        "dataType" : "string",
+        "inputControl" : "text",
+        "label" : "Rubrik 1",
+        "name" : "Rubrik1",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSetFieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "<p>text till detta - hänvisning til författning</p>"
+          },
+          "dataType" : "string",
+          "label" : "Formaterat innehåll",
+          "name" : "rich_content",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : {
+            "data" : "Vanlig"
+          },
+          "dataType" : "string",
+          "inputControl" : "select",
+          "label" : "Stilalternativ",
+          "name" : "styleoption",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "image",
+          "label" : "Bild",
+          "name" : "image",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        } ],
+        "repeatable" : false
+      } ],
+      "repeatable" : true
+    } ],
+    "contentStructureId" : 35614,
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T08:07:38Z",
+    "dateModified" : "2023-10-13T06:32:31Z",
+    "datePublished" : "2018-02-22T08:04:00Z",
+    "description" : "",
+    "externalReferenceCode" : "5930709",
+    "friendlyUrlPath" : "testartik-1",
+    "id" : 35632,
+    "key" : "5930709",
+    "keywords" : [ ],
+    "numberOfComments" : 0,
+    "priority" : 0.0,
+    "relatedContents" : [ ],
+    "renderedContents" : [ {
+      "contentTemplateId" : "5929201",
+      "contentTemplateName" : "tom mall",
+      "markedAsDefault" : true,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/rendered-content/5929201"
+    }, {
+      "contentTemplateId" : "8037067",
+      "contentTemplateName" : "Diff-mall",
+      "markedAsDefault" : false,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35632/rendered-content/8037067"
+    } ],
+    "siteId" : 20124,
+    "structuredContentFolderId" : 35584,
+    "subscribed" : false,
+    "taxonomyCategoryBriefs" : [ ],
+    "title" : "1. NUTRITIONSBEHANDLING",
+    "uuid" : "850c6223-0bc9-77b8-c46f-9a1fb135573e"
+  } ],
+  "lastPage" : 92,
+  "page" : 1,
+  "pageSize" : 1,
+  "totalCount" : 92
+}

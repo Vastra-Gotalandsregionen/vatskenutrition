@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 
 @Controller
 @RequestMapping("/image")
@@ -33,7 +36,30 @@ public class ImageController {
     @ResponseBody
     public ResponseEntity<InputStreamResource> getImage(@RequestParam("url") String url) throws IOException {
 
-        URL url2 = new URL(baseUrl + url);
+        String path = url
+                .replaceAll(" ", "%20")
+                .replaceAll("å", URLEncoder.encode("å", StandardCharsets.UTF_8))
+                .replaceAll("ä", URLEncoder.encode("ä", StandardCharsets.UTF_8))
+                .replaceAll("ö", URLEncoder.encode("ö", StandardCharsets.UTF_8))
+                .replaceAll("Å", URLEncoder.encode("Å", StandardCharsets.UTF_8))
+                .replaceAll("Ä", URLEncoder.encode("Ä", StandardCharsets.UTF_8))
+                .replaceAll("Ö", URLEncoder.encode("Ö", StandardCharsets.UTF_8))
+                ;
+
+        URL url2 = new URL(baseUrl + path);
+
+        try {
+            URI uri = new URI(url2.getProtocol(), url2.getHost(), url2.getPath(), url2.getQuery(),null);
+            HttpResponse<String> send = HttpClient.newHttpClient().send(
+                    HttpRequest.newBuilder().GET().uri(
+                            uri
+                    ).build(),
+                    HttpResponse.BodyHandlers.ofString()
+            );
+            send.headers();
+        } catch (InterruptedException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
 
         return getImage(url2);
     }

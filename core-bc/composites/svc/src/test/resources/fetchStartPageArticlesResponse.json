@@ -1,40 +1,608 @@
-[
-  {
-    "articleId": "1695345",
-    "fields": [
-      {
-        "children": [
-          {
-            "children": [],
-            "name": "rich_content",
-            "value": "<p>asdf</p> <p>asdfasdfasdf</p>"
-          },
-          {
-            "children": [],
-            "name": "style-option",
-            "value": "plain"
-          },
-          {
-            "children": [],
-            "name": "image",
-            "value": ""
-          }
-        ],
-        "name": "Rubrik1",
-        "value": "estaste"
+{
+  "actions" : {
+    "get" : {
+      "method" : "GET",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/content-structures/35618/structured-contents"
+    }
+  },
+  "facets" : [ ],
+  "items" : [ {
+    "actions" : {
+      "get-rendered-content" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642/rendered-content/{contentTemplateId}"
       },
-      {
-        "children": [],
-        "name": "Använd_ej",
-        "value": ""
+      "get-rendered-content-by-display-page" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642/rendered-content-by-display-page/{displayPageKey}"
+      },
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642"
+      },
+      "update" : {
+        "method" : "PATCH",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642"
       }
-    ],
-    "path": [
-      "2017"
-    ],
-    "status": 0,
-    "title": "test",
-    "uuid": "1a17654f-470f-4fa1-bbc2-9ae06cc510c8",
-    "version": 1.0
-  }
-]
+    },
+    "availableLanguages" : [ "sv-SE" ],
+    "contentFields" : [ {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "parentStructureFieldSet35614",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : ""
+        },
+        "dataType" : "integer",
+        "label" : "Sorteringstal",
+        "name" : "sortnumber",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "Förord"
+          },
+          "dataType" : "string",
+          "inputControl" : "text",
+          "label" : "Rubrik 1",
+          "name" : "Rubrik1",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "",
+          "label" : "",
+          "name" : "Rubrik1FieldSetFieldSet",
+          "nestedContentFields" : [ {
+            "contentFieldValue" : {
+              "data" : "<p>Många patienter på sjukhus har av olika orsaker svårt att få i sig tillräckligt med vätska och nutrition. Undernäring förekommer hos ungefär en tredjedel av patienterna.</p>\n\n<p>Det är av stor vikt för resultatet av annan medicinsk behandling att vätske- och nutritionsbehandling ordineras, något som inte sällan upplevs som svårt av läkare och sjuksköterskor, inte minst de som nyligen påbörjat sitt arbete inom vården.</p>\n\n<p>Dessa terapiråd är framtagna i syfte att vara ett stöd till läkare och sjusköterskor som skall ordinera och administrera tillförsel av vätskor och nutrition på olika vårdenheter.</p>\n\n<p>Kompletterande information med bl.a. en produktöversikt över upphandlade vätskor finns på <a href=\"www.vardgivarstod/lakemedel/vatska\">www.vardgivarstod/lakemedel/vatska</a>.</p>"
+            },
+            "dataType" : "string",
+            "label" : "Formaterat innehåll",
+            "name" : "rich_content",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : {
+              "data" : "Vanlig"
+            },
+            "dataType" : "string",
+            "inputControl" : "select",
+            "label" : "Stilalternativ",
+            "name" : "styleoption",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : { },
+            "dataType" : "image",
+            "label" : "Bild",
+            "name" : "image",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          } ],
+          "repeatable" : false
+        } ],
+        "repeatable" : true
+      } ],
+      "repeatable" : false
+    }, {
+      "contentFieldValue" : {
+        "data" : ""
+      },
+      "dataType" : "string",
+      "inputControl" : "text",
+      "label" : "Använd ej",
+      "name" : "Använd_ej",
+      "nestedContentFields" : [ ],
+      "repeatable" : false
+    } ],
+    "contentStructureId" : 35618,
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T20:42:32Z",
+    "dateModified" : "2023-10-13T06:50:47Z",
+    "datePublished" : "2018-02-22T20:40:00Z",
+    "description" : "",
+    "externalReferenceCode" : "5938001",
+    "friendlyUrlPath" : "startsida-1",
+    "id" : 35642,
+    "key" : "5938001",
+    "keywords" : [ ],
+    "numberOfComments" : 0,
+    "priority" : 0.0,
+    "relatedContents" : [ ],
+    "renderedContents" : [ {
+      "contentTemplateId" : "5937903",
+      "contentTemplateName" : "Tom mall startsida",
+      "markedAsDefault" : true,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/35642/rendered-content/5937903"
+    } ],
+    "siteId" : 20124,
+    "structuredContentFolderId" : 35582,
+    "subscribed" : false,
+    "taxonomyCategoryBriefs" : [ ],
+    "title" : "Startsida",
+    "uuid" : "75078dbc-cc60-a295-a062-d8a213cb18a0"
+  }, {
+    "actions" : {
+      "get-rendered-content" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664/rendered-content/{contentTemplateId}"
+      },
+      "get-rendered-content-by-display-page" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664/rendered-content-by-display-page/{displayPageKey}"
+      },
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664"
+      },
+      "update" : {
+        "method" : "PATCH",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664"
+      }
+    },
+    "availableLanguages" : [ "sv-SE" ],
+    "contentFields" : [ {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "parentStructureFieldSet35614",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : ""
+        },
+        "dataType" : "integer",
+        "label" : "Sorteringstal",
+        "name" : "sortnumber",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "Förord"
+          },
+          "dataType" : "string",
+          "inputControl" : "text",
+          "label" : "Rubrik 1",
+          "name" : "Rubrik1",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "",
+          "label" : "",
+          "name" : "Rubrik1FieldSetFieldSet",
+          "nestedContentFields" : [ {
+            "contentFieldValue" : {
+              "data" : "<p>Många patienter på sjukhus har av olika orsaker svårt att få i sig tillräckligt med vätska och nutrition. Undernäring förekommer hos ungefär en tredjedel av patienterna.</p>\n\n<p>Det är av stor vikt för resultatet av annan medicinsk behandling att vätske- och nutritionsbehandling ordineras, något som inte sällan upplevs som svårt av läkare och sjuksköterskor, inte minst de som nyligen påbörjat sitt arbete inom vården.</p>\n\n<p>Dessa terapiråd är framtagna i syfte att vara ett stöd till läkare och sjusköterskor som skall ordinera och administrera tillförsel av vätskor och nutrition på olika vårdenheter.</p>\n\n<p>Terapiråden finns som både ett tryckt häfte och en digital version, <a href=\"https://vatskenutrition.vgregion.se/?selectedYear=Terapir%C3%A5d%202018%20arbetsversion\">vatskanutrition.vgregion.se</a>. Den digitala versionen kommer uppdateras vid avgörande förändringar och en förteckning över gjorda förändringar på terapigrupp Vätskor och nutritions hemsida, <a href=\"https://www.vgregion.se/halsa-och-vard/vardgivarwebben/vardriktlinjer/lakemedel/terapirad/vatskor-och-nutrition/\">vgregion.se/lakemedel/vatska</a>.&nbsp;På hemsidan&nbsp;finns även beställningsanvisningar för det tryckta häftet samt kompletterande information med bl.a. en produktöversikt över upphandlade vätskor.</p>"
+            },
+            "dataType" : "string",
+            "label" : "Formaterat innehåll",
+            "name" : "rich_content",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : {
+              "data" : "Vanlig"
+            },
+            "dataType" : "string",
+            "inputControl" : "select",
+            "label" : "Stilalternativ",
+            "name" : "styleoption",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : { },
+            "dataType" : "image",
+            "label" : "Bild",
+            "name" : "image",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          } ],
+          "repeatable" : false
+        } ],
+        "repeatable" : true
+      } ],
+      "repeatable" : false
+    }, {
+      "contentFieldValue" : {
+        "data" : ""
+      },
+      "dataType" : "string",
+      "inputControl" : "text",
+      "label" : "Använd ej",
+      "name" : "Använd_ej",
+      "nestedContentFields" : [ ],
+      "repeatable" : false
+    } ],
+    "contentStructureId" : 35618,
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-05-24T07:40:17Z",
+    "dateModified" : "2019-12-17T12:51:20Z",
+    "datePublished" : "2018-02-22T20:40:00Z",
+    "description" : "",
+    "externalReferenceCode" : "6326303",
+    "friendlyUrlPath" : "startsi-1",
+    "id" : 37664,
+    "key" : "6326303",
+    "keywords" : [ ],
+    "numberOfComments" : 0,
+    "priority" : 0.0,
+    "relatedContents" : [ ],
+    "renderedContents" : [ {
+      "contentTemplateId" : "5937903",
+      "contentTemplateName" : "Tom mall startsida",
+      "markedAsDefault" : true,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/37664/rendered-content/5937903"
+    } ],
+    "siteId" : 20124,
+    "structuredContentFolderId" : 35590,
+    "subscribed" : false,
+    "taxonomyCategoryBriefs" : [ {
+      "taxonomyCategoryId" : 35550,
+      "taxonomyCategoryName" : "general"
+    } ],
+    "title" : "Startsida",
+    "uuid" : "0bee74f5-4cb2-c545-dbc0-48cd453365d1"
+  }, {
+    "actions" : {
+      "get-rendered-content" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211/rendered-content/{contentTemplateId}"
+      },
+      "get-rendered-content-by-display-page" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211/rendered-content-by-display-page/{displayPageKey}"
+      },
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211"
+      },
+      "update" : {
+        "method" : "PATCH",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211"
+      }
+    },
+    "availableLanguages" : [ "sv-SE" ],
+    "contentFields" : [ {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "parentStructureFieldSet35614",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : ""
+        },
+        "dataType" : "integer",
+        "label" : "Sorteringstal",
+        "name" : "sortnumber",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "Förord"
+          },
+          "dataType" : "string",
+          "inputControl" : "text",
+          "label" : "Rubrik 1",
+          "name" : "Rubrik1",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "",
+          "label" : "",
+          "name" : "Rubrik1FieldSetFieldSet",
+          "nestedContentFields" : [ {
+            "contentFieldValue" : {
+              "data" : "<p>Många patienter på sjukhus har av olika orsaker svårt att få i sig tillräckligt med vätska och nutrition. Undernäring förekommer hos ungefär en tredjedel av patienterna.</p>\n\n<p>Det är av stor vikt för resultatet av annan medicinsk behandling att vätske- och nutritionsbehandling ordineras, något som inte sällan upplevs som svårt av läkare och sjuksköterskor, inte minst de som nyligen påbörjat sitt arbete inom vården.</p>\n\n<p>Dessa terapiråd är framtagna i syfte att vara ett stöd till läkare och sjusköterskor som skall ordinera och administrera tillförsel av vätskor och nutrition på olika vårdenheter.</p>\n\n<p>Terapiråden finns som både ett tryckt häfte och en digital version, <a href=\"https://vatskenutrition.vgregion.se/?selectedYear=Terapir%C3%A5d%202018%20arbetsversion\">vatskanutrition.vgregion.se</a>. Den digitala versionen kommer uppdateras vid avgörande förändringar och en förteckning över gjorda förändringar på terapigrupp Vätskor och nutritions hemsida, <a href=\"https://www.vgregion.se/halsa-och-vard/vardgivarwebben/vardriktlinjer/lakemedel/terapirad/vatskor-och-nutrition/\">vgregion.se/lakemedel/vatska</a>.&nbsp;På hemsidan&nbsp;finns även beställningsanvisningar för det tryckta häftet samt kompletterande information med bl.a. en produktöversikt över upphandlade vätskor.</p>"
+            },
+            "dataType" : "string",
+            "label" : "Formaterat innehåll",
+            "name" : "rich_content",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : {
+              "data" : "Vanlig"
+            },
+            "dataType" : "string",
+            "inputControl" : "select",
+            "label" : "Stilalternativ",
+            "name" : "styleoption",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : { },
+            "dataType" : "image",
+            "label" : "Bild",
+            "name" : "image",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          } ],
+          "repeatable" : false
+        } ],
+        "repeatable" : true
+      } ],
+      "repeatable" : false
+    }, {
+      "contentFieldValue" : {
+        "data" : ""
+      },
+      "dataType" : "string",
+      "inputControl" : "text",
+      "label" : "Använd ej",
+      "name" : "Använd_ej",
+      "nestedContentFields" : [ ],
+      "repeatable" : false
+    } ],
+    "contentStructureId" : 35618,
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2019-12-20T13:38:58Z",
+    "dateModified" : "2019-12-20T13:48:56Z",
+    "datePublished" : "2018-02-22T20:40:00Z",
+    "description" : "",
+    "externalReferenceCode" : "7623402",
+    "friendlyUrlPath" : "startsi-3",
+    "id" : 42211,
+    "key" : "7623402",
+    "keywords" : [ ],
+    "numberOfComments" : 0,
+    "priority" : 0.0,
+    "relatedContents" : [ ],
+    "renderedContents" : [ {
+      "contentTemplateId" : "5937903",
+      "contentTemplateName" : "Tom mall startsida",
+      "markedAsDefault" : true,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/42211/rendered-content/5937903"
+    } ],
+    "siteId" : 20124,
+    "structuredContentFolderId" : 35598,
+    "subscribed" : false,
+    "taxonomyCategoryBriefs" : [ {
+      "taxonomyCategoryId" : 35550,
+      "taxonomyCategoryName" : "general"
+    } ],
+    "title" : "Startsida",
+    "uuid" : "a8a31f3f-0a9f-0374-8690-3204d504649f"
+  }, {
+    "actions" : {
+      "get-rendered-content" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309/rendered-content/{contentTemplateId}"
+      },
+      "get-rendered-content-by-display-page" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309/rendered-content-by-display-page/{displayPageKey}"
+      },
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309"
+      },
+      "update" : {
+        "method" : "PATCH",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309"
+      }
+    },
+    "availableLanguages" : [ "sv-SE" ],
+    "contentFields" : [ {
+      "contentFieldValue" : { },
+      "dataType" : "",
+      "label" : "",
+      "name" : "parentStructureFieldSet35614",
+      "nestedContentFields" : [ {
+        "contentFieldValue" : {
+          "data" : ""
+        },
+        "dataType" : "integer",
+        "label" : "Sorteringstal",
+        "name" : "sortnumber",
+        "nestedContentFields" : [ ],
+        "repeatable" : false
+      }, {
+        "contentFieldValue" : { },
+        "dataType" : "",
+        "label" : "",
+        "name" : "Rubrik1FieldSet",
+        "nestedContentFields" : [ {
+          "contentFieldValue" : {
+            "data" : "Förord"
+          },
+          "dataType" : "string",
+          "inputControl" : "text",
+          "label" : "Rubrik 1",
+          "name" : "Rubrik1",
+          "nestedContentFields" : [ ],
+          "repeatable" : false
+        }, {
+          "contentFieldValue" : { },
+          "dataType" : "",
+          "label" : "",
+          "name" : "Rubrik1FieldSetFieldSet",
+          "nestedContentFields" : [ {
+            "contentFieldValue" : {
+              "data" : "<p>Många patienter på sjukhus har av olika orsaker svårt att få i sig tillräckligt med vätska och nutrition. Undernäring förekommer hos ungefär en tredjedel av patienterna.</p>\n\n<p>Det är av stor vikt för resultatet av annan medicinsk behandling att vätske- och nutritionsbehandling ordineras, något som inte sällan upplevs som svårt av läkare och sjuksköterskor, inte minst de som nyligen påbörjat sitt arbete inom vården.</p>\n\n<p>Dessa terapiråd är framtagna i syfte att vara ett stöd till läkare och sjuksköterskor som skall ordinera och administrera tillförsel av vätskor och nutrition på olika vårdenheter.</p>\n\n<p>Terapiråden finns enbart i&nbsp;en digital version. Dessa nås via terapigrupp Vätskor och nutritions hemsida&nbsp;på&nbsp;<a href=\"https://vatskenutrition.vgregion.se/\">vatskanutrition.vgregion.se</a>&nbsp;samt länkbiblioteken&nbsp;i Melior. På terapigruppens <a href=\"https://www.vgregion.se/halsa-och-vard/vardgivarwebben/vardriktlinjer/lakemedel/terapirad/vatskor-och-nutrition/\">hemsida</a>&nbsp;finns kompletterande information med bl.a.&nbsp;produktöversikter för&nbsp;upphandlade vätskor/parenterala nutritionslösning.&nbsp;Uppdatering av terapiråden sker vartannat år samt&nbsp;vid avgörande förändringar.</p>"
+            },
+            "dataType" : "string",
+            "label" : "Formaterat innehåll",
+            "name" : "rich_content",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : {
+              "data" : "Vanlig"
+            },
+            "dataType" : "string",
+            "inputControl" : "select",
+            "label" : "Stilalternativ",
+            "name" : "styleoption",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          }, {
+            "contentFieldValue" : { },
+            "dataType" : "image",
+            "label" : "Bild",
+            "name" : "image",
+            "nestedContentFields" : [ ],
+            "repeatable" : false
+          } ],
+          "repeatable" : false
+        } ],
+        "repeatable" : true
+      } ],
+      "repeatable" : false
+    }, {
+      "contentFieldValue" : {
+        "data" : ""
+      },
+      "dataType" : "string",
+      "inputControl" : "text",
+      "label" : "Använd ej",
+      "name" : "Använd_ej",
+      "nestedContentFields" : [ ],
+      "repeatable" : false
+    } ],
+    "contentStructureId" : 35618,
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2022-05-17T08:01:50Z",
+    "dateModified" : "2023-01-10T15:44:59Z",
+    "datePublished" : "2018-02-22T20:40:00Z",
+    "description" : "",
+    "externalReferenceCode" : "7980976",
+    "friendlyUrlPath" : "startsida",
+    "id" : 43309,
+    "key" : "7980976",
+    "keywords" : [ ],
+    "numberOfComments" : 0,
+    "priority" : 0.0,
+    "relatedContents" : [ ],
+    "renderedContents" : [ {
+      "contentTemplateId" : "5937903",
+      "contentTemplateName" : "Tom mall startsida",
+      "markedAsDefault" : true,
+      "renderedContentURL" : "http://localhost:8080/o/headless-delivery/v1.0/structured-contents/43309/rendered-content/5937903"
+    } ],
+    "siteId" : 20124,
+    "structuredContentFolderId" : 35606,
+    "subscribed" : false,
+    "taxonomyCategoryBriefs" : [ ],
+    "title" : "Startsida",
+    "uuid" : "e513eca3-9e46-eb7a-a561-9cff3e140203"
+  } ],
+  "lastPage" : 1,
+  "page" : 1,
+  "pageSize" : 10,
+  "totalCount" : 4
+}

@@ -1,11 +1,8 @@
-import {Field} from "./field";
+import {ContentField} from './contentField';
 
 export class Article {
-  articleId: string;
-  uuid: string;
   title: string;
-  fields: Field[];
+  uuid: string;
+  contentFields: ContentField[];
   path: string[];
-  status: number;
-  version: string;
 }
