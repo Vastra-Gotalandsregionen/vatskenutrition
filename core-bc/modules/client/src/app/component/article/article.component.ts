@@ -1,7 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Article} from "../../model/article";
-import {Field} from "../../model/field";
-import {DomSanitizer} from "@angular/platform-browser";
+import {Article} from '../../model/article';
+import {ContentField} from '../../model/contentField';
+import {DomSanitizer} from '@angular/platform-browser';
+import {Image} from '../../model/image';
 
 @Component({
   selector: 'app-article',
@@ -23,32 +24,72 @@ export class ArticleComponent implements OnInit {
   ngOnInit() {
   }
 
-  getRichContent(field: Field) {
-    return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, 'rich_content'));
+  getHeadingContent(field: ContentField) {
+    return this.getChildValue(field, 'Rubrik1');
   }
 
-  getImage(field: Field): {groupId, uuid} {
-    let childValue = this.getChildValue(field, 'image');
-    if (childValue && childValue.length > 0) {
-      return JSON.parse(childValue);
+  getRichContent(field: ContentField) {
+    return this._sanitizer.bypassSecurityTrustHtml(this.getChildValue(field, 'rich_content') as string);
+  }
+
+  getImage(field: ContentField): Image {
+    return this.getChildValue(field, 'image') as Image;
+  }
+
+  getStyleOption(field: ContentField) {
+    return this.getChildValue(field, 'styleoption');
+  }
+
+  filterField(fieldName: string, fields: ContentField[]): ContentField[] {
+    let tryFind = [];
+
+    let tries = 0;
+    while ((tryFind = fields.filter(ncf2 => ncf2.name === fieldName)).length === 0) {
+      fields = this.flatMap(fields, (f: ContentField) => f.nestedContentFields);
+      if (tries++ >= 5) {
+        throw new Error('Cound\'t find sought field: ' + fieldName);
+      }
+    }
+
+    return tryFind;
+  }
+
+  flatMap(array, mapFunc) {
+    return array.reduce(function(accumulator, currentValue) {
+      return accumulator.concat(mapFunc(currentValue));
+    }, []);
+  }
+
+  private getChildValue(field: ContentField, fieldName: string): string | Image | null {
+
+    if (!field.nestedContentFields) {
+      return null;
+    }
+
+    const foundField = this.findRecursively(field, fieldName);
+
+    if (foundField) {
+      return foundField.contentFieldValue.data || foundField.contentFieldValue.image;
+    } else {
+      return null;
     }
   }
 
-  getStyleOption(field: Field) {
-    return this.getChildValue(field, "style-option");
-  }
+  private findRecursively(field: ContentField, fieldName: string): ContentField {
+    if (!field.nestedContentFields || field.nestedContentFields.length === 0) {
+      return null;
+    }
 
-  filterField(fieldName: string, fields: Field[]) {
-    return fields.filter(field => field.name === fieldName);
-  }
+    for (const nestedField of field.nestedContentFields) {
+      if (nestedField.name === fieldName) {
+        return nestedField;
+      } else {
+        const foundDeeper = this.findRecursively(nestedField, fieldName);
 
-  private getChildValue(field: Field, fieldName: string): string {
-    let result = null;
-    field.children.forEach(child => {
-      if (child.name === fieldName) {
-        result = child.value;
+        if (foundDeeper) {
+          return foundDeeper;
+        }
       }
-    });
-    return result;
+    }
   }
 }

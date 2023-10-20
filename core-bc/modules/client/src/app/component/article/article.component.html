@@ -2,15 +2,15 @@
   <h2 *ngIf="showTitle"><span class="nowrap">{{article.path[1]}}</span><span class="fa fa-caret-right"></span><span class="nowrap">{{article.title}}</span></h2>
 
   <div class="scroll-container" >
-    <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1', article.fields)">
+    <div class="{{getStyleOption(field)}}" *ngFor="let field of filterField('Rubrik1FieldSet', article.contentFields)">
 
-      <a class="anchor-element" name="{{field.value}}"><h3>{{field.value}}</h3></a>
+      <a class="anchor-element" name="{{getHeadingContent(field)}}"><h3>{{getHeadingContent(field)}}</h3></a>
 
       <div [innerHTML]="getRichContent(field)"></div>
 
       <div *ngIf="getImage(field) as image">
         <p>
-          <img src="/api/image/{{image.groupId}}/{{image.uuid}}"/>
+          <img src="/api/image?url={{image.contentUrl}}"/>
         </p>
       </div>
     </div>

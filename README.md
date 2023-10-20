@@ -13,8 +13,3 @@ Further, it depends on Liferay Portal which needs to run the Skinny JSON plugin.
 
 The frontend application makes requests to the backend web application which, in turn, fetches its data from the Skinny JSON plugin.
 
-## Notes on Liferay 7 / DXP
-
-When using Liferay 7 / DXP it is needed to add the service class com.liferay.skinny.service.SkinnyService as a *default* service access policy.
-Alternatively authorization is required to be sent with each request from the backend application to the Skinny JSON
-plugin. Currently, the backend application relies on unauthenticated requests to the Skinny JSON plugin.

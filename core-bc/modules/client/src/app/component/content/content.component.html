@@ -10,11 +10,11 @@
         <h3>{{chapter.heading}}</h3>
 
         <div *ngFor="let article of chapter.articles">
-          <a class="article-link" routerLink="/" [queryParams]="{article: prettify(article.title)}" queryParamsHandling="merge" routerLinkActive="active" (click)="scrollToTop()">{{article.title}} {{article.status === 2 ? '(Utkast)' : ''}}</a>
+          <a class="article-link" routerLink="/" [queryParams]="{article: prettify(article.title)}" queryParamsHandling="merge" routerLinkActive="active" (click)="scrollToTop()">{{article.title}} <!--{{article.status === 2 ? '(Utkast)' : ''}}--></a>
           <ul class="sub-chapter-list">
             <!--<li *ngFor="let field of article.fields" [ngStyle]="{'display': 'none'}">{{field.value}}</li>-->
-            <li *ngFor="let field of filterField('Rubrik1', article.fields)" [ngStyle]="(field.value && field.value.length > 0) ? {} : {'display': 'none'}">
-              <a class="sub-chapter-link" (click)="scrollToSubChapter(field.value)">{{field.value}}</a>
+            <li *ngFor="let field of filterField('Rubrik1', article.contentFields)" [ngStyle]="(field.contentFieldValue?.data && field.contentFieldValue?.data.length > 0) ? {'display': 'block'} : {'display': 'none'}">
+              <a class="sub-chapter-link" (click)="scrollToSubChapter(field.contentFieldValue?.data)">{{field.contentFieldValue?.data}}</a>
             </li>
           </ul>
         </div>

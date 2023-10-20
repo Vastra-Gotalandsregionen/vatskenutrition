@@ -1,0 +1,778 @@
+{
+  "actions" : {
+    "updateBatch" : {
+      "method" : "PUT",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/batch"
+    },
+    "get" : {
+      "method" : "GET",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-content-folders"
+    },
+    "create" : {
+      "method" : "POST",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-content-folders"
+    },
+    "createBatch" : {
+      "method" : "POST",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/sites/20124/structured-content-folders/batch"
+    },
+    "deleteBatch" : {
+      "method" : "DELETE",
+      "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/batch"
+    }
+  },
+  "facets" : [ ],
+  "items" : [ {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35582"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T08:07:38Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "c483f677-45b6-58e9-f7da-755284748e57",
+    "id" : 35582,
+    "name" : "Arbetsversion (byt namn till passande)",
+    "numberOfStructuredContentFolders" : 3,
+    "numberOfStructuredContents" : 1,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35584"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T08:07:38Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "c6ab5505-acbb-83f8-6e90-00dc821e0d09",
+    "id" : 35584,
+    "name" : "B. Nutritionsbehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 5,
+    "parentStructuredContentFolderId" : 35582,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35586"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T08:07:38Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "29701d46-43f1-4ffd-adc3-1d844e816550",
+    "id" : 35586,
+    "name" : "C. Vätska och nutrition till barn",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 8,
+    "parentStructuredContentFolderId" : 35582,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35588"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-02-22T08:07:39Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "9a3bf07e-9506-aad0-9bf9-8ec499dcd9a5",
+    "id" : 35588,
+    "name" : "A. Vätskebehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 9,
+    "parentStructuredContentFolderId" : 35582,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35590"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-05-24T07:40:17Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "f8396fb6-81de-2291-5f42-427382546d42",
+    "id" : 35590,
+    "name" : "Terapiråd 2018 arbetsversion",
+    "numberOfStructuredContentFolders" : 3,
+    "numberOfStructuredContents" : 1,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35592"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-05-24T07:40:18Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "7ca69b28-ce90-c40d-81e7-23b016b3e7c0",
+    "id" : 35592,
+    "name" : "A. Vätskebehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 10,
+    "parentStructuredContentFolderId" : 35590,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35594"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-05-24T07:40:22Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "c8d5e1a9-e478-9b2d-5663-eb67868d5174",
+    "id" : 35594,
+    "name" : "B. Nutritionsbehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 5,
+    "parentStructuredContentFolderId" : 35590,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35596"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2018-05-24T07:40:26Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "796b9212-6486-c6e8-4263-77070287a1d2",
+    "id" : 35596,
+    "name" : "C. Vätska och nutrition till barn",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 7,
+    "parentStructuredContentFolderId" : 35590,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35598"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2019-12-20T13:38:58Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "5d2b7e9e-d68d-4ba7-678b-bc59735ed953",
+    "id" : 35598,
+    "name" : "Vätske- och nutritionsbehandling 2020",
+    "numberOfStructuredContentFolders" : 3,
+    "numberOfStructuredContents" : 1,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35600"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2019-12-20T13:38:58Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "c12513e5-0bec-2799-1c5b-53187fce739a",
+    "id" : 35600,
+    "name" : "A. Vätskebehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 10,
+    "parentStructuredContentFolderId" : 35598,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35602"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2019-12-20T13:39:00Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "4e7b8e5d-172d-5df8-0e31-135b0b9955e0",
+    "id" : 35602,
+    "name" : "B. Nutritionsbehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 5,
+    "parentStructuredContentFolderId" : 35598,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35604"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2019-12-20T13:39:12Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "2cab8545-921d-9e66-65b8-a276127acbd1",
+    "id" : 35604,
+    "name" : "C. Vätska och nutrition till barn",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 7,
+    "parentStructuredContentFolderId" : 35598,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35606"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2022-05-17T08:01:50Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "e574754c-7365-9d52-df23-18d5f1d9ab33",
+    "id" : 35606,
+    "name" : "Vätske- och nutritionsbehandling 2022",
+    "numberOfStructuredContentFolders" : 3,
+    "numberOfStructuredContents" : 1,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35608"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2022-05-17T08:01:51Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "244b2a45-f350-8fbc-5255-9efbd89fcc57",
+    "id" : 35608,
+    "name" : "A. Vätskebehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 10,
+    "parentStructuredContentFolderId" : 35606,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35610"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2022-05-17T08:01:54Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "a28bd7ce-0bab-06de-64a6-98181d0a3bc3",
+    "id" : 35610,
+    "name" : "B. Nutritionsbehandling, vuxna",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 5,
+    "parentStructuredContentFolderId" : 35606,
+    "siteId" : 20124,
+    "subscribed" : false
+  }, {
+    "actions" : {
+      "subscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612/subscribe"
+      },
+      "unsubscribe" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612/unsubscribe"
+      },
+      "get" : {
+        "method" : "GET",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612"
+      },
+      "replace" : {
+        "method" : "PUT",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612"
+      },
+      "add-subfolder" : {
+        "method" : "POST",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612/structured-content-folders"
+      },
+      "delete" : {
+        "method" : "DELETE",
+        "href" : "http://localhost:8080/o/headless-delivery/v1.0/structured-content-folders/35612"
+      }
+    },
+    "creator" : {
+      "additionalName" : "",
+      "contentType" : "UserAccount",
+      "familyName" : "Admin",
+      "givenName" : "Liferay",
+      "id" : 20130,
+      "name" : "Liferay Admin"
+    },
+    "customFields" : [ ],
+    "dateCreated" : "2022-05-17T08:02:03Z",
+    "dateModified" : "2023-10-17T13:04:03Z",
+    "description" : "",
+    "externalReferenceCode" : "807d391c-8959-b934-3c4b-41edded82915",
+    "id" : 35612,
+    "name" : "C. Vätska och nutrition till barn",
+    "numberOfStructuredContentFolders" : 0,
+    "numberOfStructuredContents" : 7,
+    "parentStructuredContentFolderId" : 35606,
+    "siteId" : 20124,
+    "subscribed" : false
+  } ],
+  "lastPage" : 1,
+  "page" : 1,
+  "pageSize" : 20,
+  "totalCount" : 16
+}

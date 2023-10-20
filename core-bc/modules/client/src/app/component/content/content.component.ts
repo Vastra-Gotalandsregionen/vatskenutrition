@@ -3,7 +3,7 @@ import {Chapter} from "../../model/chapter";
 import {Article} from "../../model/article";
 import "rxjs/add/operator/map";
 import {ActivatedRoute} from "@angular/router";
-import {Field} from "../../model/field";
+import {ContentField} from "../../model/contentField";
 import {YearService} from "../../service/year.service";
 import "rxjs/add/operator/mergeMap";
 import "rxjs/add/operator/takeLast";
@@ -18,6 +18,7 @@ import {AuthStateService} from "../../service/auth/auth-state.service";
 import {StateService} from "../../service/state/state.service";
 import {combineLatest} from "rxjs/observable/combineLatest";
 import {debounceTime} from "rxjs/operators";
+import {fn} from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-content',
@@ -65,9 +66,9 @@ export class ContentComponent implements OnInit, OnDestroy {
         return this.httpClient.get<Article[]>('/api/article/year/' + year)
           .map(response => {
             return response.reduce(function (map, article) {
-              let path = article['path'][1];
+              const path = article['path'][1];
               if (!map.get(path)) {
-                map.set(path, []);// = [];
+                map.set(path, []); // = [];
               }
               map.get(path).push(article);
               return map;
@@ -78,11 +79,11 @@ export class ContentComponent implements OnInit, OnDestroy {
         this.chapters = [];
         // this.chapterEntries = chapters.entries();
         let next;
-        let entries = chapters.entries();
+        const entries = chapters.entries();
 
         while (!(next = entries.next()).done) {
           // next: {value: [chapterName: string, articles: Article[]], done: boolean},
-          let articles = <Article[]>next.value[1];
+          const articles = <Article[]>next.value[1];
           articles.sort((a, b) => this.sort(a, b));
 
           this.chapters.push({heading: next.value[0], articles: articles});
@@ -135,9 +136,9 @@ export class ContentComponent implements OnInit, OnDestroy {
   }
 
   private getSortNumber(article: Article): number {
-    let sortFields = this.filterField('sortnumber', article.fields);
-    if (sortFields.length === 1 && !!sortFields[0].value) {
-      return Number.parseInt(sortFields[0].value);
+    let sortFields = this.filterField('sortnumber', article.contentFields);
+    if (sortFields.length === 1 && !!sortFields[0].contentFieldValue) {
+      return Number.parseInt(sortFields[0].contentFieldValue.data);
     } else {
       return 999;
     }
@@ -171,7 +172,24 @@ export class ContentComponent implements OnInit, OnDestroy {
     return this.stateService.showProgress;
   }
 
-  filterField(fieldName: string, fields: Field[]): Field[] {
-    return fields.filter(field => field.name === fieldName);
+  filterField(fieldName: string, fields: ContentField[]): ContentField[] {
+
+    let tryFind = [];
+
+    let tries = 0;
+    while ((tryFind = fields.filter(ncf2 => ncf2.name === fieldName)).length === 0) {
+      fields = this.flatMap(fields, (f: ContentField) => f.nestedContentFields);
+      if (tries++ >= 5) {
+        throw new Error('Cound\'t find sought field: ' + fieldName);
+      }
+    }
+
+    return tryFind;
+  }
+
+  flatMap(array, mapFunc) {
+    return array.reduce(function(accumulator, currentValue) {
+      return accumulator.concat(mapFunc(currentValue));
+    }, []);
   }
 }

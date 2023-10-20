@@ -17,10 +17,11 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.concurrent.ListenableFutureCallback;
 import se.vgregion.vatskenutrition.config.AppITConfig;
-import se.vgregion.vatskenutrition.model.Article;
+import se.vgregion.vatskenutrition.model.v2.Article;
+import se.vgregion.vatskenutrition.model.v2.ItemResponse;
 
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
@@ -56,16 +57,21 @@ public class ArticleServiceIT {
         String fetchStartPageArticlesResponse = IOUtils.toString(ArticleServiceIT.class.getClassLoader().getResourceAsStream(
                 "fetchStartPageArticlesResponse.json"), "UTF-8");
 
+        String fetchAllFoldersResponse = IOUtils.toString(ArticleServiceIT.class.getClassLoader().getResourceAsStream(
+                "fetchAllFoldersResponse.json"), "UTF-8");
+
         mockServer = startClientAndServer(8877);
         
-        mockServer.when(HttpRequest.request("/api/jsonws/skinny-web.skinny/get-skinny-journal-articles/company-id/" +
-                "10136/group-name/vatskenutrition/ddm-structure-id/1687613/locale/sv_SE/").withMethod("GET"))
+        mockServer.when(HttpRequest.request("/o/headless-delivery/v1.0/content-structures/35614/structured-contents").withMethod("GET"))
                 .respond(HttpResponse.response(fetchAllArticlesResponse)
                         .withHeader("Content-Type", "application/json;charset=UTF-8"));
         
-        mockServer.when(HttpRequest.request("/api/jsonws/skinny-web.skinny/get-skinny-journal-articles/company-id/" +
-                "10136/group-name/vatskenutrition/ddm-structure-id/1695303/locale/sv_SE").withMethod("GET"))
+        mockServer.when(HttpRequest.request("/o/headless-delivery/v1.0/content-structures/35618/structured-contents").withMethod("GET"))
                 .respond(HttpResponse.response(fetchStartPageArticlesResponse)
+                        .withHeader("Content-Type", "application/json;charset=UTF-8"));
+
+        mockServer.when(HttpRequest.request("/o/headless-delivery/v1.0/sites/20124/structured-content-folders").withMethod("GET"))
+                .respond(HttpResponse.response(fetchAllFoldersResponse)
                         .withHeader("Content-Type", "application/json;charset=UTF-8"));
     }
 
@@ -80,7 +86,7 @@ public class ArticleServiceIT {
         CountDownLatch lock = new CountDownLatch(1);
 
         // Given (preparation)
-        articleService.update(Optional.of(completableFuture));
+        articleService.update();
 
         // Just to wait...
         completableFuture.whenComplete((o, v) -> {
@@ -123,9 +129,9 @@ public class ArticleServiceIT {
     @Test
     public void fetchArticlesFromExternalSource() throws Exception {
         CountDownLatch lock = new CountDownLatch(1);
-        final List<Article>[] articles = new List[]{null};
+        final List<Article>[] articles = new List[]{new ArrayList<>()};
 
-        ListenableFutureCallback<ResponseEntity<Article[]>> callback = new ListenableFutureCallback<ResponseEntity<Article[]>>() {
+        ListenableFutureCallback<ResponseEntity<ItemResponse<Article>>> callback = new ListenableFutureCallback<>() {
 
             @Override
             public void onFailure(Throwable ex) {
@@ -133,18 +139,20 @@ public class ArticleServiceIT {
             }
 
             @Override
-            public void onSuccess(ResponseEntity<Article[]> result) {
-                articles[0] = Arrays.asList(result.getBody());
+            public void onSuccess(ResponseEntity<ItemResponse<Article>> result) {
+                articles[0] = result.getBody().getItems();
 
                 lock.countDown();
             }
         };
+
         articleService.fetchArticlesFromExternalSource(
-                fetchAllArticlesUrl, callback);
+                fetchAllArticlesUrl, callback, Article.class
+        );
 
         lock.await(5, TimeUnit.SECONDS);
 
-        assertNotNull(articles[0]);
+        assertNotNull(articles[0].get(0));
 
         LOGGER.info("Articles size: " + articles[0].size());
     }
@@ -157,7 +165,7 @@ public class ArticleServiceIT {
         // Wait to assure the articles are fetched and stored.
         value.get(2, TimeUnit.SECONDS);
 
-        Article startPageArticle = articleService.findStartPageArticle("2017");
+        Article startPageArticle = articleService.findStartPageArticle("Terapiråd 2018 arbetsversion");
 
         assertNotNull(startPageArticle);
     }

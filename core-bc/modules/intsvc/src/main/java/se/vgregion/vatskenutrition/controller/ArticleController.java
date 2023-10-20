@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import se.vgregion.vatskenutrition.model.Article;
+import se.vgregion.vatskenutrition.model.v2.Article;
 import se.vgregion.vatskenutrition.service.ArticleService;
 import se.vgregion.vatskenutrition.util.HttpUtil;
 
@@ -102,7 +102,9 @@ public class ArticleController {
         }
 
         // If fetching other than default revision authenication is required.
-        if (!article.getPaths().get(0).equals(articleService.getDefaultRevision())
+        String rootFolderName = articleService.getRootFolder(article).getName();
+
+        if (!rootFolderName.equals(articleService.getDefaultRevision())
                 && httpUtil.getUserIdFromRequest(request) == null) {
 
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
@@ -121,8 +123,10 @@ public class ArticleController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
+        String rootFolderName = articleService.getRootFolder(article).getName();
+
         // If fetching other than default revision authenication is required.
-        if (!article.getPaths().get(0).equals(articleService.getDefaultRevision())
+        if (!rootFolderName.equals(articleService.getDefaultRevision())
                 && httpUtil.getUserIdFromRequest(request) == null) {
 
             return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
