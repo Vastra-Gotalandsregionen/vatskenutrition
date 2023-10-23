@@ -1,0 +1,22 @@
+baseUrl=http://localhost:8080
+
+fetchAllArticlesUrl=${baseUrl}/o/headless-delivery/v1.0/content-structures/35614/structured-contents?flatten=true&pageSize=1000
+fetchStartPageArticlesUrl=${baseUrl}/o/headless-delivery/v1.0/content-structures/35618/structured-contents?flatten=true&pageSize=1000
+fetchFolderUrl=${baseUrl}/o/headless-delivery/v1.0/sites/20124/structured-content-folders?flatten=true
+
+defaultRevision=Vätske- och nutritionsbehandling 2022
+additionalHeadingText=1983
+articleAdminUrl=https://aldrekompassen-admin-test.vgregion.se/
+
+api.username=
+api.password=
+
+default.admin.username=
+default.admin.encoded.password={encodedPassword}
+
+jwt.secret=asdklasdfas
+
+ldap.url=ldaps://vgregion.se:636
+ldap.base=DC=vgregion,DC=se
+ldap.userDn=
+ldap.password=
