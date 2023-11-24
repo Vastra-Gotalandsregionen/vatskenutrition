@@ -77,6 +77,39 @@ public class ArticleService {
             CompletableFuture<Object> completableFuture2 = new CompletableFuture<>();
             CompletableFuture<Object> completableFuture3 = new CompletableFuture<>();
 
+            fetchArticlesFromExternalSource(fetchFolderUrl,
+                                            new ListenableFutureCallback<ResponseEntity<ItemResponse<Folder>>>() {
+                                                @Override
+                                                public void onFailure(Throwable throwable) {
+                                                    LOGGER.error(throwable.getMessage(), throwable);
+                                                    completableFuture3.complete(new Object());
+                                                }
+
+                                                @Override
+                                                public void onSuccess(ResponseEntity<ItemResponse<Folder>> responseEntity) {
+                                                    try {
+                                                        List<Folder> folders = Objects.requireNonNull(responseEntity.getBody()).getItems();
+
+                                                        Map<Integer, Folder> newMap = new HashMap<>();
+
+                                                        for (Folder folder : folders) {
+                                                            newMap.put(folder.getId(), folder);
+                                                        }
+
+                                                        allFolders = newMap;
+
+                                                        LOGGER.info("Stored " + allFolders.size() + " folders.");
+
+                                                        completableFuture3.complete(new Object());
+                                                    } catch (Exception e) {
+                                                        LOGGER.error(e.getMessage(), e);
+                                                    }
+                                                }
+                                            }, Folder.class);
+
+            // Need to wait for the folders before processing the articles.
+            completableFuture3.get();
+
             fetchArticlesFromExternalSource(fetchAllArticlesUrl,
                     new ListenableFutureCallback<ResponseEntity<ItemResponse<Article>>>() {
 
@@ -142,33 +175,6 @@ public class ArticleService {
                         }
                     }, Article.class);
 
-            fetchArticlesFromExternalSource(fetchFolderUrl,
-                    new ListenableFutureCallback<ResponseEntity<ItemResponse<Folder>>>() {
-                        @Override
-                        public void onFailure(Throwable throwable) {
-                            LOGGER.error(throwable.getMessage(), throwable);
-                            completableFuture3.complete(new Object());
-                        }
-
-                        @Override
-                        public void onSuccess(ResponseEntity<ItemResponse<Folder>> responseEntity) {
-                            try {
-                                List<Folder> folders = Objects.requireNonNull(responseEntity.getBody()).getItems();
-
-                                Map<Integer, Folder> newMap = new HashMap<>();
-
-                                for (Folder folder : folders) {
-                                    newMap.put(folder.getId(), folder);
-                                }
-
-                                allFolders = newMap;
-                                completableFuture3.complete(new Object());
-                            } catch (Exception e) {
-                                LOGGER.error(e.getMessage(), e);
-                            }
-                        }
-                    }, Folder.class);
-
             if (doneConsumer.isPresent()) {
                 CompletableFuture.allOf(completableFuture1, completableFuture2, completableFuture3)
                         .thenAccept(o -> doneConsumer.get().complete(new Object()));
@@ -184,7 +190,7 @@ public class ArticleService {
     }
 
     public List<Article> findByYear(String year) {
-        return allArticles.stream().filter(a -> getRootFolder(a).getName().contains(year)).collect(Collectors.toList());
+        return allArticles.stream().filter(a -> getRootFolder(a).getName().equals(year)).collect(Collectors.toList());
     }
 
     public Folder getRootFolder(Article article) {
